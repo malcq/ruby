@@ -1,0 +1,24 @@
+@media (max-width: 990px) {
+  .d-sm-hidden {
+    display: none;
+  }
+}
+.hrevert {
+  transform: scale(-1, 1);
+}
+
+.dollar-sign:before, .USD-sign:before {
+  content: '$';
+}
+.euro-sign:before, .EUR-sign:before  {
+  content: '€';
+}
+
+@font-face {
+  font-family: "Big Noodle Titling";
+  src: url("../fonts/big_noodle_titling.ttf") format("truetype");
+}
+
+.hidden {
+  display: none !important;
+}

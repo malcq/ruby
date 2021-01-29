@@ -1,0 +1,15 @@
+@import '../../assets/styles/theme';
+
+.form-check {
+
+  display: flex;
+  align-items: center;
+  min-height: 1.1875rem;
+
+  &__label{
+    font-family: $main-font-family;
+    font-size: 0.8rem;
+    cursor: pointer;
+    user-select: none;
+  }
+}

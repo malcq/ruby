@@ -1,0 +1,26 @@
+@import '../../../assets/styles/theme';
+
+.search-form__cariage-multiple {
+  display: flex;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid #ebedf0;
+  border-top: none;
+  background-color: white;
+  padding: 29px 20%;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    padding: 29px 0;
+    justify-content: space-around;
+  }
+
+  .carige-multiple__item {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    align-items: center;color: #98a0a5;
+
+    label {
+      font-size: 13px;
+    }
+  }
+}

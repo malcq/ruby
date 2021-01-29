@@ -1,0 +1,117 @@
+<app-nav-bar
+  (leftButtonPress)="back()"
+></app-nav-bar>
+<header class="header">
+  <ng-container *ngIf="!isPlayerActive">
+    <ng-container *ngIf="!recording && !blob">
+      <app-fancy-header
+        title="RECORD."
+        [blacked]="false"
+        [smallDescription]="true"
+      ></app-fancy-header>
+      <div class="header__subtitle">
+        Tap red button to start...
+      </div>
+    </ng-container>
+    <ng-container *ngIf="recording">
+        <app-fancy-header
+          title="RECORDING."
+          [blacked]="false"
+          [smallDescription]="true"
+        ></app-fancy-header>
+        <div class="header__subtitle">
+          Tap red button to stop...
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!recording && blob">
+        <app-fancy-header
+          title="RECORDED."
+          [blacked]="false"
+          [smallDescription]="true"
+        ></app-fancy-header>
+        <div class="header__subtitle">
+          Press DONE to finish...
+        </div>
+      </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="isPlayerActive">
+    <ng-container *ngIf="isPlayerPaused">
+        <app-fancy-header
+          title="REPLAY."
+          [blacked]="false"
+          [smallDescription]="true"
+        ></app-fancy-header>
+        <div class="header__subtitle">
+          Press Play to start...
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isPlayerPaused">
+        <app-fancy-header
+          title="REPLAY."
+          [blacked]="false"
+          [smallDescription]="true"
+        ></app-fancy-header>
+        <div class="header__subtitle">
+          Press Pause to stop...
+        </div>
+    </ng-container>
+  </ng-container>
+
+  
+</header>
+<main class="main-container">
+
+  <div
+    class="record-info"
+    [class.record-info--hidden]="isPlayerActive"
+  >
+    <div class="record-info__wavegraph">
+      <canvas #audioIndicator id="audioIndicator"></canvas>
+    </div>
+    <app-duration-info [duration]="duration"></app-duration-info>
+  </div>
+
+  <div
+    *ngIf="blob && isPlayerActive"
+    class="audio-player"
+  >
+    <app-audio-player
+      [audioBlob]="blob"
+      (audioPaused)="onPlayerPaused($event)"
+    ></app-audio-player>
+  </div>
+
+  <div class="record-controls">
+    <div *ngIf="blob"
+      class="record-controls__text record-controls--right"
+      (click)="togglePlayer()"
+    >
+      <div [hidden]="!isPlayerActive">DELETE</div>
+      <div [hidden]="isPlayerActive" class="play-button">
+        <app-play-button-image size="50"></app-play-button-image>
+      </div>
+    </div>
+    <app-record-button
+      *ngIf="!isPlayerActive && !converting"
+      class="record-controls__record-button"
+      [recording]="recording"
+      (startCapture)="startCapture()"
+      (stopCapture)="stopCapture()"
+    ></app-record-button>
+    <mat-progress-spinner *ngIf="converting"
+      class="record-controls__record-button"
+      color="warn"
+      [diameter]="54"
+      mode="indeterminate"
+    ></mat-progress-spinner>
+    <div class="record-controls__text record-controls--left">
+      <div *ngIf="blob" (click)="done()">
+        DONE
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<app-screen-overlay></app-screen-overlay>

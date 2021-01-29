@@ -1,0 +1,126 @@
+@import "../../assets/styles/theme.scss";
+
+.not-found-page{
+  display: flex;
+  flex-direction: column;
+  background: white  url('../../assets/images/footer-image.png') no-repeat bottom/contain;
+  height: 100vh;
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+
+    &-brand{
+      font:{
+        size: 1.7rem;
+        family: 'Big Noodle Titling';
+      }
+      display: flex;
+      align-items: flex-end;
+
+      &-icon{
+        color: $header-left-color;
+        $size: 2.5rem;
+        font-size: $size;
+        height: $size;
+        margin-right: 0.8rem;
+      }
+
+      &-name{
+        line-height: 1;
+        letter-spacing: 5.4px;
+        color: $text-color;
+      }
+
+      &:hover{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      &:link{
+        color: inherit;
+      }
+
+      &:visited{
+        color: inherit;
+      }
+    }
+
+    &-nav{
+
+      &-button{
+        font: {
+          family: $main-font-family;
+        }
+        color: $text-color;
+        font-size: 1.3125rem;
+        padding: 0.25rem 2rem;
+
+        &:hover{
+          text-decoration: none;
+          opacity: 0.5;
+        }
+      }
+
+
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    &-message{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      background: transparent url('../../assets/images/background-pattern.png') no-repeat top/contain;
+      padding: 5em 0;
+      color: #1b2538;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.2;
+
+
+
+      &-code{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 6.25rem;
+        color: $title-blue-color;
+        margin: 0;
+        position: relative;
+
+        &:after{
+          content: "";
+          background: transparent url('../../assets/images/500-mask.png') no-repeat bottom/contain;
+          width: 12rem;
+          height: 3rem;
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 16px;
+          user-select: none;
+        }
+      }
+      &-text{
+
+        margin-bottom: 0.5rem;
+      }
+      &-link {
+        color: $header-left-color;
+
+        &:hover {
+          color: $blue-button-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

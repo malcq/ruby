@@ -1,0 +1,36 @@
+<div class="file">
+  <div
+    class="file__thumb"
+    (click)="onFileClick()"
+    >
+    <video
+      #video
+      *ngIf="thumbType === MediaFileType.video"
+      autoplay
+    >
+      <source
+        [src]="thumbSrc | sanitizeUrl"
+      >
+    </video>
+    <img
+      *ngIf="thumbType === MediaFileType.image"
+      [src]="thumbSrc | sanitizeUrl"
+    >
+    <img
+      *ngIf="thumbType === MediaFileType.audio"
+      src="/assets/img/soundwave.png"
+    >
+    <div *ngIf="fileType === MediaFileType.video || fileType === MediaFileType.audio" class="play-icon-overlay">&nbsp;</div>
+    <mat-icon *ngIf="fileType === MediaFileType.video || fileType === MediaFileType.audio" class="play-icon">play_arrow</mat-icon>
+  </div>
+  <div
+    class="file__remove"
+    (click)="onCloseClick($event)"
+  >
+    <div class="remove-button">
+      <div class="remove-button__cross">
+        &#x2715;
+      </div>
+    </div>
+  </div>
+</div>

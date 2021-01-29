@@ -1,0 +1,28 @@
+@import "../../assets/styles/theme";
+
+.form-layout{
+  background-color: white;
+  border-radius: 3px;
+  padding: 1rem;
+  font-family: $main-font-family;
+  font-size: 1rem;
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+
+  &__title {
+    display: flex;
+    padding-bottom: 1rem;
+
+    &-icon{
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__container-button_cancel{
+    width: 92px;
+  }
+}

@@ -1,0 +1,293 @@
+/*
+  Fancy input.
+*/
+.fancy-input,
+.fancy-input__input > input {
+  font-size: 14px;
+}
+
+.fancy-input {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.fancy-input,
+.fancy-input__input > input {
+  font-size: 15px;
+}
+
+.fancy-input__title {
+  font-weight: bold;
+  color: #1C69D4;
+  margin-right: 5px;
+  /* padding-left: 0; */
+}
+
+.fancy-input__input {
+  flex-grow: 1;
+}
+
+.fancy-input__input > input {
+  border: none;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.fancy-input__icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+/*
+  Fancy rounded input
+*/
+
+.fancy-rounded-input {
+  display: flex;
+  align-items: stretch;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.fancy-rounded-input--invalid {
+  border: 1px solid #FC5950;
+}
+
+.fancy-rounded-input__input {
+  flex-grow: 1; 
+}
+
+.fancy-rounded-input__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.fancy-rounded-input__input > input {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+.fancy-rounded-input__submit {
+  width: 46px;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C69D4;
+  color: white;
+}
+
+.fancy-rounded-input__submit  {
+  width: 46px;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C69D4;
+  color: white;
+  border-radius: 20px;
+  padding: 0 7px;
+}
+
+.fancy-rounded-input__submit > .send-button {
+  color: white;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  border: none;
+}
+
+.fancy-rounded-input__submit .send-icon {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+
+/*
+  Fancy button
+*/
+
+.fancy-button {
+  background-color: #1C69D4;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+  margin: 0;
+}
+
+.fancy-button--full-width {
+  width: 100%;
+}
+
+.fancy-button:active {
+  background-color: #113973;
+}
+
+/*
+  Fancy header
+*/
+.fancy-header {
+  background-color: transparent;
+  color: white;
+}
+
+.fancy-header--black {
+  color: #262626;
+}
+
+.fancy-header__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.fancy-header__title--blue {
+  color: #1C69D4;
+}
+
+.fancy-header__description {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+/*
+  Imaged title
+*/
+.fancy-imaged-title {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+}
+
+.fancy-imaged-title__image {
+  background-color: white;
+  width: 100%;
+  height: 95%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fancy-imaged-title__hexagon {
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+.fancy-imaged-title__hexagon-outer {
+  border-radius: 2px;
+  overflow: hidden;
+  height: 100px;
+  width: 200px;
+  position: relative;
+}
+
+.fancy-imaged-title__hexagon-inner {
+  background: linear-gradient(to top, rgba(255,0,0,0.8), rgba(152, 152, 152, 1));
+  transform: rotate(45deg);
+  height: 245px;
+  width: 160px;
+  position: absolute;
+  left: 22px;
+  top: -75px;
+}
+
+.fancy-imaged-title__caption {
+  position: absolute;
+  letter-spacing: -0.3px;
+  line-height: 22px;
+  bottom: 40px;
+  left: 20px;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+.fancy-imaged-title__border {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 30px;
+  border-bottom: 4px solid white;
+}
+
+/*
+  Wallpaper
+*/
+.wallpaper {
+  background-color: white;
+  position: absolute;
+  z-index: -100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.wallpaper--blurred {
+  filter: blur(3px);
+}
+
+.wallpaper__overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -99;
+}
+
+.wallpaper__overlay--white {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*
+  Chatbot action
+*/
+.fancy-action {
+  border: none;
+  color: white;
+  box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: #1d69d4;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+
+@media screen and (max-width: 320px) {
+  .fancy-button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

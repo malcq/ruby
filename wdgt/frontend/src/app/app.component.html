@@ -1,0 +1,19 @@
+<div class="container" *ngIf="initialized">
+  <div
+    [@routerTransition]="o.isActivated ? o.activatedRoute : ''"
+    class="content"
+    [class.content--inner-scroll]="innerScrollEnabled"
+  >
+    <router-outlet
+      #o="outlet"
+      (activate)='onActivate($event)'
+    ></router-outlet>
+  </div>
+  <app-alert
+    [alertStyle]="alertStyle"
+  ></app-alert>
+</div>
+
+<div class="dialog">
+  <app-dialog></app-dialog>
+</div>

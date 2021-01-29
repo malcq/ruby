@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14.46875 2.25284091 8.72159091 8 14.46875 13.7471591 13.0198864 15.1960227 7.27272727 9.44886364 1.52556818 15.1960227 0.0767045455 13.7471591 5.82386364 8 0.0767045455 2.25284091 1.52556818 0.803977273 7.27272727 6.55113636 13.0198864 0.803977273"></polygon>
+    </defs>
+    <g id="ic/close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#58585A" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-55.272727, -53.818182)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#666666" fill-rule="evenodd" x="0" y="0" width="125" height="125"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="125" height="125"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

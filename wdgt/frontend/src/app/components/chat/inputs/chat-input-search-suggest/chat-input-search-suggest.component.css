@@ -1,0 +1,126 @@
+:host {
+  color: black;
+}
+
+.chat-input {
+  margin: 15px 20px;
+  padding: 1px;
+  padding-left: 15px;
+  background-color: white;
+  display: flex;
+  align-items: stretch;
+  min-height: 31px;
+  box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.chat-input,
+.send-button {
+  border-radius: 20px;
+}
+
+.chat-input__editable {
+  max-height: 100px;
+  overflow: auto;
+}
+
+.chat-input__input {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.chat-input__send-button {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chat-input__input > input, .chat-input__input > textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  height: 18px;
+  background-color: transparent;
+  border: none;
+  padding: 0 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.send-button {
+  color: white;
+  background-color: #1d69d4;
+  border: none;
+  transition: 0.2s;
+}
+
+.send-button:active {
+  background-color: #1953a5;
+}
+
+.send-icon {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+
+.tag__item {
+  min-height: 28px;
+  padding: 13px 0px;
+  margin-left: 20px;
+  padding: 0;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.tag-selector__item-content,
+.tag-selector__item-icon {
+  padding: 13px 20px;
+}
+
+.tag-selector__item-content {
+  padding-left: 0;
+}
+
+.search-suggest {
+  background-color: transparent;
+}
+
+div.tag-selector__item-icon,
+.tag-selector__item-icon > .mat-icon {
+  height: 12px;
+  width: 12px;
+}
+
+div.tag-selector__item-content {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+div.tag-selector__item-icon {
+  transform: scale(-1, 1);
+  height: 18px;
+  margin-right: 0;
+}
+
+.tag-selector__item-icon > .mat-icon {
+  color: #c0c1c1;
+  font-size: 12px;
+}

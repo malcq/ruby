@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Engli
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body.main
+  .container-fluid
+    .row
+      = render 'layouts/navigation'
+      .col-md-10.col-offset-2
+        - flash.each do |k,v|
+          div class="alert alert-#{k}" = v
+        = yield
+

@@ -1,0 +1,26 @@
+tr
+  td= phrase.id
+  td= link_to phrase.phrase, phrase_path(phrase)
+  td= phrase.translation
+  td= phrase.category
+
+  - if author
+    td = link_to phrase.user.username, user_path(phrase.user)
+
+  td
+    = link_to vote_phrase_path(phrase, vote: 'up'), method: :post do
+      div
+        span.glyphicon.glyphicon-chevron-up.upvote
+    | #{ phrase.get_likes.size - phrase.get_dislikes.size }
+    = link_to vote_phrase_path(phrase, vote: 'down'), method: :post do
+      div
+        span.glyphicon.glyphicon-chevron-down.downvote
+
+  - if phrase.is_author? current_user
+    td
+      = link_to 'Edit ', edit_phrase_path(phrase)
+      ' |
+      = link_to 'Destroy ', phrase, method: :delete, data: { confirm: 'Are you sure?' }
+  - else
+    td
+

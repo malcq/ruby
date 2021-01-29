@@ -1,0 +1,58 @@
+@import '../../../mixins.scss';
+
+.navbar {
+  position: relative;
+  min-height: 33px;
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 25px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-white;
+
+  &__button mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+  }
+
+  &__toolbar-title {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__button--right {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 22px;
+  }
+}
+
+.navbar--blue .navbar__button,
+.navbar--blue .navbar__toolbar-title {
+  color: $color-primary;
+}
+
+@media screen and (max-width: 320px) {
+  .navbar__button--right {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-height: $height-iphone-6) {
+  .navbar {
+    padding-top: 42px;
+  }
+}
+

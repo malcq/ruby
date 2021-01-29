@@ -1,0 +1,171 @@
+@import '../../assets/styles/theme';
+@import '../../assets/styles/mediaSettings';
+
+$column-flex: 1 1 33%;
+
+.quote{
+  color: $grey-text-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-radius: 3px;
+  border: $light-border-color solid 1px;
+  font: 0.8rem $main-font-family;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $small-screen-width){
+    flex-direction: column;
+  }
+
+  &:hover{
+    background-color: $light-hover-color;
+  }
+
+
+  @mixin group{
+    display: flex;
+    flex: 1 1 50%;
+    width: 50%;
+    min-height: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: $small-screen-width){
+      width: 100%;
+    }
+  }
+
+  &__link{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  &__field{
+    margin: 0 0.5rem;
+    flex: $column-flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+    &-container{
+      @include group;
+
+      margin: 0 0.5rem;
+      justify-content: space-between;
+      overflow-x: hidden;
+
+      @media screen and (max-width: $small-screen-width){
+        margin: 0;
+      }
+      @media screen and (max-width: 550px){
+        flex-direction: column;
+      }
+    }
+
+    &-name{
+      color: black;
+    }
+
+    &-value{
+      max-width: 100%;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    text-transform: capitalize;
+  }
+
+  &__flag{
+    margin-left: 0.5rem;
+    $height: 0.8rem;
+    $ratio: 4/3;
+    width: $height * $ratio;
+    height: $height;
+    line-height: 0.8rem;
+    border-radius: 2px;
+    align-self: flex-end;
+  }
+
+
+
+  &__route{
+
+    @include group;
+
+    min-width: 30rem;
+
+    @media screen and (max-width: $small-screen-width){
+      margin-bottom: 2rem;
+      min-width: 0;
+    }
+
+    @media screen and (max-width: 550px) {
+      flex-wrap: wrap;
+    }
+    &-progress{
+      min-width: 13rem;
+      margin: 0 1rem;
+      flex: $column-flex;
+
+      @media screen and (max-width: $mobile-screen-width){
+        min-width: 11rem;
+      }
+
+      @media screen and (max-width: 550px){
+        order: 1;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-port{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex: $column-flex;
+      @media screen and (max-width: 550px){
+        flex-direction: column;
+        flex-basis: 50%;
+        order: 2;
+        &--destination {
+          order: 3;
+        }
+      }
+    }
+    &-date--short {
+      color: black;
+      font-weight: bold;
+      @media screen and (min-width: 550px) {
+        display: none;
+      }
+    }
+    &-text{
+      margin-left: 0.5rem;
+      color: black;
+
+      @media screen and (max-width: $mobile-screen-width){
+        font-size: 0.7rem;
+      }
+    }
+
+    &-city{
+      color: $passive-color;
+    }
+  }
+
+
+  &__valid{
+
+    &.checked{
+      color: $green;
+    }
+    &.attention{
+      color: $red;
+    }
+  }
+}

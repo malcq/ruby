@@ -1,0 +1,28 @@
+.shipment-overview-date-picker-input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  color: #98a0a5;
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &--color-black {
+      color: #1b2538;
+    }
+  }
+
+  &__icon {
+    margin-top: 3px;
+    margin-left: 3px;
+    font-size: 12.8px;
+    color: #98a0a5;
+
+    &--rotate-90deg {
+      transform: rotate(90deg);
+    }
+  }
+}

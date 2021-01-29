@@ -1,0 +1,21 @@
+<div class="model-card">
+  <div
+    class="model-card__image"
+    [style.background-image]="carImage | sanitizeBackgroundImage"
+  ></div>
+  <div class="model-card__title">{{ feedback.productModel.title }}</div>
+  <div class="model-card__description">
+    VIN: {{ feedback.vin }}
+  </div>
+</div>
+
+<div class="type-buttons">
+  <div
+    class="type-buttons__button"
+    *ngFor="let feedbackType of feedbackTypes"
+    (click)="onCategoryPress(feedbackType)"
+  >
+    <img src="/assets/img/feedback-types/{{feedbackType.type}}.svg" />
+    <div class="feedback-types__text">{{feedbackType.title}}</div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "short_name": "Shypple",
+  "name": "Shypple",
+  "gcm_sender_id": "shypple-9dc8b",
+  "gcm_user_visible_only": true,
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#0095e8",
+  "background_color": "#ffffff"
+}
+

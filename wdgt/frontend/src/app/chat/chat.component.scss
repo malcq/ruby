@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: white;
+}
+
+:host.desktop {
+  overflow: auto;
+  max-height: 100%;
+}
+
+:host,
+.chat-view {
+  background-color: #f8f8f8;
+}
+
+.navbar {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.login-modal {
+  position: absolute;
+  top: -56px;
+  bottom: 0;
+  display: flex;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.8) 100%);
+  width: 100%;
+}
+
+.chat-view {
+  flex-grow: 1;
+}
+
+
+.scroller {
+  &--suggestion {
+    padding-bottom: 100px;
+  }
+}

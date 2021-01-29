@@ -1,0 +1,31 @@
+@import 'assets/styles/colors.css';
+
+.internal-link {
+  color: var(--brand-link);
+}
+
+.index-page {
+  .caption {
+      h1 {
+          text-align: left;
+  }
+}
+
+  table {
+    .actions {
+      .dropdown-item {
+          cursor: pointer;
+      }
+
+      .delete {
+        color: var(--btn-danger);
+      }
+    }
+  }
+}
+
+.view-page {
+  .label {
+    font-weight: 600;
+  }
+}

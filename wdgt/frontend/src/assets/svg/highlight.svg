@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/highlight</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.2265625,3.921875 L11.8085938,2.33984375 L12.8632812,3.39453125 L11.28125,5.01171875 L10.2265625,3.921875 Z M0.13671875,3.39453125 L1.19140625,2.33984375 L2.7734375,3.921875 L1.71875,5.01171875 L0.13671875,3.39453125 Z M5.76171875,0.51171875 L7.23828125,0.51171875 L7.23828125,2.76171875 L5.76171875,2.76171875 L5.76171875,0.51171875 Z M2,9.51171875 L2,5.75 L11,5.75 L11,9.51171875 L8.75,11.7617188 L8.75,15.4882812 L4.25,15.4882812 L4.25,11.7617188 L2,9.51171875 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/highlight" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#1C69D4" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-36.000000, -32.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#666666" fill-rule="evenodd" x="0" y="0" width="86" height="86"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="86" height="86"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

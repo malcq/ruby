@@ -1,0 +1,13 @@
+@import '../../assets/styles/theme';
+
+.account-info-form{
+  &__checkbox-group{
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0.75rem;
+    font: bold 0.8rem $main-font-family;
+    cursor: pointer;
+    user-select: none;
+  }
+}

@@ -1,0 +1,60 @@
+<app-nav-bar (leftButtonPress)="back()"></app-nav-bar>
+
+<header class="header">
+  <app-fancy-header
+    title="IN PROGRESS."
+    [blacked]="false"
+    [smallDescription]="true"
+  ></app-fancy-header>
+  <div class="header__subtitle">We are uploading your files...</div>
+</header>
+
+<main class="container">
+  <div class="progress-info">
+    <div
+      class="progress-info__spinner"
+      style="width: 162px; height: 162px;"
+    >
+      <svg
+        focusable="false"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 168.2 168.2"
+        style="width: 162px; height: 162px;"
+      >
+        <circle
+          cx="50%"
+          cy="50%"
+          r="76"
+          style="stroke: #84AEE0;"
+        ></circle>
+        <circle
+          [ngClass]="{'animated_indicator': loading}"
+          cx="50%"
+          cy="50%"
+          r="76"
+          [ngStyle]="{'stroke-dashoffset': progressLength}"
+          style="stroke: white;stroke-dasharray: 477.522px;stroke-linecap: round;"
+        ></circle>
+      </svg>
+    </div>
+    <div
+      class="progress-info__title"
+      style="width: 162px; height: 162px;"
+    >
+      <div>{{progress}} %</div>
+    </div>
+  </div>
+  <div class="connection-info">
+    <div class="connection-info__header">
+      <img src="/assets/svg/no-wifi.svg">
+      <div class="connection-info__title">
+        Bad Internet Connection?
+      </div>
+    </div>
+    <div class="connection-info__description">
+      No worries, we are saving your file in the browser cache. Just come back later and re&#x2011;start the upload.
+    </div>
+  </div>
+</main>
+
+<app-screen-overlay></app-screen-overlay>

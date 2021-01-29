@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head>
+  	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' *; media-src *; font-src *;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+addMessageListener(event => {
+	const name = event.data.name;
+	if(name === 'show') {
+		document.body.style.height = 'auto';
+		document.body.style.visibility = 'hidden';
+		addStringToHtml(event.data.body, document.body);
+		const head = event.data.head;
+		document.getElementsByTagName('head')[0].innerHTML = head;
+		const scripts = document.getElementsByTagName('head')[0].getElementsByTagName('script');
+		for (let n = 0; n < scripts.length; n++) {
+		    eval(scripts[n].innerHTML);
+		}
+		setTimeout(() => {
+			sendMessage({type: 'height', height: document.body.offsetHeight+30});
+			window.addEventListener("resize", () => {
+				document.body.style.visibility = 'visible';
+				document.body.style.transform = 'translateY(150%)';
+				setTimeout(() => {
+					document.body.style.transition = '400ms ease-in-out transform';
+					document.body.style.transform = 'translateY(0%)';
+				}, 0);
+			});
+		}, 0);
+	}
+});
+
+function addMessageListener(listener) {
+	window.addEventListener('message', listener);
+}
+function sendMessage(data) {
+	const message = {
+		name: 'widgetMessageFromInput',
+		info: data
+	};
+	parent.postMessage(message, "*");
+}
+function addStringToHtml(str, parent) {
+	const parser = new DOMParser();
+  	const body = parser
+    	.parseFromString(str, 'text/html')
+    	.body;
+    for (var i = 0; i < body.children.length; i++) {
+        const node = body.children[i];
+        parent.appendChild(node);
+    }
+}
+    </script>
+  </head> 
+  <body>
+  	<div id='header'>
+  	</div>
+  </body>
+    <script type="text/javascript">
+sendMessage({type: 'load'});
+    </script>
+</html>

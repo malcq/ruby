@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600,700,800,900');
+
+@font-face {
+  font-family: 'Shypple4';
+  src: url('./assets/fonts/Shypple4.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/Shypple4.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Shypple4.woff') format('woff'), /* Modern Browsers */
+  url('./assets/fonts/Shypple4.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Shypple4.svg#Shypple4') format('svg'); /* Legacy iOS */
+}
+
+html {
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  background-color: #f5f7fa;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+
+html {
+  font-size: 16px
+}

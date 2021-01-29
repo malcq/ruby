@@ -1,0 +1,50 @@
+@import '../../assets/styles/theme';
+
+.cariage-count{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    display: block;
+    background: none;
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    outline: none;
+    border: 1px solid #ccc;
+    &--desc {
+      border-radius: 50% 0 0 50%;
+      border-right: none;
+    }
+    &--asc {
+      border-radius: 0 50% 50% 0;
+      border-left: none;
+    }
+  }
+
+  &__input {
+    display: block;
+    border: 1px solid #ccc;
+    width: 25px;
+    height: 17px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    border-radius: 0;
+    &.error-field {
+      border-color: #ee4266;
+    }
+  }
+}
+
+.error-holder {
+  position: absolute;
+  background: white;
+  z-index: 98;
+  border: 1px grey solid;
+  border-radius: 3px;
+  padding: 5px;
+  width: calc(100% - 20px);
+  top: 30px;
+}

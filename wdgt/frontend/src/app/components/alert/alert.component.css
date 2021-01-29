@@ -1,0 +1,33 @@
+.alert {
+  padding: 10px;
+  background-color: red;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.alert--vin-screen {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+.alert--brief-screen {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+.alert__content {
+  flex-grow: 1;
+}
+
+.alert__close {
+  padding: 0 5px;
+  font-size: 20px;
+  color: white;
+}

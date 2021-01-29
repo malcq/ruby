@@ -1,0 +1,16 @@
+<app-menu-item
+  [showArrow]="false"
+>
+  <div class="product__name">
+    {{carName}}
+  </div>
+  <div
+    class="product__vin"
+    *ngIf="vin"
+  >
+    {{vin}}
+  </div>
+  <div class="product__feedback-type">
+    {{feedbackType}}
+  </div>
+</app-menu-item>

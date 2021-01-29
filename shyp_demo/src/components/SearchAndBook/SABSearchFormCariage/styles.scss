@@ -1,0 +1,27 @@
+@import '../../../assets/styles/theme';
+
+.search-form__cariage {
+  border-left: 1px solid $light-border-color;
+  width: 170px;
+  padding: 11px;
+  color: $grey;
+  .cariage__form {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .cariage__radio-button {
+    text-align: center;
+  }
+  .cariage__radio {
+    display: none;
+  }
+  .cariage__radio-label {
+    font-size: 9px;
+  }
+  label {
+    text-align: center;
+    cursor: pointer;
+  }
+}

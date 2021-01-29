@@ -1,0 +1,25 @@
+@import "../../assets/styles/theme";
+
+.dialog{
+
+  &__title{
+    font-family: $main-font-family;
+    font-weight: bold;
+  }
+
+  &__message.mui-override{
+    font-family: $main-font-family;
+    color: $text-color
+  }
+
+  &__actions{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1rem 2rem;
+  }
+
+  &__button{
+    margin-left: 1rem;
+    width: 5rem;
+  }
+}

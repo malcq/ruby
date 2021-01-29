@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1",
+    "messages": [
+      {
+        "id": "1",
+        "type": "text",
+        "options": {
+          "text": "Ok. Let’s do this. Please tell me the confimation number of your trip first."
+        }
+      },
+      {
+        "id": "2",
+        "type": "text",
+        "options": {
+          "text": "By the way, how are you doing friend?"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "id": "1",
+        "type": "btn",
+        "options": {
+          "title": "button title"
+        }
+      },
+      {
+        "id": "2",
+        "type": "phone_call",
+        "options": {
+          "title": "Call police",
+          "phone": "+7123456789"
+        }
+      },
+      {
+        "id": "3",
+        "type": "input",
+        "options": {
+          "placeholder": "Enter something great"
+        }
+      }
+    ]
+  }
+]

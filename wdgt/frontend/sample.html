@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Detecting iPhone's App Mode (Full Screen Mode)</title>
+    <meta
+        name="viewport"
+        content="width=device-width"
+        />
+
+    <style type="text/css">
+        #appModeNote {
+            background-color: #333333 ;
+            border-top: 5px solid #000000 ;
+            bottom: 0px ;
+            color: #F0F0F0 ;
+            display: none ;
+            font-family: helvetica ;
+            left: 0px ;
+            padding: 10px 0px 10px 0px ;
+            position: fixed ;
+            text-align: center ;
+            width: 100% ;
+            }
+        #appModeNote em {
+            display: block ;
+            font-size: 20px ;
+            font-weight: bold ;
+            line-height: 26px ;
+            }
+        #appModeNote span {
+            display: block ;
+            font-size: 14px ;
+            line-height: 20px ;
+            }
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        // When the DOM is ready, init the scripts.
+        $(function(){
+            // Get a reference to the app mode note.
+            var appModeNote = $( "#appModeNote" );
+            // Get a reference to the body.
+            var body = $( document.body );
+            // Check to see if the window is running in app mode. If
+            // it is not, then we want to show the app mode note and
+            // bind some event listeners to the scroll.
+            if (
+                ("standalone" in window.navigator) &&
+                !window.navigator.standalone
+                ){
+                // This user is running in a "full screen ready"
+                // device, but is NOT using the full screen mode.
+                // Show the note about full screen.
+                appModeNote.show();
+                // Now that we have shown the note, we want to bind
+                // some special events to get rid of the note when
+                // the user tries to interact with the application.
+                //
+                // We are going to bind the touchStart and touchMove
+                // events such that when the user triggers these
+                // events, we will hide the app mode note.
+                //
+                // Notice that we are using nameSpaced events. This
+                // is to ensure that when we unbind the events (after
+                // the app mode note is removed), we don't remove any
+                // other critical event bindints.
+                body.bind(
+                    "touchstart.appModeNote touchmove.appModeNote",
+                    function( event ){
+                        // Prevent the default events. We are doing
+                        // this both to bring the note to the users
+                        // attention... and because FIXED position
+                        // elements on the "view port" are not truly
+                        // fixed.
+                        event.preventDefault();
+                        // Unbind the current event handler such that
+                        // the user's next attempt to interact with
+                        // the screen is successful.
+                        body.unbind( "touchstart.appModeNote touchmove.appModeNote" );
+                        // Fade out the app mode, full screen note.
+                        appModeNote.fadeOut( 500 );
+                    }
+                );
+            }
+        });
+    </script>
+</head>
+<body>
+
+    <h1>
+        Detecting iPhone's App Mode (Full Screen Mode)
+    </h1>
+
+    <p>
+        Hello, welcome to my mobile web application.
+    </p>
+    <div id="appModeNote">
+        <em>Go Full Screen!</em>
+        <span>Use the "Add to Home Screen" Feature</span>
+    </div>
+    <p>
+        .<br />.<br />.<br />.<br />.<br />.<br />
+        .<br />.<br />.<br />.<br />.<br />.<br />
+        .<br />.<br />.<br />.<br />.<br />.<br />
+        .<br />.<br />.<br />.<br />.<br />.<br />
+        .<br />.<br />.<br />.<br />.<br />.<br />
+    </p>
+
+</body>
+</html>

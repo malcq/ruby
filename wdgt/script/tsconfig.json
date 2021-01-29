@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "es2015",
+    "target": "es5",
+    "allowJs": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "include": [
+    "./src/**/*",
+    "../new_frontend/src/utils/parent/*"
+  ],
+  "typeAcquisition": {
+    "include": [
+      "./src/typings"
+    ]
+  }
+}

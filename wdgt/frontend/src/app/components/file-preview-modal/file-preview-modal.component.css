@@ -1,0 +1,28 @@
+.modal {
+  width: 90%;
+  padding: 2%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.modal__top-bar {
+  position: absolute;
+  top: -55px;
+  right: 0;
+}
+
+.top-bar__close-button {
+  padding: 10px 0;
+}
+.top-bar__close-button,
+.top-bar__close-button > img {
+  width: 30px;
+  height: 30px;
+}
+
+.modal > img,
+.modal > video {
+  width: 100%; 
+}

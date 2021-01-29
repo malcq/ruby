@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/flash</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.90067868,8.62426076 L0.612970594,8.62426076 C0.0851277428,8.62426076 -0.195248703,7.90663383 0.15607666,7.53366477 L7.16206857,0.0968505144 C7.37320572,-0.137845086 7.7685536,0.0927474445 7.64076007,0.376269577 L4.90067868,6.57067426 L9.18325792,6.57067426 C9.73118872,6.57067426 10.0333627,7.04334791 9.68673879,7.44421785 L2.21274047,15.9305974 C2.066996,16.0955408 1.78918398,15.9400345 1.87252758,15.7402149 L4.90067868,8.62426076 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/flash" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Color/Dark_grey" transform="translate(3.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)">
+                <g transform="translate(-30.000000, -26.400000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#666666" fill-rule="evenodd" x="0" y="0" width="71.8" height="68.8"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="0.8" fill="none" x="0" y="0" width="71.8" height="68.8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

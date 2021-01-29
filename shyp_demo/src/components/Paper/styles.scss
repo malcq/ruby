@@ -1,0 +1,27 @@
+@import "../../assets/styles/theme";
+
+.paper{
+  &.mui-override{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background-color: white;
+  }
+
+  &__padded.mui-override{
+    padding: 1rem;
+  }
+
+  &__header{
+    font-family: $main-font-family;
+    display: flex;
+    font-size: 1rem;
+    padding: {
+      right: 1rem;
+      bottom: 1rem;
+    }
+
+    &-icon{
+      margin-right: 0.5rem;
+    }
+  }
+}

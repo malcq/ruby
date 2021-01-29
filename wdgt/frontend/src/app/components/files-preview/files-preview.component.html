@@ -1,0 +1,33 @@
+<div class="file-list" #fileList>
+  <div
+    *ngFor="let file of files; let last = last"
+    class="file"
+    #list
+  >
+    <app-file-preview
+      [file]="file"
+      (removeFile)="onRemoveFile($event)"
+      (clickFile)="onFileClick($event)"
+    ></app-file-preview>
+  </div>
+  <div
+    class="add-file"
+    (click)="onAddFileClick()"
+    [style.visibility]="(files.length>0 || !updateRequest)? 'visible' : 'hidden'"
+  >
+    <app-add-box-image size="20"></app-add-box-image>
+    <div class="add-file__descrition ">
+      Add more
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="currentFile"
+  class="modal"
+>
+  <app-file-preview-modal
+    [file]="currentFile"
+    (close)="onModalClose()"
+  ></app-file-preview-modal>
+</div>

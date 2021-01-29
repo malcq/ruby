@@ -1,0 +1,22 @@
+.footer {
+  background-color: #fbfbfd;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  transition: all 0.3s ease;
+
+  &__text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #1b2531;
+  }
+
+  &__link{
+    &, &:active, &:focus, &:hover {
+      color: #1b2531;
+    }
+  }
+}

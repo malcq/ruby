@@ -1,0 +1,31 @@
+.address-book-edit{
+  &__person-list{
+
+    &.mui-override{
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &-title{
+      font-size: 0.8rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__button{
+    &.mui-override{
+      display: flex;
+      align-items: center;
+    }
+
+    &-container{
+      margin-bottom: 1rem;
+    }
+
+    &-icon{
+      display: block;
+      margin-right: 0.5rem;
+      line-height: 0.8;
+    }
+  }
+}

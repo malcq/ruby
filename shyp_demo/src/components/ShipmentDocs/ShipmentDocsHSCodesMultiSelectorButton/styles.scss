@@ -1,0 +1,79 @@
+@import '../../../assets/styles/theme';
+
+.shipment-docs-hs-codes-multi-selector-button{
+  $font-size: 1rem;
+  $v-padding: 0.4rem;
+  $option-height: $font-size + 2 * $v-padding;
+
+  &__menu-button {
+    width: 640px;
+  }
+
+  &__search{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $background-color;
+    font: lighter $font-size $main-font-family;
+    padding: 0.4rem 1rem;
+
+    &::placeholder{
+      color: #b0b6b9;
+    }
+
+    &-container{
+      display: flex;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  &__info-block {
+    height: 200px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: $passive-color;
+  }
+
+  &__hs-codes-list {
+    outline: none;
+  }
+
+  &__option-parent-name {
+    padding: 5px 8px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $passive-color;
+  }
+
+  &__option-children{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: $passive-color;
+    padding: $v-padding 1rem;
+    line-height: 1.2;
+
+    &:hover{
+      background-color: $green-hover-color;
+    }
+
+    &_disabled:hover{
+      background-color: transparent;
+      cursor: default;
+    }
+
+    &-checkbox.mui-override{
+      $size: 1rem;
+      height: $size;
+      width: $size;
+    }
+
+    &-name{
+      font-weight: lighter;
+    }
+  }
+}

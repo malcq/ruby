@@ -1,0 +1,88 @@
+@import '../../assets/styles/theme';
+@import '../Login/styles';
+
+.change-password-page {
+
+  @extend .login-page;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: $background-color;
+  font-family: $main-font-family;
+
+  &__title.mui-override {
+    font-family: $main-font-family;
+  }
+
+  &__header {
+    width: 2em;
+  }
+
+  &__dialog.mui-override {
+    display: flex;
+    max-width: 20em;
+    width: 100%;
+    max-height: 20em;
+    height: 100%;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__input{
+    &-container{
+      margin: auto 0;
+      flex-basis: 15em;
+      padding: 2em 0;
+    }
+
+    &_hidden{
+      display: none;
+    }
+  }
+
+  &__button{
+    &.mui-override{
+      width: 174px;
+      height: 32px;
+      min-width: 0;
+      min-height: 0;
+      border-radius: 3px;
+      text-transform: none;
+      padding: 0;
+    }
+
+    &-container.mui-override{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+
+  &__description.mui-override {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.62;
+    letter-spacing: normal;
+    color: #818181;
+    font-family: $main-font-family;
+  }
+
+  &__login-links {
+    &, &.mui-override{
+      width: auto;
+      height: 32px;
+    }
+  }
+}
+
+.remember-checkbox svg {
+  font-size: 0.7em;
+}
+
+

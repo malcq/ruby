@@ -1,0 +1,164 @@
+@import '../../mixins.scss';
+
+@mixin radial-menu-animation {
+  opacity: 0;
+}
+
+@keyframes video {
+  from {
+    transform: translateY(80px);
+    @include radial-menu-animation;
+  }
+}
+
+@keyframes library {
+  from {
+    transform: translateX(70px);
+    @include radial-menu-animation;
+  }
+}
+
+@keyframes photo {
+  from {
+    transform: translateX(-70px);
+    @include radial-menu-animation;
+  }
+}
+
+@keyframes text {
+  from {
+    transform: translate(55px, -80px);
+    @include radial-menu-animation;
+  }
+}
+
+@keyframes voice {
+  from {
+    transform: translate(-55px, -80px);
+    @include radial-menu-animation;
+  }
+}
+
+:host {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  @include navbar-margins-a;
+
+  &__subtitle {
+    @include header-subtitle-a;
+  }
+}
+
+.main-container {
+  width: 265px;
+  margin: 54px auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &--first {
+    margin-bottom: -4px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &--second {
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  &--third {
+    justify-content: space-evenly;
+  }
+}
+
+.capture-button {
+  padding: 0 13px;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+
+  &__title {
+    font-weight: bold;
+    line-height: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  & > label {
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 12px;
+  }
+
+  & > input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &--video {
+    animation-name: video;
+  }
+
+  &--library {
+    animation-name: library;
+  }
+
+  &--photo {
+    animation-name: photo;
+  }
+
+  &--voice {
+    animation-name: voice;
+  }
+
+  &--text {
+    animation-name: text;
+  }
+
+
+
+
+}
+
+@media screen and (max-width: $width-sm) {
+  .main-container {
+    margin-bottom: 0;
+    margin-top: 52px;
+    width: 245px;
+  }
+
+  .row {
+    &--first {
+      margin-bottom: -30px;
+    }
+  }
+}
+
+@media screen and (min-height: $height-iphone-6) {
+  .main-container {
+    justify-content: flex-end;
+    margin-bottom: 156px;
+  }
+}

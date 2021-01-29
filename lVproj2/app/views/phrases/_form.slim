@@ -1,0 +1,30 @@
+= form_with(model: @phrase, local: true) do |f|
+
+  .form-group
+    = f.label :phrase
+    br
+    = f.text_field :phrase, class: 'form-control'
+
+  .form-group
+    = f.label :translation
+    br
+    = f.text_field :translation, class: 'form-control'
+
+  .form-group
+    = f.label :category
+    br
+    = f.select(:category, Phrase::CATEGORIES.map{ |k,v| [k,k] }, {}, { class: 'form-control' })
+
+  - if @phrase.id.nil?
+
+    = f.fields_for :examples do |example|
+
+      .form-group
+        = example.label :example
+        br
+        = example.text_field :example, class: 'form-control'
+        = example.hidden_field :user_id, class: 'form-control'
+
+  .actions
+    = f.submit class: 'btn btn-primary'
+

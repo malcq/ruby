@@ -1,0 +1,34 @@
+<div
+  class="actions"
+  [style.visibility]="!hide ? 'visible' : 'hidden'"
+>
+  <div class="chat-input">
+    <div class="chat-input__input">
+      <input type="number" pattern="\d*"
+        id="message"
+        [(ngModel)]="message"
+        placeholder="Milage"
+        (keyup.enter)="onInputKeyupEnter()"
+        [appFocus]="focus"
+      />
+    </div>
+    <div
+      class="chat-input__send-button"
+    >
+      <button
+      id="send"
+        class="send-button"
+        (click)="onSendPress()"
+      >
+        <mat-icon class="send-icon">send</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div
+    id="iDontKnow"
+    class="action"
+    (click)="onIDontKnowPress()"
+  >
+    I don't know.
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@import '../../assets/styles/theme';
+
+.sab__loader {
+  text-align: center;
+  background-color: rgba(68,68,68,0.68);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  &--clear {
+    text-align: center;
+  }
+}

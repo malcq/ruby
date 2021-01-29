@@ -1,0 +1,24 @@
+@import '../../../mixins.scss';
+
+.capture {
+  border: 6px solid $color-white;
+  border-radius: 100px;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inset {
+    width: 54px;
+    height: 54px;
+    background-color: red;
+    border-radius: 100px;
+  }
+
+  &__inset--recording {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
+}

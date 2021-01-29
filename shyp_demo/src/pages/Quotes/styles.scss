@@ -1,0 +1,27 @@
+@import "../../assets/styles/theme";
+
+.quotes-page{
+
+  &.mui-override{
+    background-color: white;
+    border-radius: 3px;
+    padding: 1rem;
+    font-family: $main-font-family;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__header{
+    display: flex;
+    padding: {
+      right: 1rem;
+      bottom: 1rem;
+    }
+
+    &-icon{
+      margin-right: 0.5rem;
+    }
+  }
+
+}

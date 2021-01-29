@@ -1,0 +1,69 @@
+@import '../../../assets/styles/theme';
+
+.search-form__location {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ebedf0;
+  width: 228px;
+  box-sizing: border-box;
+  padding: 11px;
+  font-size: 13px;
+  position: relative;
+  label {
+    color: #98a0a5;
+  }
+  .mui-override.checkbox {
+    margin-left: 2px;
+    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    margin-right: 11px;
+    svg {
+      color: #a6a8aa;
+    }
+    &_checked svg {
+      color: inherit;
+    }
+  }
+  .location__switch {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -7px;
+    font-size: 16px;
+    color: #cccccc;
+    background: white;
+    cursor: pointer;
+    @media screen and (max-width: 550px) {
+      top: -8px;
+      left: calc(50% - 7px);
+    }
+  }
+  .location__input {
+    font-size: 13px;
+    font-family: "Exo 2", sans-serif;
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    &--error::placeholder {
+      color: $red
+    }
+    &--error:-ms-input-placeholder {
+      color: $red
+    }
+    &--error::-ms-input-placeholder {
+      color: $red
+    }
+  }
+  .location-label__root {
+    margin-left: -2px;
+  }
+  .location-label__label {
+    font-size: 11px;
+    color: #98a0a5;
+    font-family: "Exo 2", sans-serif;
+  }
+  &.bln {
+    border-left: none;
+  }
+}

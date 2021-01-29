@@ -1,0 +1,17 @@
+<div
+  *ngIf="message"
+  [@alertAnimation]
+  [class.alert]="message"
+  [class.alert--success]="message.type === 'success'"
+  [class.alert--danger]="message.type === 'error'"
+  [class.alert--vin-screen]="alertStyle === 'vin-screen'"
+  [class.alert--brief-screen]="alertStyle === 'brief-screen'"
+>
+  <div class="alert__content">{{message.text}}</div>
+  <div
+    class="alert__close"
+    (click)="closeAlert()"
+  >
+    &times;
+  </div>
+</div>

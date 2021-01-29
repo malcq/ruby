@@ -1,0 +1,59 @@
+@import "../../assets/styles/theme";
+
+.contact{
+
+  display: flex;
+  padding: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $main-font-family;
+  font-size: 0.8rem;
+  color: black;
+  $border-radius: 3px;
+  border: 1px solid $light-border-color;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $light-hover-color;
+  }
+
+  &:first-child{
+    border-top:{
+      left-radius: $border-radius;
+      right-radius: $border-radius;
+    };
+  }
+
+  &:last-child{
+    border-bottom:{
+      left-radius: $border-radius;
+      right-radius: $border-radius;
+    };
+  }
+  &__icon{
+    min-width: 2.5rem;
+    font-size: 1.875rem;
+  }
+
+  &__field{
+    text-align: center;
+    flex-basis: 8.75rem;
+    word-break: normal;
+
+    &_email{
+      word-break: break-all;
+    }
+  }
+
+  &__label{
+    color: $passive-color
+  }
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    .contact__field {
+      flex-basis: inherit;
+    }
+  }
+}

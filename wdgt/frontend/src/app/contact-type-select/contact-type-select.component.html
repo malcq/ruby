@@ -1,0 +1,33 @@
+<app-nav-bar
+  [hideBack] = "!canClose"
+  (leftButtonPress)="back()"
+></app-nav-bar>
+
+<header class="header">
+  <app-fancy-header
+    title="Select."
+    [blacked]="false"
+    [smallDescription]="true"
+  ></app-fancy-header>
+  <div class="header__subtitle">Contact reason...</div>
+</header>
+
+<main class="container">
+  <div class="type-list">
+    <div
+      class="type-card"
+      *ngFor="let category of categories"
+      (click)="onTypeClick(category)"
+    >
+      <img
+        class="type-card__icon"
+        src="assets/svg/contact-types/{{category.type}}.svg"
+      />
+      <div class="type-card__title">
+        {{category.title}}
+      </div>
+    </div>
+  </div>
+</main>
+
+<app-screen-overlay></app-screen-overlay>

@@ -1,0 +1,21 @@
+<div
+  class="message"
+  [class.message--left]="leftSide"
+  [class.message--loading]="loading"
+>
+  <div
+    *ngIf="!loading"
+    [@readyMessage]="data.sender"
+    (@readyMessage.done)="data.sender"
+  >
+      <span class="message__content" [innerHTML]="data.text|RichTextToHtml"></span>
+  </div>
+  <div
+    class="message__content-loading"
+    *ngIf="loading"
+  >
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>
+  </div>
+</div>

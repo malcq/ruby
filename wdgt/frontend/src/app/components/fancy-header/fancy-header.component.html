@@ -1,0 +1,27 @@
+<div
+  class="fancy-header"
+  [class.fancy-header--black]="blacked"
+>
+  <div
+    *ngIf="title"
+    class="fancy-header__title"
+    [class.fancy-header__title--blue]="blueTitle"
+    [class.fancy-header__title--centered]="centerTitle"
+    [class.fancy-header__title--raised]="raiseTitle"
+  >
+    {{title}}
+  </div>
+  <div
+    *ngIf="subtitle"
+    class="fancy-header__subtitle"
+  >
+    {{subtitle}}
+  </div>
+  <div
+    *ngIf="description"
+    class="fancy-header__description"
+    [class.fancy-header__description--small]="smallDescription"
+  >
+    {{description}}
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/parts</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13.8166555,11.3739921 L8.03439793,5.59173449 C8.60626956,4.13028477 8.2885631,2.41466988 7.08127855,1.20738533 C5.81045271,-0.0634405165 3.90421394,-0.317605685 2.37922293,0.381348529 L5.11149849,3.1136241 L3.20525972,5.01986286 L0.409442866,2.2875873 C-0.35305264,3.81257831 -0.0353461792,5.71881708 1.23547967,6.98964292 C2.44276422,8.19692747 4.15837911,8.51463394 5.61982883,7.94276231 L11.4020864,13.7250199 C11.6562516,13.9791851 12.0374993,13.9791851 12.2916645,13.7250199 L13.7531142,12.2635702 C14.0708207,12.009405 14.0708207,11.564616 13.8166555,11.3739921 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/parts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="baseline-build-24px" transform="translate(1.000000, 1.000000)">
+            <g id="Color/Dark_grey">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(-38.000000, -39.000000)">
+                        <rect id="Fill/Secondary" stroke="none" fill="#666666" fill-rule="evenodd" x="0" y="0" width="86" height="86"></rect>
+                        <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="86" height="86"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

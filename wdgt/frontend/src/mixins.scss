@@ -1,0 +1,58 @@
+/* Window width variables */
+$width-sm: 320px;
+
+/* Window height variables */
+$height-sm: 500px;
+$height-md: 600px;
+$height-iphone-6: 667px;
+$height-iphone-6-bordered: 552px;
+
+/* Color variables */
+$color-primary: #1C69D4;
+$color-secondary: #8E8E8E;
+$color-black: #262626;
+$color-darkgrey: #666666;
+$color-grey: #A8A8A8;
+$color-lightergrey: #E6E6E6;
+$color-greybg: #F3F3F3;
+$color-white: #FFFFFF;
+$color-opacityclean: rgba(0, 0, 0, 0.7);
+
+/* Font variables */
+$font-arial: 'Arial', sans-serif;
+$font-bmw: 'BMW', sans-serif;
+
+$letter-spacing-a: -0.34px;
+
+/* Mixins */
+@mixin primary-button {
+  border-radius: 4px;
+  background-color: $color-primary;
+  font-family: $font-arial;
+  color: $color-white;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+
+  &:active {
+    background-color: rgb(21, 77, 155);
+  }
+}
+
+@mixin header-subtitle-a {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: $letter-spacing-a;
+  line-height: 22px;
+  margin-top: 10px;
+  color: $color-white;
+}
+
+@mixin navbar-margins-a {
+  margin-top: 20px;
+  margin-left: 34px;
+
+  @media screen and (min-height: $height-iphone-6) {
+    margin-top: 17px;
+  }
+}

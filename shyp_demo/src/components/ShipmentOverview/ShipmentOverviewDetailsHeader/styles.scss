@@ -1,0 +1,111 @@
+@import "../../../assets/styles/theme";
+
+.shipment-details-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__column {
+    width: 25%;
+    margin-bottom: 40px;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+
+    @media (max-width: 810px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 12.8px;
+    line-height: 15.2px;
+    color: #98a0a5;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    margin-left: 5px;
+    cursor: pointer;
+
+    &--hover-red {
+      &:hover {
+        color: #f54c3d;
+      }
+    }
+
+    &--hover-green {
+      &:hover {
+        color: #21d2bd;
+      }
+    }
+  }
+
+  &__input {
+    margin-bottom: 1px;
+    border: 0;
+    padding: 0 0 6px 0;
+    color: #555;
+    min-height: 1px;
+    border-bottom: 1px solid #EBEDF0;
+    border-radius: 0;
+    width: 90%;
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:focus {
+      margin-bottom: 0;
+      border-bottom: 2px solid #21d2bd;
+    }
+  }
+
+  &__value {
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--operator {
+      font-weight: 900;
+      font-size: 11.2px;
+      line-height: 17.6px;
+    }
+  }
+
+  &__value-icon {
+    color: #98a0a5;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  &__value-tooltip.mui-override {
+    font-family: $main-font-family;
+    font-size: 14px;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #EBEDF0;
+    word-break: break-all;
+    position: relative;
+    top: -3px;
+
+    &::before, &:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 5px);
+      top: -20px;
+      border: 10px solid #0000;
+      border-bottom: 10px solid #EBEDF0;
+    }
+
+    &:after {
+      border-bottom: 10px solid #fff;
+      top: -19px;
+    }
+  }
+}

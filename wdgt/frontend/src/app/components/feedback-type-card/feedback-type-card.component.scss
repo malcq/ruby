@@ -1,0 +1,71 @@
+@import '../../../mixins.scss';
+
+$card-border-radius: 4px;
+
+:host {
+  width: 100%;
+  max-width: 325px;
+}
+
+.model-card {
+  background-color: $color-white;
+  border-radius: $card-border-radius;
+  padding-bottom: 25px;
+  margin-bottom: 15px;
+
+  &__image {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+    height: 149px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__title,
+  &__description {
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: $font-bmw;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 22px;
+  }
+
+  &__description {
+    font-family: $font-arial;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.type-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px;
+  grid-gap: 15px;
+}
+
+.type-buttons__button {
+  @include primary-button;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+
+  & > img {
+    margin-bottom: 12px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :host {
+    max-width: 270px;
+  }
+}

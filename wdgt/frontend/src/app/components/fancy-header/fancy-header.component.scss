@@ -1,0 +1,62 @@
+@import '../../../mixins.scss';
+
+.fancy-header {
+  background-color: transparent;
+  color: $color-white;
+}
+
+.fancy-header--black {
+  color: $color-black;
+}
+
+.fancy-header__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.fancy-header__title--centered {
+  text-align: center;
+}
+
+.fancy-header__title--raised {
+  margin-top: -12px;
+}
+
+.fancy-header__subtitle {
+  @include header-subtitle-a;
+}
+
+.fancy-header__title--blue {
+  color: $color-primary;
+}
+
+.fancy-header__description {
+  font-size: 17px;
+  font-family: $font-arial;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.fancy-header__description--small {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 320px) {
+  .fancy-header__description {
+    font-size: 16px;
+  }
+
+  .fancy-header__description--small {
+    font-size: 15px;
+  }
+
+  .fancy-header__title {
+    font-size: 26px;
+  }
+
+  .fancy-header__subtitle {
+    font-size: 16px;
+  }
+}

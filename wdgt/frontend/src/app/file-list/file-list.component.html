@@ -1,0 +1,32 @@
+<app-nav-bar (leftButtonPress)="back()"></app-nav-bar>
+<header class="header">
+  <app-fancy-header
+    title="UPLOAD."
+    [blacked]="false"
+    [smallDescription]="true"
+  ></app-fancy-header>
+  <div class="header__subtitle">Or add more...</div>
+</header>
+
+<main class="container">
+  <app-files-preview
+    [files]="files"
+    (removeFile)="onFileRemove($event)"
+    (addFile)="onAddFile()"
+  ></app-files-preview>
+
+  <div
+    class="button-wrapper"
+    [style.visibility]="files.length>0 ? 'visible' : 'hidden'"
+  >
+    <app-fancy-button
+      [disabled]="!online"
+      title="Upload Feedback"
+      [fullWidth]="true"
+      (buttonPress)="onConfirmSelection()"
+      viewType="secondary"
+    ></app-fancy-button>
+  </div>
+</main>
+
+<app-screen-overlay></app-screen-overlay>

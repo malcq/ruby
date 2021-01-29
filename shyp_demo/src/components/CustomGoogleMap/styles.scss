@@ -1,0 +1,83 @@
+@import '../../assets/styles/mediaSettings';
+
+.info-window {
+  z-index: 999;
+  width: 250px;
+  text-align: center;
+  padding: 10px 0;
+  &__title {
+    &--link {
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+        &--text {
+          text-decoration: underline;
+        }
+      }
+      &--text {
+        display: block;
+        &--icon {
+          margin-left: 5px;
+          &.checked {
+            color: #05ceb6;
+          }
+          &.attention {
+            color: #ee4266;
+          }
+        }
+      }
+      &--reference {
+        display: block;
+        font-size: 14px;
+        color: #98a0a5;
+        margin-top: 5px;
+        font-weight: 100;
+      }
+    }
+  }
+
+  &__body {
+    display: inline-flex;
+    margin-top: 5px;
+    &--date-block {
+      color: #1b2538;
+      font-size: 14px;
+      font-weight: 400;
+
+      &__port-code {
+        display: block;
+        color: #818181;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+    &--progress-bar {
+      width: 130px;
+
+      .line-container {
+        padding: 0 10px;
+      }
+
+      .days {
+        color: #98a0a5;
+        font-size: 14px;
+        font-weight: 300;
+
+        .delay {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.small-info-window {
+  &__shipment-link {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

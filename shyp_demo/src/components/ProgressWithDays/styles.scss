@@ -1,0 +1,125 @@
+@import '../../assets/styles/theme';
+@import '../../assets/styles/icons';
+
+$active: $header-left-color;
+$passive: $light-border-color;
+$active-icon: white;
+$passive-icon: $incomplete-node-icon-color;
+$size: 25px;
+$icon-shift-x: 5.4px;
+
+
+.ranged-progress{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__timeline{
+    position: absolute;
+    //top: 50%;
+    top: 13px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 99%;
+    background-color: $passive;
+
+    &-filled{
+      height: 100%;
+      background-color: $active;
+    }
+  }
+
+  &__icon{
+    height: $size;
+    position: relative;
+    top: 1px;
+    font-family: $icon-font-family;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    font-smoothing: antialiased;
+    color: $passive-icon;
+    margin: 0 auto;
+
+    &:before{
+      display: inline-block;
+      color: $passive;
+      font-size: $size;
+    }
+    &:after{
+      position: absolute;
+      color: $passive-icon;
+      font-size: 0.8rem;
+      top: 5.4px;
+    }
+
+    &_active{
+      color: $active-icon;
+      &:before{
+        color: $active;
+      }
+      &:after{
+        color: $active-icon;
+      }
+    }
+
+    &_start{
+      margin-left: 0;
+      &:before{
+        content: $icon-start-and-end;
+      }
+      &:after{
+        left: $icon-shift-x;
+      }
+    }
+
+    &_end{
+      margin-right: 0;
+      &:before{
+        content: $icon-start-and-end;
+        transform: scaleX(-1);
+      }
+      &:after{
+        right: $icon-shift-x;
+      }
+    }
+
+    &_middle{
+      font-family: $main-font-family;
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+      z-index: 1;
+      font-weight: bold;
+
+      &:before{
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 0;
+        z-index: -1;
+        font-family: $icon-font-family;
+        content: $icon-long-mid;
+      }
+    }
+
+    &_air-depart:after{
+      content: $icon-air-depart;
+    }
+
+    &_air-arrive:after{
+      content: $icon-air-arrive;
+    }
+
+    &_cargo:after{
+      content: $icon-cargo;
+    }
+  }
+}

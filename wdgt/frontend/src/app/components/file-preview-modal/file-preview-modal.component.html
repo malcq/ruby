@@ -1,0 +1,33 @@
+<div class="modal">
+  <div class="modal__top-bar top-bar">
+    <div
+      (click)="onCloseClick()"
+      class="top-bar__close-button"
+    >
+      <img
+        src="/assets/svg/close-ios.svg"
+      />
+    </div>
+  </div>
+  <ng-container
+    *ngIf="file"
+  >
+    <img
+      *ngIf="fileType === MediaFileType.image"
+      [src]="fileSrc | sanitizeUrl"
+    >
+    <video
+      #video
+      *ngIf="fileType === MediaFileType.video"
+      [src]="fileSrc | sanitizeUrl"
+      autoplay
+      controls
+    ></video>
+    <audio
+      *ngIf="fileType === MediaFileType.audio"
+      [src]="fileSrc | sanitizeUrl"
+      autoplay
+      controls
+    ></audio>
+  </ng-container>
+</div>

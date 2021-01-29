@@ -1,0 +1,125 @@
+<app-menu-item
+  [showArrow]="isEditable"
+  [headerCaption]="headerCaption"
+>
+  <div *ngIf="!oneFile">
+    <div class="file__file-type many-files">{{title}} <span class="change" *ngIf="isEditable && !getStarted">Change</span><span class="change" *ngIf="isEditable && getStarted">Get started</span></div>
+    <div class="type-list">
+      <div *ngIf = "videoFiles.length">
+        <div class="file-list" #fileList>
+          <div
+            *ngFor="let file of videoFiles;"
+            class="file"
+            #list
+          >
+            <div
+              class="file__thumbnail"
+              [ngStyle]="{'background-image': 'url(' + file.thumbSrc + ')'}"
+            ></div>
+            <div
+              *ngIf="file.fancyDuration"
+              class="file__file-duration"
+            >{{file.fancyDuration}} min</div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf = "audioFiles.length">
+        <div class="file-list" #fileList>
+          <div
+            *ngFor="let file of audioFiles;"
+            class="file"
+            #list
+          >
+          <div
+            class="file__thumbnail"
+            [style.background-image]="'/assets/img/soundwave.png' | sanitizeBackgroundImage"
+          ></div>
+            <div
+              *ngIf="file.fancyDuration"
+              class="file__file-duration"
+            >{{file.fancyDuration}} min</div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf = "photoFiles.length">
+        <div class="file-list" #fileList>
+          <div
+            *ngFor="let file of photoFiles;"
+            class="file"
+            #list
+          >
+            <div
+              class="file__thumbnail"
+              [style.background-image]="file.thumbSrc | sanitizeBackgroundImage"
+            ></div>
+            <div
+              class="file__file-duration"
+            >&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="oneFile && videoFiles.length" class="file-list file-one">
+    <div
+      class="file__thumbnail"
+      [ngStyle]="{'background-image': 'url(' + videoFiles[0].thumbSrc + ')'}"
+    ></div>
+
+    <div class="file__info">
+      <div class="file__file-type">
+        {{title}} <span class="change" *ngIf="isEditable && !getStarted">Change</span><span class="change" *ngIf="isEditable && getStarted">Get started</span>
+      </div>
+      <div
+        class="file__file-duration"
+      >
+        {{videoFiles[0].fancyDuration}} min
+      </div>
+    </div>
+  </div>
+  <div *ngIf="oneFile && audioFiles.length" class="file-list file-one">
+      <div
+        class="file__thumbnail"
+        [style.background-image]="'/assets/img/soundwave.png' | sanitizeBackgroundImage"
+      ></div>
+
+    <div class="file__info">
+      <div class="file__file-type">
+        {{title}} <span class="change" *ngIf="isEditable && !getStarted">Change</span><span class="change" *ngIf="isEditable && getStarted">Get started</span>
+      </div>
+      <div
+        class="file__file-duration"
+      >
+        {{audioFiles[0].fancyDuration}} min
+      </div>
+    </div>
+  </div>
+  <div *ngIf="oneFile && photoFiles.length" class="file-list file-one">
+    <div
+      class="file__thumbnail"
+      [style.background-image]="photoFiles[0].thumbSrc | sanitizeBackgroundImage"
+    ></div>
+
+    <div class="file__info">
+      <div class="file__file-type">
+        {{title}} <span class="change" *ngIf="isEditable && !getStarted">Change</span><span class="change" *ngIf="isEditable && getStarted">Get started</span>
+      </div>
+      <div
+        class="file__file-duration"
+      >
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!videoFiles.length && !audioFiles.length && !photoFiles.length" class="file-list no-file">
+    <div class="file__info">
+      <div class="file__file-type">
+        No files uploaded
+      </div>
+      <div
+        class="file__file-duration"
+      >
+        <ng-template *ngIf="getStarted;then get_started else change"></ng-template>
+      </div>
+    </div>
+  </div>
+</app-menu-item>

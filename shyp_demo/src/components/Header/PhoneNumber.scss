@@ -1,0 +1,16 @@
+.phone-number{
+  &__text {
+    margin-right: 0.25rem;
+  }
+
+  &__link {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+h2 listing phrases
+
+table.table.table-striped
+  tr
+    th Id
+    th Phrase
+    th Translation
+    th Category
+    th Author
+    th Vote
+    th Actions
+  = render @phrases, author: true
+
+= will_paginate @phrases, renderer: WillPaginate::ActionView::BootstrapLinkRenderer
+= link_to 'Create Phrase', new_phrase_path

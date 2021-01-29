@@ -1,0 +1,131 @@
+@import '../../../mixins.scss';
+
+$seekbar-bg: #9B9B9B;
+
+:host * {
+  box-sizing: border-box;
+}
+ 
+/*.seekbar {
+  position: relative;
+
+  & > .seekbar__range-input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+    outline: 0;
+    border: 0;
+  }
+
+  & > .seekbar__range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+  }
+
+  &__progress {
+    height: 2px;
+    background-color: $seekbar-bg;
+    border-radius: 6px;
+  }
+
+  &__progress > [role="progressbar"] {
+    height: 100%;
+    position: relative;
+    background: $color-white;
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+  }
+
+  &__progress > [role="progressbar"]:after {
+    content: " ";
+    display: block;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    background-color: $color-white;
+    border-radius: 100px;
+  }
+}*/
+
+/*
+ * Main
+ */
+.seekbar{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 1.1em;
+    background: $seekbar-bg;
+}
+
+.seekbar_btn,
+.seekbar_bg{
+    padding: 0;
+    position: absolute;
+    left: 0;
+}
+
+/* 
+ * Seekber Circle Button
+ */
+.seekbar_btn{
+  height: 7px;
+  width: 7px;
+  background: #ccc;
+  z-index: 2;
+  border-radius: 1.1em;
+  top: -2px;
+}
+
+/* 
+ * Seekber Background
+ */
+.seekbar_bg{
+    margin: 0;
+    background: $color-white;
+    height: 100%;
+    z-index: 1;
+}
+
+.duration-info {
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 22px;
+  color: $color-white;
+}
+
+//  Mozilla:
+//  https://developer.mozilla.org/en-US/docs/User:Jonathan_Watt/range
+// */
+// .seekbar input[type="range"]::-moz-range-thumb {
+//   display: block;
+//   width: 48px;
+//   height: 48px;
+//   background: transparent;
+//   border: 0;
+// }
+
+// .seekbar input[type="range"]::-moz-range-track {
+//   background: transparent;
+//   border: 0;
+// }
+
+// .seekbar input[type="range"]::-moz-focus-outer {
+//   border: 0;
+// }

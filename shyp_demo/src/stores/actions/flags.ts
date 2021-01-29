@@ -1,0 +1,1 @@
+export const FLAGS_NOT_FOUND = 'FLAGS_NOT_FOUND';

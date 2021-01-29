@@ -1,0 +1,11 @@
+@import 'assets/styles/colors';
+
+.default-nav{
+  margin: 5px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background: var(--the-black-flag);
+  color: #fff;
+}

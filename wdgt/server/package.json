@@ -1,0 +1,24 @@
+{
+  "name": "widget-server",
+  "version": "1.0.0",
+  "description": "3BACK is the first AI-driven app-as-a-service feedback solution that let's brands directly connect customers & PM",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js --name widget",
+    "restart": "pm2 restart widget",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3BACK/widget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3BACK/widget/issues"
+  },
+  "homepage": "https://github.com/3BACK/widget#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

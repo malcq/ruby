@@ -1,0 +1,17 @@
+<div
+  *ngIf="!simple"
+  class="marker-wrapper marker--second"
+>
+  <div class="marker-line"></div>
+  <div class="marker-line-dash"></div>
+  <div class="marker">
+    {{title}}
+  </div>
+</div>
+
+<div
+  *ngIf="simple"
+  class="marker"
+>
+  {{title}}
+</div>

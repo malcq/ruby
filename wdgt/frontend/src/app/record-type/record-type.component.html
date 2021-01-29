@@ -1,0 +1,76 @@
+<app-nav-bar
+  [hideBack] = "!canBack"
+  xButton = "true"
+  (leftButtonPress)="back()"
+></app-nav-bar>
+
+<header class="header">
+  <app-fancy-header
+    [title]="title"
+    [blacked]="false"
+    [smallDescription]="true"
+  ></app-fancy-header>
+  <div class="header__subtitle">{{description}}</div>
+</header>
+
+<main class="main-container">
+  <section class="row row--first">
+    <div class="capture-button capture-button--video">
+      <label for="file-video">
+        <app-file-type-icon type="video"></app-file-type-icon>
+      </label>
+      <input
+        accept="video/*"
+        type="file"
+        name="file-video"
+        id="file-video"
+        capture
+        (change)="onFileChange($event)"
+      />
+    </div>
+  </section>
+  <section class="row row--second">
+    <div class="capture-button capture-button--library">
+      <label for="file-library">
+        <app-file-type-icon type="library"></app-file-type-icon>
+      </label>
+      <input
+        #inputAll
+        accept="image/*, video/*, audio/*"
+        type="file"
+        name="file-library"
+        id="file-library"
+        (change)="onFileChange($event)"
+        multiple
+      />
+    </div>
+    <div class="capture-button capture-button--photo">
+      <label for="file-photo">
+        <app-file-type-icon type="photo"></app-file-type-icon>
+      </label>
+      <input
+        #inputPicture
+        accept="image/*"
+        type="file"
+        name="file-photo"
+        id="file-photo"
+        capture
+        (change)="onFileChange($event)"
+      />
+    </div>
+  </section>
+  <section class="row row--third">
+    <div class="capture-button capture-button--text" (click)="startText()">
+      <label>
+          <app-file-type-icon type="text"></app-file-type-icon>
+      </label>
+    </div>
+    <div class="capture-button capture-button--voice" (click)="captureVoice()">
+      <label>
+        <app-file-type-icon type="voice"></app-file-type-icon>
+      </label>
+    </div>
+  </section>
+</main>
+
+<app-screen-overlay></app-screen-overlay>

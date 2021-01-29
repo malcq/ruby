@@ -1,0 +1,45 @@
+@import '../../../mixins.scss';
+
+button:disabled {
+  background-color: #69788f;
+  pointer-events: none;
+  color: lightgray;
+}
+.fancy-button {
+  background-color: $color-primary;
+  border-radius: 4px;
+  border: none;
+  color: $color-white;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+  line-height: 22px;
+
+  &--rounded {
+    border-radius: 50px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--secondary {
+    background-color: $color-white;
+    color:  $color-primary;
+  }
+
+  :active {
+    background-color: #113973;
+  }
+
+  :disabled {
+    background-color: #69788f;
+    pointer-events: none;
+    color: lightgray;
+  }
+}

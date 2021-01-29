@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- styles are not in separate file because this template will be
+    rendered by puppeteer and there are related problems with paths to static resources-->
+  <style>
+    body {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .word-wrap {
+      word-wrap: break-word;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .flex-container-two {
+      width: 100%;
+      padding: 1% 5%;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 20px;
+      grid-template-areas: 'techs skills''techs education';
+    }
+
+    .description-project {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    .href-project {
+      color: #47A7FF;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    .header {
+      position: relative;
+      padding: 45px 0 5px;
+      margin-bottom: 45px;
+    }
+
+    .logo {
+      height: 181px;
+      width: 151px;
+      position: absolute;
+      top: 0;
+      left: 42px;
+      border-radius: 2px;
+      background-color: black;
+    }
+
+    .name {
+      font-size: 40px;
+      line-height: 47px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #E9E9E9;
+      margin-bottom: 0;
+      padding: 12px 0 0 215px;
+    }
+
+    .profession {
+      line-height: 19px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      background-color: #E9E9E9;
+      padding: 6px 0 17px 215px;
+    }
+
+    .technologies {
+      line-height: 17px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 215px;
+      margin-top: 13px;
+    }
+
+    .technologies-block {
+      padding: 30px 18px;
+      padding-bottom: 0;
+      background-color: #000000;
+      flex: 1;
+      height: auto;
+    }
+
+    .project-href {
+      color: #47A7FF !important;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+    }
+
+    .technologies-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      padding-right: 30px;
+      margin-top: 20px;
+    }
+
+    .technologies-item {
+      list-style: none;
+      padding-top: 10px;
+      display: inline-block;
+    }
+
+    .technologies-icon {
+      width: 30px !important;
+      height: 30px !important;
+      margin-right: 10px;
+    }
+
+    .left-side {
+      display: flex;
+      flex-grow: 2;
+      padding-right: 0;
+    }
+
+    .right-side {
+      flex-grow: 2;
+    }
+
+    .intro {
+      padding-bottom: 80px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    .category {
+      color: #fff;
+      background-color: #202020;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-left: 12px;
+      border-radius: 2px 2px 0 0;
+      padding-top: 6px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    .line-cat {
+      background: linear-gradient(272.47deg, #72EEFF -10.48%, #7472FF 46.7%, #D272FF 113.37%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      width: inherit;
+      height: 4px;
+    }
+
+    .header-project {
+      font-size: 26px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      line-height: normal;
+      text-transform: capitalize;
+      color: #000000;
+      padding-bottom: 16px;
+    }
+
+    .what-i-did {
+      padding-top: 23px;
+    }
+
+    .content-category {
+      padding-left: 26px;
+      padding-top: 19px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      min-width: 260px;
+    }
+
+    .skills {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 1em;
+    }
+
+    .content-category-end {
+      padding-bottom: 30px;
+    }
+
+    .role {
+      padding-bottom: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    .final-text {
+      padding-top: 50px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+
+    ul.skills>li:before {
+      content: "—";
+      position: relative;
+      left: -5px;
+    }
+
+    .projects-section {
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    .brake-page {
+      page-break-before: always;
+    }
+
+    .technology-category {
+      color: black;
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px 2px 0 0;
+      padding-top: 6px;
+      font-size: 15px;
+      height: 25px;
+      position: relative;
+    }
+
+    .technology-category:before {
+      content: ' ';
+      position: absolute;
+      width: 10px;
+      left: -15px;
+      top: 9px;
+      height: 10px;
+      background-color: #A372FF;
+    }
+
+    .final-farewell {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .final-farewell p {
+      margin-left: 3px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="logo" style="display: flex; justify-content: center; align-items: center">
+      <img src="{{ image }}" />
+    </div>
+    <h1 class="name">{{name}}</h1>
+    <p class="profession">
+      {{#if isDeveloper}}
+        {{technologies}}
+      {{/if}}
+       {{text.header__specialty}}
+    </p>
+    <!-- {{#if technologies}}
+    <div class="technologies">
+      {{technologies}}
+    </div>
+    {{/if}} -->
+  </div>
+  <div class="container">
+    <div class="about-me">
+      <div class="intro">
+        {{#if intro}}
+          {{{ intro }}}
+        {{/if}}
+      </div>
+      <div class="grid">
+
+        {{#if knowledgeTechnology}}
+        <div class="word-wrap" style="grid-area: techs">
+          <div class="content-category-end">
+            <div class="category">
+              <b>{{text.info__techs}}</b>
+            </div>
+            <div class="line-cat"></div>
+            <ul class="content-category">
+              {{#each knowledgeTechnology}}
+              <li style="list-style-type: none; margin-bottom: 20px">
+                <div class="technology-category">{{@key}}</div>
+                {{#each this}} {{#if @last}} {{ title }} {{ else }} {{ title }}, {{/if}} {{/each}}
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if skills}}
+        <div class="word-wrap" style="grid-area: skills">
+          <div class="content-category-end">
+            <div class="category">
+              <b>{{text.info__soft_skills}}</b>
+            </div>
+            <div class="line-cat"></div>
+            <ul class="content-category skills">
+              {{{skills}}}
+              <!-- {{#each skills}}
+              <li> {{label}} </li>
+              {{/each}} -->
+            </ul>
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if education}}
+        <div class="word-wrap" style="grid-area: education">
+          <div class="content-category-end">
+            <div class="category">
+              <b>{{text.info__education}}</b>
+            </div>
+            <div class="line-cat"></div>
+            <div class="content-category" style="line-height: 2.1;">
+              {{{education}}}
+            </div>
+          </div>
+        </div>
+        {{/if}}
+
+        <!-- {{#if benefits}}
+        <div class="word-wrap">
+          <div class="content-category-end">
+            <div class="category">
+              <b>BENEFITS</b>
+            </div>
+            <div class="line-cat"></div>
+            <div class="content-category">
+              {{{benefits}}}
+            </div>
+          </div>
+        </div>
+        {{/if}} -->
+      </div>
+    </div>
+
+
+    <div>
+      {{#each projects}}
+      <div class="row" style="page-break-inside: avoid; padding-top: 41px;">
+        {{# if @first}}
+        <div class="projects-section">
+          <div class="col-md-12 word-wrap ">
+            <div>
+              <div class="category">
+                <b>{{../text.info__projects}}</b>
+              </div>
+              <div class="line-cat"></div>
+            </div>
+          </div>
+        </div>
+        {{/if}}
+        <div class="col-md-5 left-side">
+          <div class="content-category" style="max-width: 100%">
+            {{#if images}}
+            {{#checkLengthArray images 1}}
+            <div class="flex-container-two">
+              {{else}}
+              <div style="width: 100%">
+                {{/checkLengthArray}}
+                {{#each images as |val key|}}
+                {{#getMin @index 1 }}
+                <div style="width: inherit">
+                  <img style="width: inherit; max-height: 60%; min-width: 260px !important; object-fit: contain;"
+                    src={{val}} alt="projectPreview">
+                </div>
+                {{/getMin}}
+                {{/each}}
+              </div>
+              {{/if}}
+              <div class='technologies-block'>
+                {{#if href}}
+                <a href={{href}} class="href-project">
+                  {{href}}
+                </a>
+                {{/if}}
+                <ul class='technologies-list'>
+                  {{#if technologies}}
+                  {{#each technologies}}
+                  <li class='technologies-item'>
+                    <img class='technologies-icon' src={{#getIconSrc title}} {{/getIconSrc}}
+                      onerror="this.onerror=null;this.style.display = 'none'" />
+                  </li>
+                  {{/each}}
+                  {{/if}}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 right-side">
+            <div class="content-category"
+              style="display: flex; flex-direction: column; justify-content: space-between; height: 100%">
+              <div>
+
+
+                <div style="display: flex; justify-content: space-between">
+                  <p class="header-project">{{title}}</p>
+                </div>
+                {{#if description}}
+                <div class="description-project">
+                  {{{description}}}
+                </div>
+                {{/if}}
+                <div>
+                </div>
+              </div>
+              <div>
+                <p class="header-project what-i-did ">{{../text.project__role_responsibilities}}:</p>
+                <div class="role">{{{ role }}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      <div class="final-farewell">
+        {{{farewell}}}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

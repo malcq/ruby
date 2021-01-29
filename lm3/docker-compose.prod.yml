@@ -1,0 +1,29 @@
+version: "3"
+services:
+  nginx:
+    build:
+      context: docker/nginx
+    image: lotto-mansion-nginx
+    container_name: lotto-mansion-nginx
+    restart: always
+    depends_on:
+      - server
+      - front
+    ports:
+      - 80:80
+      - 443:443
+
+  server:
+    build:
+      dockerfile: Dockerfile.prod
+    restart: always
+
+  front:
+    build:
+      context: ./ui
+    image: lotto-mansion-front
+    container_name: lotto-mansion-front
+    working_dir: /app
+    restart: always
+    ports:
+      - 3000

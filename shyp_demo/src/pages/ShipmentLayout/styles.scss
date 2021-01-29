@@ -1,0 +1,143 @@
+@import "../../assets/styles/theme";
+@import "../../assets/styles/mediaSettings";
+
+.shipment-layout{
+  $min-nav-size: 950px;
+
+  &__content{
+    padding: 0.625rem 0.75rem;
+  }
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem 1rem;
+    font-size: 1.2rem;
+
+    &-button{
+      &.mui-override{
+        font-weight: lighter;
+        margin-left: 1rem;
+      }
+
+      &-icon:before{
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__navigation{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $light-border-color;
+    padding: 0 0.75rem;
+
+    @media screen and (max-width: $mobile-screen-width){
+      padding: 0;
+      display: block;
+    }
+
+    &-button{
+      &.mui-override{
+        color: $passive-color;
+        font-family: $main-font-family;
+        padding: 0.25rem 0.6rem;
+
+        @media screen and (max-width: $mobile-screen-width){
+          margin: 10px 0 10px 1%;
+          width: 98%;
+        }
+      }
+
+      .icon{
+        font-size: 1rem;
+      }
+
+      &-container{
+        align-self: center;
+      }
+    }
+  }
+
+  &__tab{
+    &.mui-override {
+      color: $light-text-color;
+      font: 500 1rem $main-font-family;
+      text-transform: none;
+      min-width: unset;
+      min-height: fit-content;
+      padding: 0.75rem 1rem;
+
+      @media screen and (min-width: $mobile-screen-width) and (max-width: $min-nav-size){
+        font-size: 0.75rem;
+      }
+
+      @media screen and (max-width: $mobile-screen-width){
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+
+    &_selected.mui-override{
+      color: $text-color;
+
+      @media screen and (max-width: $mobile-screen-width){
+        border-bottom: 2px solid;
+        border-color: $active-color;
+        box-sizing: border-box;
+      }
+    }
+    &-label{
+      display: inline-block;
+    }
+    &-text{
+      &.mui-override{
+        padding: 0;
+      }
+
+      &__badge {
+        background-color: #ee364f;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 11px;
+        padding: 3px;
+        vertical-align: top;
+        margin-left: 3px;
+        font-weight: bold;
+      }
+
+
+      &-wrapper.mui-override{
+        @media screen and (max-width: $mobile-screen-width){
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &-panel.mui-override{
+      min-width: fit-content;
+      min-height: fit-content;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-container.mui-override{
+      @media screen and (max-width: $mobile-screen-width){
+        flex-direction: column;
+      }
+    }
+
+    &-indicator.mui-override{
+      background-color: $active-color;
+      height: 2px;
+
+      @media screen and (max-width: $mobile-screen-width){
+        display: none;
+      }
+    }
+  }
+}

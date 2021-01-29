@@ -1,0 +1,47 @@
+:host {
+  height: 100%;
+  flex-grow: 1;
+  position: relative;
+  background-color: #f8f8f8;
+}
+
+.messages {
+  padding: 20px 20px 20px 20px;
+  flex-grow: 1;
+}
+
+.message--with-avatar {
+  display: flex;
+}
+
+.messages .message-wrapper {
+  margin-bottom: 8px;
+}
+
+.avatar {
+  min-width: 32px;
+  height: 32px;
+  background-size: cover;
+  border-radius: 50px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 10;
+  align-self: flex-start;
+}
+
+.messages .message-wrapper:first-child {
+  /* margin-bottom: 0; */
+}
+
+.message-wrapper--left {
+  justify-content: flex-start;
+}
+
+.chat-input {
+  z-index: 100;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+}

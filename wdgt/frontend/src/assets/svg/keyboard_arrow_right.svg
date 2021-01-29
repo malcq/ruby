@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/keyboard_arrow_right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="1.15104167 13.328125 6.765625 7.71354167 1.15104167 2.09895833 2.86979167 0.380208333 10.203125 7.71354167 2.86979167 15.046875"></polygon>
+    </defs>
+    <g id="ic/keyboard_arrow_right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(3.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#8E8E8E" xlink:href="#path-1"></use>
+            <g id="Color/Grey" mask="url(#mask-2)">
+                <g transform="translate(-50.666667, -48.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#A8A8A8" fill-rule="evenodd" x="0" y="0" width="115" height="115"></rect>
+                    <rect id="Border/Secondary" stroke="#A8A8A8" stroke-width="1" fill="none" x="0" y="0" width="115" height="115"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

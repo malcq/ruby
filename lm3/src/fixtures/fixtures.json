@@ -1,0 +1,7 @@
+{
+  "firstName": "Admin",
+  "pass": "00000000",
+  "email": "admin@admin.com",
+  "password": "$2b$10$zn2XbLm6eNyPSg2hCqk29eap8KAsYN459G4jHoigV9c70T8mFtstS",
+  "role": "admin"
+}

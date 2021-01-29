@@ -1,0 +1,21 @@
+<a
+  href="{{data.link.url}}"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div class="link">
+    <div class="link__image">
+      <img
+        [src]="data.link.image"
+      >
+    </div>
+    <div class="link__footer">
+      <div class="link__title">
+        {{data.link.title}}
+      </div>
+      <div class="link__url">
+        {{data.link.url | fancyUrl}}
+      </div>
+    </div>
+  </div>
+</a>

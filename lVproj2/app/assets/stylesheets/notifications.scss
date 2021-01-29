@@ -1,0 +1,28 @@
+// Place all the styles related to the notifications controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.notification {
+  font-size: 20px;
+  padding: 5px 0;
+
+  .notification-item {
+    color: red;
+    vertical-align: text-top;
+    margin-right: 10px;
+  }
+
+  .readed {
+    color: green;
+  }
+
+  .notification-date {
+    color: gray;
+    font-size: 13px;
+  }
+}
+
+.navigation-notification-item {
+  color: red;
+  font-size: 10px;
+  margin-right: 5px;
+}

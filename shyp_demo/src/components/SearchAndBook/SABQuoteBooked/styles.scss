@@ -1,0 +1,75 @@
+@import '../../../assets/styles/theme';
+.search-book__quote {
+  .confirmed {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    color: #05ceb6;
+    margin-bottom: 31px;
+  }
+  .search-booking__chat-title {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: #1b2538;
+    margin: 32px;
+  }
+  .search-booking__conversation {
+    padding: 13px;
+    margin-top: 16px;
+
+    .comments__container {
+      height: 250px;
+    }
+  }
+
+  .chat-area {
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #edeff1;
+    height: 175px;
+    text-align: right;
+    padding: 20px 70px;
+    color: #98a0a5;
+    font-size: 14px;
+  }
+  .chat-input {
+    border-radius: 0 0 3px 3px;
+    border: 1px solid #edeff1;
+    border-top: none;
+    height: 175px;
+    padding-top: 15px;
+    font-size: 10px;
+    display: flex;
+    position: relative;
+    textarea {
+      background-color: rgb(250, 251, 252);
+      width: 97%;
+      display: block;
+      height: 90px;
+      resize: none;
+      border: none;
+      color: #98a0a5;
+      padding: 10px;
+      margin-bottom: 5px;
+      outline: none;
+    }
+    .chat-button {
+      position: absolute;
+      right: 3%;
+      top: 30px;
+      width: 50px;
+    }
+    .keyboardCut {
+      border-radius: 10px;
+      padding: 0 7px;
+      background-color: #85c6f2;
+      color: #fff;
+      font-weight: bold;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+  .SABSearchItemExpanded {
+    padding: 32px 0 25px;
+  }
+}

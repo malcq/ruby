@@ -1,0 +1,212 @@
+@import "../../assets/styles/theme";
+@import "../../assets/styles/mediaSettings";
+@import "../../assets/styles/icons";
+
+$calendar-color: $passive-color !default;
+$calendar-background: white !default;
+$calendar-month-button-background: #bdc3c7 !default;
+$calendar-month-button-icon-color: rgb(52, 73, 94) !default;
+$calendar-day-selected-background: $green !default;
+$calendar-day-hover-background: $green-hover-color !default;
+$calendar-day-in-range-background: $green-hover-color !default;
+$calendar-padding: 16px !default;
+$calendar-width: 256px + $calendar-padding !default;
+$cell-border-width: 1px;
+$cell-margin: 0 !default;
+$cell-size: (($calendar-width - $calendar-padding * 2) / 7) - ($cell-margin * 2) - 1 !default;
+$calendar-shadow: none !default;
+
+.rdr-DateRange {
+  justify-self: center;
+  display: flex;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-radius: 2px;
+  background: $calendar-background;
+  box-shadow: $calendar-shadow;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .rdr-Calendar {
+    box-shadow: none;
+  }
+}
+
+.rdr-Calendar {
+  display: block;
+  box-sizing: border-box;
+  width: $calendar-width;
+  padding: $calendar-padding;
+  white-space: normal;
+  letter-spacing: 0;
+  color: $calendar-color;
+  border-radius: 2px;
+  background: $calendar-background;
+  box-shadow: $calendar-shadow;
+
+
+  @media screen and (min-width: $mobile-screen-width) {
+    &:first-child .rdr-MonthAndYear-button.next{
+      display: none;
+    }
+
+    &:last-child .rdr-MonthAndYear-button.prev{
+      display: none;
+    }
+  }
+}
+
+.rdr-MonthAndYear-divider{
+  margin: 0 0.25rem
+}
+
+.rdr-MonthAndYear-innerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  height: 2rem;
+  line-height: 1.2;
+  box-sizing: border-box;
+
+  &>span{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.rdr-MonthAndYear-button {
+  $border-radius: 6px;
+  $button-color: $lighter-border-color;
+  $button-color-hover: $border-color;
+  display: block;
+  box-sizing: border-box;
+  width: 28px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid $button-color;
+  color: $button-color;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover{
+    border-color: $button-color-hover;
+    color: $button-color-hover;
+  }
+
+  i {
+    display: block;
+    padding: 0;
+    background: none;
+
+    &:before{
+      display: block;
+      font-style: normal;
+      font-family: $icon-font-family;
+      content: $icon-chevron;
+    }
+  }
+
+  &.prev {
+    justify-self: flex-start;
+    border:{
+      top-left-radius: $border-radius;
+      bottom-left-radius: $border-radius;
+    }
+
+    i {
+      &:before {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+
+  &.next {
+    justify-self: flex-end;
+    border:{
+      top-right-radius: $border-radius;
+      bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+.rdr-WeekDays{
+  display: none;
+
+
+}
+
+.rdr-WeekDay {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: $cell-size / 2;
+  display: inline-block;
+  box-sizing: border-box;
+  width: $cell-size;
+  height: $cell-size / 2;
+  margin-bottom: 1px;
+  text-align: center;
+  letter-spacing: initial;
+}
+
+.rdr-Days{
+  width: 7 * ($cell-size + $cell-border-width) + 1px;
+  margin-top: 0.75rem;
+
+  &>span{
+    display: inline-block;
+    $border: $cell-border-width solid $light-border-color;
+    border: {
+      right: $border;
+      bottom: $border;
+    }
+    &:first-child, &:nth-child(7n+1){
+      border-left: $border;
+    }
+
+    &:nth-child(-n+7){
+      border-top: $border;
+    }
+  }
+}
+
+.rdr-Day {
+  font-size: 1rem;
+  line-height: $cell-size;
+  display: inline-block;
+  box-sizing: border-box;
+  width: $cell-size;
+  height: $cell-size;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  text-align: center;
+  letter-spacing: initial;
+
+
+
+
+
+  &.is-passive {
+    cursor: normal;
+    opacity: 0.3;
+    background-color: #F4F4F4;
+    color: $passive-color;
+  }
+
+  &.is-inRange {
+    color: $calendar-color;
+    background: $calendar-day-in-range-background;
+  }
+
+  &.is-selected {
+    color: $calendar-background;
+    background: $calendar-day-selected-background;
+  }
+
+  &:hover:not(.is-selected) {
+    background: $calendar-day-hover-background;
+  }
+}

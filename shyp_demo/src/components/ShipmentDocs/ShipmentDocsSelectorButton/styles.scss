@@ -1,0 +1,67 @@
+@import '../../../assets/styles/theme';
+
+.shipment-docs-selector-button{
+  $font-size: 1rem;
+  $v-padding: 0.6rem;
+  $option-height: $font-size + 2 * $v-padding;
+
+
+  &__search{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $background-color;
+    font: lighter $font-size $main-font-family;
+    padding: 0.4rem 1rem;
+
+    &::placeholder{
+      color: #b0b6b9;
+    }
+
+    &-container{
+      display: flex;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  &__no-results {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    color: $passive-color;
+    padding: $v-padding 1rem;
+    line-height: $font-size - 0.2rem;
+    font-weight: lighter;
+  }
+
+
+  &__options{
+    height: $option-height*5;
+    overflow-y: scroll;
+  }
+
+  &__option{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: $passive-color;
+    padding: $v-padding 1rem;
+    line-height: $font-size - 0.2rem;
+
+    &:hover{
+      background-color: $green-hover-color;
+    }
+
+    &-checkbox.mui-override{
+      $size: 1rem;
+      height: $size;
+      width: $size;
+    }
+
+    &-name{
+      font-weight: lighter;
+    }
+  }
+
+}

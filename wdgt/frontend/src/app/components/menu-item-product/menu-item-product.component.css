@@ -1,0 +1,16 @@
+.product__name,
+.product__vin {
+  margin-bottom: 5px;
+}
+
+.product__name,
+.product__vin {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #bababa;
+}
+
+.product__name {
+  color: #262626;
+  font-weight: bold;
+}

@@ -1,0 +1,55 @@
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(10%) scale(0.9);
+  }
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 0.2s;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: translateY(10%) scale(0.9);
+  }
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+  animation-duration: 0.2s;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 10px solid #1ea9ef;
+    border-color: #1ea9ef transparent #1ea9ef transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+}
+

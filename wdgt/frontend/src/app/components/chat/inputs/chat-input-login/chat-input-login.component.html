@@ -1,0 +1,56 @@
+<div class="container">
+  <form
+    *ngIf="!loading"
+    name="login-form"
+    (ngSubmit)="f.form.valid  && onSubmitPress()"
+    #f="ngForm"
+    novalidate
+  >
+    <div
+      class="fancy-rounded-input"
+      [class.fancy-rounded-input--invalid]="f.submitted && nameRef.invalid"
+    >
+      <div class="fancy-rounded-input__icon">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <div class="fancy-rounded-input__input">
+        <input
+          #nameRef="ngModel"
+          [(ngModel)]="name"
+          placeholder="Name"
+          minlength="2"
+          name="name"
+          type="text"
+          required
+        >
+      </div>
+    </div>
+    <div
+      class="fancy-rounded-input"
+      [class.fancy-rounded-input--invalid]="f.submitted && emailRef.invalid"
+    >
+      <div class="fancy-rounded-input__icon">
+        <mat-icon>mail</mat-icon>
+      </div>
+      <div class="fancy-rounded-input__input">
+        <input
+          #emailRef="ngModel"
+          [(ngModel)]="email"
+          type="text"
+          name="email"
+          placeholder="E-Mail"
+          [pattern]="emailPattern"
+          required
+        >
+      </div>
+    </div>
+    <div class="submit-button">
+      <button
+        class="fancy-button fancy-button--full-width"
+        type="submit"
+      >
+        Proceed
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+@import "../../assets/styles/theme";
+
+.iconed-button{
+  &.mui-override.button{
+    border-radius: 3px;
+  }
+
+  &__icon{
+
+    $side-padding: 0.25rem;
+
+    &_left{
+      padding-right: 0.25rem;
+    }
+
+    &_right{
+      padding-left: 0.25rem;
+    }
+  }
+}

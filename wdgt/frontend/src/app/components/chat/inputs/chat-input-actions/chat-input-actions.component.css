@@ -1,0 +1,30 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  /*overflow: scroll;*/
+}
+
+.action {
+  cursor: pointer;
+  background-color: #1d69d4;
+  border-radius: 30px;
+  padding: 10px 15px;
+  min-width: 45px;
+  margin-right: 8px;
+  white-space: nowrap;
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.action:active {
+  background-color: #1851a0;
+}
+
+.action:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,134 @@
+@import '../../assets/styles/theme';
+
+.button {
+  &.mui-override {
+    display: inline-block;
+    height: 2.0625rem;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    white-space: nowrap;
+    padding: 0.4375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 4px;
+    background-color: $active-color;
+    color: white;
+    font-family: $main-font-family;
+    flex-shrink: 0;
+  }
+  &_blue{
+    &:hover{
+      background-color: $blue-button-hover-color;
+    }
+  }
+  &_light-blue.mui-override{
+    background-color: $blue;
+    &:hover{
+      background-color: $blue-hover;
+    }
+  }
+  &_full-width{
+    width: 100%;
+  }
+  &_green.mui-override {
+    background-color: $green;
+    &:hover{
+      background-color: $green-button-hover-color;
+    }
+
+  }
+  &_red.mui-override {
+    background-color: $red;
+    &:hover{
+      background-color: $red-button-hover-color;
+    }
+
+  }
+  &_blue-border.mui-override, &_blue-outline.mui-override {
+    border-radius: 3px;
+    border: solid 1px $blue;
+    background-color: transparent;
+    color: $blue;
+
+    &:hover{
+      background-color: $blue-hover;
+      border-color: $blue-hover;
+      color: white;
+    }
+  }
+  &_green-border.mui-override, &_green-outline.mui-override {
+    border-radius: 3px;
+    border: solid 1px $green;
+    background-color: transparent;
+    color: $green;
+
+    &:hover{
+      background-color: $green-hover;
+      border-color: $green-hover;
+      color: white;
+    }
+  }
+  &_grey-border.mui-override, &_grey-outline.mui-override {
+    border: solid 1px $grey;
+
+    background-color: white;
+    color: $light-text-color;
+    font-weight: lighter;
+
+    &:hover{
+      border-color: transparent;
+      background-color: $grey-outline-button-hover-color;
+      color: $grey-outline-button-hover-text-color;
+    }
+  }
+
+  &_grey-outline-disabled.mui-override {
+    border: solid 1px $grey;
+
+    color: $light-text-color;
+    font-weight: lighter;
+    background-color: #f1f0f0;
+
+    &:hover{
+      background-color: #dddddd;
+    }
+  }
+
+  &_grey-border-green.mui-override, &_grey-outline-green.mui-override {
+    border-radius: 4px;
+    border: solid 1px $grey;
+    font-weight: lighter;
+    background-color: white;
+    color: $light-text-color;
+
+    &:hover{
+      border-color: transparent;
+      background-color: $light-green-hover-color;
+      color: $light-green-hover-text-color;
+    }
+  }
+  &_white.mui-override{
+    font-weight: 300;
+    background-color: white;
+    color: $grey-text-color;
+
+    &:hover{
+      color: white;
+      background-color: $grey-background-text-color;
+    }
+  }
+  &_disabled.mui-override{
+    background-color: $disabled-background-color;
+    border-color: $passive-color;
+  }
+  &_mui.mui-override{
+    color: #2196f3;
+    background: none;
+    &:hover{
+      background-color: rgba(33, 150, 243, 0.08);
+    }
+  }
+}

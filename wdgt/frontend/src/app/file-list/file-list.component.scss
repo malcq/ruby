@@ -1,0 +1,39 @@
+@import '../../mixins.scss';
+
+:host {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  @include navbar-margins-a;
+
+  &__subtitle {
+    @include header-subtitle-a;
+  }
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 25px;
+}
+
+.button-wrapper {
+  margin-top: 15px;
+}
+
+@media screen and (min-height: $height-iphone-6-bordered) {
+  .container {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (min-height: $height-iphone-6) {
+  .container {
+    padding-top: 93px;
+  }
+}

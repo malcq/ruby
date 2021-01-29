@@ -1,0 +1,31 @@
+<div class="messages">
+  <ng-container *ngFor="let message of messages">
+    <div
+      class="message-wrapper"
+      [class.message--with-avatar]="message.sender === 'bot'"
+      *ngIf="!message.dontShowInHistory"
+    >
+      <div
+        *ngIf="message.sender === 'bot'"
+        class="avatar"
+        [ngStyle]="{'background-image': (message.hasAvatar?'url(' + avatarImage + ')': 'none')}"
+        [@avatar]="message.sender"
+      ></div>
+      <div
+        [@message]="message.sender"
+        [@.disabled]="!message.fakeBotTypingAnimation"
+      >
+        <app-chat-item
+          [message]="message"
+        ></app-chat-item>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div class="chat-input">
+  <app-chat-input
+    [message]="lastMessage"
+    [context]="context"
+  ></app-chat-input>
+</div>

@@ -1,0 +1,81 @@
+@import '../../../mixins.scss';
+
+$color-cross-icon: #ECF2FB;
+$play-button-height: 50px;
+
+$icon-size-large: 90px;
+
+.file,
+.file__thumb > img,
+.file__thumb > video {
+  width: $icon-size-large;
+  height: $icon-size-large;
+  border-radius: 2px;
+  border-color: transparent;
+}
+
+.file {
+  position: relative;
+
+  &__thumb > video {
+    background-color: black;
+  }
+
+  &__thumb > img,
+  &__thumb > video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+}
+
+.remove-button {
+  width: 18px;
+  height: 18px;
+  background-color: var(--tb-color-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__cross {
+    padding-top: 1px;
+    padding-left: 1px;
+    color: $color-cross-icon;
+    font-size: 9px;
+  }
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: $play-button-height;
+  font-size: $play-button-height;
+  opacity: 0.6;
+  text-align: center;
+  margin-top: -#{$play-button-height / 2};
+  color: $color-white;
+}
+
+.play-icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+  opacity: 0.3;
+}

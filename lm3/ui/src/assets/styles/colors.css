@@ -1,0 +1,56 @@
+/* stylelint-disable */
+
+:root {
+  --brand-text-normal: #191f28;
+  --brand-text-light: #b6b6b7;
+  --brand-background: #f8f9fa;
+  --btn-default: rgba(0, 0, 0, 0.6);
+  --btn-success: #56c300;
+  --btn-danger: #c30000;
+  --btn-default-hover: rgba(0, 0, 0, 0.8);
+  --btn-success-hover: #4eaf02;
+  --btn-danger-hover: #a30606;
+
+  --brand-white: #fff;
+  --brand-grey-dark: #d8d8d8;
+  --brand-grey-medium: #f0f0f0;
+  --brand-success: #28a745;
+  --brand-semi-success: rgba(40, 167, 69, 0.5);
+  --brand-info: #17a2b8;
+  --brand-semi-info: rgba(23, 162, 184, 0.5);
+  --brand-warning: #ffc107;
+  --brand-error: #dc3545;
+  --brand-semi-error: rgba(220, 53, 69, 0.5);
+  --brand-link: #007bff;
+
+  --brand-blue: #7AB0DF;
+
+  --admin-header: #000;
+  --admin-active-link: #007bff;
+
+  /* drunken-parrot themes colors */
+
+  /* ACCENT COLORS */
+  --lagoon: #02baf2;
+  --overboard: #009dcd;
+  --strawberry: #f84545;
+  --first-blood: #cc0000;
+  --banana: #fad46b;
+  --doubloon: #f3bc65;
+  --bruise: #a88cd5;
+  --sugar-plum: #9175bd;
+  --emerald-cove: #3eb5ac;
+  --land-lubber: #28948c;
+  --horizon: #f58410;
+  --nassua-sunset: #e96300;
+
+  /*SHADE COLORS*/
+  --the-black-flag: #364347;
+  --gunpowder: #5e696d;
+  --pieces-of-eight: #93a4aa;
+  --cutlass: #b2c6cd;
+  --coral: #d6e1e5;
+  --costal-surf: #e1eef3;
+}
+
+/* stylelint-enable */

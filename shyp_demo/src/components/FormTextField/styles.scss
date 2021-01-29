@@ -1,0 +1,29 @@
+@import '../../assets/styles/theme';
+
+.form-text-field{
+  &__input{
+    &.mui-override{
+      width: 100%;
+      font-size: 1rem;
+      font-family: $main-font-family;
+      line-height: 1.2;
+      color: $text-color;
+      &:after{
+        border-color: $active-color;
+      }
+    }
+
+    &_selector.mui-override{
+      user-select: none;
+      cursor: pointer;
+    }
+
+    &_disabled.underline.mui-override:before{
+      border-bottom-style: solid
+    }
+  }
+
+  &__selector-input.mui-override{
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,27 @@
+<app-menu-item
+  [showArrow]="!disabled"
+>
+  <div
+    class="content"
+  >
+    <div
+      class="content__icon"
+      *ngIf="icon"
+    >
+      <img
+        src="/assets/svg/{{icon}}.svg"
+      >
+    </div>
+    <div>
+      <div class="title">
+        {{title}}
+      </div>
+      <div
+      class="description"
+      *ngIf="description"
+      >
+          {{description}}
+      </div>
+    </div>
+  </div>
+</app-menu-item>

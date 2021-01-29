@@ -1,0 +1,55 @@
+/* Breakpoint variables */
+// width variables
+$width-xs: 320px; // iphone se, portrait
+$width-sm: 576px; // iphone se, landscaped
+$width-lg: 992px; // tablets
+$width-xl: 1200px; // desktops
+
+/* Mixins */
+// MEDIA QUERIES //
+/**
+ * Use them like that:
+ * .some-cool-selector {
+ *   @mixin media-lg {
+ *     color: white;
+ *   }
+ * }
+*/
+
+@mixin media-query-width($media: $width-xs, $direction: max) {
+  $extrema: null;
+
+  @if $direction == max {
+    $extrema: max;
+  }
+  @if $direction == min {
+    $extrema: min;
+  }
+  @media only screen and (#{$extrema}-width: $media - 1px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @include media-query-width($width-xl) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @include media-query-width($width-lg) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @include media-query-width($width-sm) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @include media-query-width($width-xs) {
+    @content;
+  }
+}

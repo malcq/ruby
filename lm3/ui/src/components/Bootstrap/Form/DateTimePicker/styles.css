@@ -1,0 +1,7 @@
+.datetime-picker {
+  &.is-invalid {
+    ~ .invalid-feedback {
+      display: block;
+    }
+  }
+}

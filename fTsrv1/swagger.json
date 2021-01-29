@@ -1,0 +1,2575 @@
+{
+  "info": {
+    "title": "fusion-swagger",
+    "version": "1.0.0",
+    "description": "internal-server swagger"
+  },
+  "openapi": "3.0.0",
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "authorization"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "projects",
+      "description": "Projects"
+    },
+    {
+      "name": "requests",
+      "description": "Requests"
+    },
+    {
+      "name": "articles",
+      "description": "Articles"
+    },
+    {
+      "name": "skills",
+      "description": "Skills"
+    },
+    {
+      "name": "extraHours",
+      "description": "ExtraHours"
+    },
+    {
+      "name": "statistics",
+      "description": "user's statistics"
+    },
+    {
+      "name": "tag",
+      "description": "tag"
+    },
+    {
+      "name": "auth",
+      "description": "auth"
+    },
+    {
+      "name": "anounsments",
+      "description": "anounsments"
+    },
+    {
+      "name": "cv",
+      "description": "cv creator"
+    },
+    {
+      "name": "portfolio",
+      "description": "portfolio creator"
+    },
+    {
+      "name": "technologies",
+      "description": "technologies"
+    },
+    {
+      "name": "techGroup",
+      "description": "techGroup"
+    },
+    {
+      "name": "users",
+      "description": "users"
+    },
+    {
+      "name": "taskJobs",
+      "description": "taskJobs"
+    },
+    {
+      "name": "plans",
+      "description": "plans"
+    }
+  ],
+  "paths": {
+    "/api/announcement/{id}": {
+      "get": {
+        "summary": "GET announcement by id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "anounsment db Pkey"
+          }
+        ],
+        "tags": [
+          "anounsments"
+        ],
+        "responses": {
+          "200": {
+            "description": "anounsment"
+          },
+          "500": {
+            "description": "err message. probably wrong request data"
+          }
+        }
+      },
+      "delete": {
+        "summary": "GET announcement by id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "anounsment db Pkey"
+          }
+        ],
+        "tags": [
+          "anounsments"
+        ],
+        "responses": {
+          "200": {
+            "description": "anounsment"
+          },
+          "500": {
+            "description": "error message. Probably wrong request"
+          }
+        }
+      },
+      "put": {
+        "summary": "create new anounsment",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "required": true,
+            "description": "announsment db Pkey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/AnounsmentModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "anounsments"
+        ],
+        "responses": {
+          "200": {
+            "description": "anounsment"
+          },
+          "500": {
+            "description": "error message. Probably wrong request"
+          }
+        }
+      }
+    },
+    "/api/announcement/": {
+      "get": {
+        "summary": "GET filtered and sorted announcements list",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "schema": {
+              "type": "string"
+            },
+            "description": "STRINGIFIED filter object"
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "number"
+            },
+            "description": "current page"
+          },
+          {
+            "in": "query",
+            "name": "perPage",
+            "schema": {
+              "type": "number"
+            },
+            "description": "rows per page"
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "array",
+              "collectionFormat": "multi",
+              "description": "rows per page",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "tags": [
+          "anounsments"
+        ],
+        "responses": {
+          "200": {
+            "description": "anounsments"
+          },
+          "500": {
+            "description": "err message. probably wrong request data"
+          }
+        }
+      },
+      "post": {
+        "summary": "create new anounsment",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/AnounsmentModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "anounsments"
+        ],
+        "responses": {
+          "200": {
+            "description": "anounsment created"
+          },
+          "500": {
+            "description": "error message. Probably wrong request body"
+          }
+        }
+      }
+    },
+    "/api/articles/": {
+      "get": {
+        "summary": "GET all articles",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "title": "string"
+              }
+            },
+            "description": "filter for where"
+          }
+        ],
+        "tags": [
+          "articles"
+        ],
+        "responses": {
+          "200": {
+            "description": "articles"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create new article",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/createArticleModel"
+              }
+            },
+            "description": "New article object"
+          }
+        },
+        "tags": [
+          "articles"
+        ],
+        "responses": {
+          "200": {
+            "description": "Article created"
+          },
+          "424": {
+            "description": "Invalid URL"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/articles/{id}": {
+      "delete": {
+        "summary": "Delete article",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "article db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "articles"
+        ],
+        "responses": {
+          "200": {
+            "description": "article deleted"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/auth/authorize": {
+      "post": {
+        "summary": "Check authorization cookie",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cookie": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "user data"
+          },
+          "403": {
+            "description": "Error message, probably wrong request"
+          },
+          "404": {
+            "description": "error no such user"
+          }
+        }
+      }
+    },
+    "/api/auth/password_restore": {
+      "post": {
+        "summary": "Request password restore",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "email have been sent to the email"
+          },
+          "403": {
+            "description": "Error message, probably wrong request"
+          },
+          "404": {
+            "description": "error no such user"
+          }
+        }
+      }
+    },
+    "/api/auth/reset/{token}": {
+      "post": {
+        "summary": "reset password",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "token",
+            "schema": {
+              "type": "string"
+            },
+            "description": "token generated onRestore"
+          },
+          {
+            "name": "reset pass object"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "newPass": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "password have been changed"
+          },
+          "400": {
+            "description": "no token"
+          },
+          "404": {
+            "description": "err message. Probably no such user"
+          }
+        }
+      }
+    },
+    "/api/auth/signin": {
+      "post": {
+        "summary": "log in",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "login": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "password have been changed"
+          },
+          "500": {
+            "description": "validation errors"
+          }
+        }
+      }
+    },
+    "/api/auth/signup": {
+      "post": {
+        "summary": "register",
+        "produces": [
+          "application/json"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "login": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "password have been changed"
+          }
+        }
+      }
+    },
+    "/api/cv/": {
+      "post": {
+        "summary": "Create cv pdf",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/cvRequestModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "cv"
+        ],
+        "responses": {
+          "200": {
+            "description": "cv created"
+          },
+          "500": {
+            "description": "error message, probably invalid request"
+          }
+        }
+      }
+    },
+    "/api/event/": {
+      "get": {
+        "description": "GET all events records",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "requests"
+          }
+        }
+      }
+    },
+    "/api/extra/": {
+      "get": {
+        "summary": "GET filtered and sorted list of articles",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "order",
+            "description": "sort direction",
+            "schema": {
+              "type": "string"
+            },
+            "example": "asc"
+          },
+          {
+            "in": "query",
+            "name": "orderBy",
+            "schema": {
+              "type": "string"
+            },
+            "example": "date",
+            "description": "sort field"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "number"
+            },
+            "description": "pagination offset",
+            "example": 1
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "number"
+            },
+            "example": 10,
+            "description": "pagination limit"
+          }
+        ],
+        "tags": [
+          "extraHours"
+        ],
+        "responses": {
+          "200": {
+            "description": "filtered and sorted list"
+          },
+          "500": {
+            "description": "err message. probably invalid request data"
+          }
+        }
+      },
+      "post": {
+        "summary": "create new extra hours record",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/ExtraHoursModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "extraHours"
+        ],
+        "responses": {
+          "201": {
+            "description": "Extra hour record created"
+          },
+          "400": {
+            "description": "validation error"
+          },
+          "500": {
+            "description": "err message. probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/extra/{id}": {
+      "put": {
+        "summary": "update extra hours record",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/ExtraHoursModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "extraHours"
+        ],
+        "responses": {
+          "200": {
+            "description": "article"
+          },
+          "400": {
+            "description": "validation error"
+          },
+          "500": {
+            "description": "err message. probably invalid request data"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete extra hours record",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "extra hours db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "extraHours"
+        ],
+        "responses": {
+          "200": {
+            "description": "extraHours"
+          },
+          "500": {
+            "description": "err message. probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/plan/{id}": {
+      "get": {
+        "summary": "GET particukar plan by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "plan db Pkey"
+          }
+        ],
+        "tags": [
+          "plans"
+        ],
+        "responses": {
+          "200": {
+            "description": "plan"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      },
+      "put": {
+        "summary": "update Plan",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "plan db Pkey"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/PlanModel"
+              },
+              "description": "new Plan object"
+            }
+          }
+        },
+        "tags": [
+          "plans"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan updated"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete Plan",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "plan db Pkey"
+          }
+        ],
+        "tags": [
+          "plans"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan deleted"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/plan/": {
+      "post": {
+        "summary": "create Plan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/PlanModel"
+              },
+              "description": "new Plan object"
+            }
+          }
+        },
+        "tags": [
+          "plans"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan created"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/plan/taskJobInPlan/{id}": {
+      "put": {
+        "summary": "update Plan",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "plan db Pkey"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/PlanModel"
+              },
+              "description": "new Plan object"
+            }
+          }
+        },
+        "tags": [
+          "plans"
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan updated"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/portfolio": {
+      "post": {
+        "summary": "Create portfolio pdf",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/portfolioRequestModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "portfolio"
+        ],
+        "responses": {
+          "200": {
+            "description": "portfolio created"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/projects/": {
+      "get": {
+        "summary": "GET filtered array of Projects",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "required": true,
+            "allowReserved": true,
+            "schema": {
+              "type": "string",
+              "example": {
+                "users": [
+                  1,
+                  2,
+                  3
+                ],
+                "technologies": [
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "description": "filter for where STRINGIFIED object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "array",
+              "collectionFormat": "multi",
+              "required": true,
+              "items": {
+                "type": "string"
+              },
+              "description": "sorting parameters",
+              "example": [
+                "id",
+                "ASC"
+              ]
+            }
+          }
+        ],
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "Filtered and ordered list of projects"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create new project",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/definitions/ProjectModel"
+              },
+              "encoding": {
+                "imagesSrc": {
+                  "contentType": "image/png, image/jpeg"
+                },
+                "role": {
+                  "contentType": "application/json"
+                }
+              }
+            }
+          },
+          "description": "new project object"
+        },
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "project created"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/projects/project/{id}": {
+      "get": {
+        "summary": "Get particular project by it's db ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "project db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "project with selected id or null if missmatched id"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/projects/{userId}": {
+      "get": {
+        "summary": "Get projects related to particular user",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "user db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of selected user's projects"
+          },
+          "500": {
+            "description": "Error message"
+          }
+        }
+      }
+    },
+    "/api/projects/{id}": {
+      "put": {
+        "summary": "Update existing project",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "db Pkey of project",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/definitions/ProjectModel"
+              },
+              "encoding": {
+                "imagesSrc": {
+                  "contentType": "image/png, image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "project updated"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/project/{id}": {
+      "delete": {
+        "summary": "delete particular project",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "project db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "projects"
+        ],
+        "responses": {
+          "200": {
+            "description": "project deleted"
+          },
+          "500": {
+            "description": "err message"
+          }
+        }
+      }
+    },
+    "/api/request/{userId}": {
+      "get": {
+        "summary": "GET all user's request records",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "user's DB pkey",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "requests"
+        ],
+        "responses": {
+          "200": {
+            "description": "Particular user's requests"
+          },
+          "500": {
+            "description": "error message. Probably error in parameters"
+          }
+        }
+      }
+    },
+    "/api/request/": {
+      "get": {
+        "summary": "GET all request records",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "allowReserved": true,
+            "schema": {
+              "type": "string",
+              "example": {
+                "type": "string",
+                "status": "string"
+              },
+              "description": "filter for where STRINGIFIED object"
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "array",
+              "collectionFormat": "multi",
+              "items": {
+                "type": "string"
+              },
+              "description": "sorting parameters",
+              "example": [
+                "id",
+                "ASC"
+              ]
+            }
+          }
+        ],
+        "tags": [
+          "requests"
+        ],
+        "responses": {
+          "200": {
+            "description": "Filtered and sorted list of requests"
+          },
+          "500": {
+            "description": "error message. Probably error in parameters"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update request record",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/requestModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "requests"
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated request record"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create request record",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/createRequestModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "requests"
+        ],
+        "responses": {
+          "201": {
+            "description": "new request created"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/request/{id}": {
+      "delete": {
+        "summary": "Delete request record",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "request db PK",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "requests"
+        ],
+        "responses": {
+          "200": {
+            "description": "request deleted"
+          },
+          "500": {
+            "description": "Error message. Probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/skills/": {
+      "get": {
+        "summary": "GET all skills records",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "skills"
+        ],
+        "responses": {
+          "200": {
+            "description": "all requests list"
+          },
+          "500": {
+            "description": "err mesage"
+          }
+        }
+      }
+    },
+    "/api/statistics/{id}": {
+      "get": {
+        "summary": "GET all stats for user",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "dates",
+            "schema": {
+              "$ref": "#/definitions/dates"
+            },
+            "description": "filter for where by date"
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "id of user"
+          }
+        ],
+        "tags": [
+          "statistics"
+        ],
+        "responses": {
+          "200": {
+            "description": "statistics for user"
+          }
+        }
+      }
+    },
+    "/api/statistics/holiday/{id}": {
+      "get": {
+        "summary": "GET User's holiday statistic",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "id of user",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "statistics"
+        ],
+        "responses": {
+          "200": {
+            "description": "statistics for user"
+          },
+          "500": {
+            "description": "err message. probably invalid request data"
+          }
+        }
+      }
+    },
+    "/api/tag/": {
+      "get": {
+        "summary": "GET all tags",
+        "tags": [
+          "tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "tags"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create tag",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TagModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "tag created"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update tag",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/UpdateTagModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "tag updated"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete tag",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TagModelTitle"
+              }
+            }
+          }
+        },
+        "tags": [
+          "tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "tag deleted"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/tag/{id}": {
+      "get": {
+        "summary": "Get tag by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "tag's db pkey",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "tag"
+        ],
+        "responses": {
+          "200": {
+            "description": "tag"
+          },
+          "500": {
+            "description": "err message. probably invalid request body"
+          }
+        }
+      }
+    },
+    "/api/taskjob/": {
+      "get": {
+        "summary": "GET filtered and sorted list of task jobs",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "schema": {
+              "type": "string",
+              "description": "STRINGIFIED filter object for where",
+              "example": {
+                "title": "string"
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "array",
+              "example": [
+                "id",
+                "asc"
+              ],
+              "collectionFormat": "multi",
+              "items": {
+                "type": "string"
+              },
+              "description": "sorting parameters"
+            }
+          }
+        ],
+        "tags": [
+          "taskJobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "taskJobs list"
+          },
+          "500": {
+            "description": "error message probably wrong request"
+          }
+        }
+      },
+      "post": {
+        "summary": "create TaskJob",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TaskJobModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "taskJobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "TaskJob created"
+          },
+          "500": {
+            "description": "error message probably wrong request"
+          }
+        }
+      }
+    },
+    "/api/taskjob/{id}": {
+      "put": {
+        "summary": "update TaskJob",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "taskJob db Pkey"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TaskJobModel"
+              }
+            },
+            "description": "new project object",
+            "in": "body"
+          }
+        },
+        "tags": [
+          "taskJobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "TaskJob updated"
+          },
+          "500": {
+            "description": "error message probably wrong request"
+          }
+        }
+      },
+      "get": {
+        "summary": "get particukar TaskJob by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "taskJob db Pkey"
+          }
+        ],
+        "tags": [
+          "taskJobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "TaskJob"
+          },
+          "500": {
+            "description": "error message probably wrong request"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete TaskJob by id",
+        "parameters": [
+          {
+            "in": "path",
+            "required": true,
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "taskJob db Pkey"
+          }
+        ],
+        "tags": [
+          "taskJobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "TaskJob deleted"
+          },
+          "500": {
+            "description": "error message probably wrong request"
+          }
+        }
+      }
+    },
+    "/api/tech-group/": {
+      "get": {
+        "summary": "GET all tech groups",
+        "tags": [
+          "techGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "techGroups"
+          },
+          "500": {
+            "description": "err message"
+          }
+        }
+      },
+      "post": {
+        "summary": "create new tech group",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TechGroupModel"
+              }
+            },
+            "description": "new tech group object"
+          }
+        },
+        "tags": [
+          "techGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "tech group created"
+          },
+          "500": {
+            "description": "err message"
+          }
+        }
+      },
+      "put": {
+        "summary": "update tech group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "db Pkey"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TechGroupModel"
+              }
+            },
+            "description": "new tech group object"
+          }
+        },
+        "tags": [
+          "techGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "tech group updated"
+          },
+          "500": {
+            "description": "err message"
+          }
+        }
+      }
+    },
+    "/api/tech-group/{id}": {
+      "delete": {
+        "summary": "delete tech group",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "techGroup db pkey"
+          }
+        ],
+        "tags": [
+          "techGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "tech group deleted"
+          },
+          "500": {
+            "description": "err message"
+          }
+        }
+      }
+    },
+    "/api/technology/": {
+      "get": {
+        "summary": "GET all technologies",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "technologies"
+        ],
+        "responses": {
+          "200": {
+            "description": "technologies list"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/tecnology/": {
+      "post": {
+        "summary": "Create new tecnology",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TechnologyModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "technologies"
+        ],
+        "responses": {
+          "200": {
+            "description": "technologies"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/tecnology/{id}": {
+      "put": {
+        "summary": "Create new tecnology",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "tecnology db Pkey",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/TechnologyModel"
+              }
+            },
+            "description": "new tecnology object"
+          }
+        },
+        "tags": [
+          "technologies"
+        ],
+        "responses": {
+          "200": {
+            "description": "technologies"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete technology by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": "trre",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "tags": [
+          "technologies"
+        ],
+        "responses": {
+          "200": {
+            "description": "delete technology"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/users/{login}": {
+      "get": {
+        "summary": "GET user by login",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "login",
+            "schema": {
+              "type": "string"
+            },
+            "description": "user's login"
+          }
+        ],
+        "tags": [
+          "users"
+        ],
+        "responses": {
+          "200": {
+            "description": "user"
+          }
+        }
+      }
+    },
+    "/api/users/": {
+      "get": {
+        "summary": "GET filtered and sorted user list",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "filter": {
+                    "type": "object",
+                    "description": "filter for where",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "notRole": {
+                        "type": "string"
+                      },
+                      "status": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "sort": {
+                    "type": "array",
+                    "collectionFormat": "multi",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "id",
+                      "asc"
+                    ]
+                  },
+                  "description": "sorting parameters"
+                }
+              }
+            },
+            "in": "body"
+          }
+        },
+        "tags": [
+          "users"
+        ],
+        "responses": {
+          "200": {
+            "description": "user"
+          }
+        }
+      }
+    },
+    "/api/users/editUser": {
+      "put": {
+        "summary": "edit user record",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/definitions/UserModel"
+              }
+            }
+          }
+        },
+        "tags": [
+          "users"
+        ],
+        "responses": {
+          "200": {
+            "description": "user updated"
+          },
+          "500": {
+            "description": "error message"
+          }
+        }
+      }
+    },
+    "/api/users/adminChange/{id}": {
+      "put": {
+        "summary": "edit user record",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "schema": {
+              "type": "number"
+            },
+            "description": "user db Pkey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": null,
+            "schema": {
+              "$ref": "#/definitions/UserModel"
+            }
+          }
+        },
+        "tags": [
+          "users"
+        ],
+        "responses": {
+          "200": {
+            "description": "user updated"
+          },
+          "403": {
+            "description": "invalid token"
+          },
+          "500": {
+            "description": "erroe message"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AnounsmentModel": {
+      "type": "object",
+      "required": [
+        "link"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "id": {
+          "type": "number"
+        }
+      }
+    },
+    "createArticleModel": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "__isNew__": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "link"
+      ]
+    },
+    "cvRequestModel": {
+      "type": "object",
+      "properties": {
+        "farewell": {
+          "type": "string"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "number"
+            }
+          }
+        },
+        "projects": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "number"
+          }
+        },
+        "isMyData": {
+          "type": "string"
+        },
+        "specializedOn": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "string"
+          },
+          "skills": {
+            "type": "string"
+          },
+          "education": {
+            "type": "string"
+          },
+          "benefits": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string"
+          },
+          "knowledgeTechnology": {
+            "type": "array",
+            "collectionFormat": "multi",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "rolesInProjects": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string"
+              },
+              "technologies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "eventModel": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "technical",
+            "vacation",
+            "medical",
+            "dayOff",
+            "common",
+            "documents"
+          ]
+        },
+        "dateFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTo": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dates": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "comment": {
+          "type": "string"
+        },
+        "deniedComment": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "wait",
+            "completed",
+            "denied",
+            "inProgress"
+          ]
+        }
+      }
+    },
+    "createEventModel": {
+      "type": "object",
+      "required": [
+        "title",
+        "date",
+        "type",
+        "comment"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "technical",
+            "vacation",
+            "medical",
+            "dayOff",
+            "common",
+            "documents"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "from": {
+          "type": "object"
+        }
+      }
+    },
+    "ExtraHoursModel": {
+      "type": "object",
+      "required": [
+        "link"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "project_id": {
+          "type": "number"
+        },
+        "user_id": {
+          "type": "number"
+        }
+      }
+    },
+    "PlanModel": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "noteForAdmin": {
+          "type": "string"
+        },
+        "idChain": {
+          "type": "number"
+        }
+      }
+    },
+    "portfolioRequestModel": {
+      "type": "object",
+      "properties": {
+        "mainTitle": {
+          "type": "string"
+        },
+        "projects": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "number"
+          }
+        },
+        "rolesInProjects": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string"
+              },
+              "technologies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ProjectModel": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "users": {
+          "type": "string",
+          "in": "body",
+          "description": "string of ids with ',' delimeter"
+        },
+        "technologies": {
+          "type": "string",
+          "in": "body",
+          "description": "string of ids with ',' delimeter"
+        },
+        "projectIMG": {
+          "type": "string",
+          "format": "binary",
+          "description": "file"
+        },
+        "changedImages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "oldImages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "role": {
+          "type": "string",
+          "description": "stringified array of objects"
+        }
+      }
+    },
+    "requestModel": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "technical",
+            "vacation",
+            "medical",
+            "dayOff",
+            "common",
+            "documents"
+          ]
+        },
+        "dateFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTo": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dates": {
+          "type": "array",
+          "collectionFormat": "multi",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "comment": {
+          "type": "string"
+        },
+        "deniedComment": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "wait",
+            "completed",
+            "denied",
+            "inProgress"
+          ]
+        }
+      }
+    },
+    "createRequestModel": {
+      "type": "object",
+      "required": [
+        "title",
+        "date",
+        "type",
+        "comment"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "technical",
+            "vacation",
+            "medical",
+            "dayOff",
+            "common",
+            "documents"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "from": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "dates": {
+      "type": "object",
+      "example": {
+        "from": "2019-08-14T15:58:57.188Z",
+        "to": "2019-08-14T15:58:57.188Z"
+      },
+      "properties": {
+        "from": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "to": {
+          "type": "number",
+          "format": "date-time"
+        }
+      }
+    },
+    "TagModel": {
+      "type": "object",
+      "properties": {
+        "newTag": {
+          "type": "string"
+        }
+      }
+    },
+    "TagModelTitle": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "UpdateTagModel": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "newName": {
+          "type": "string"
+        }
+      }
+    },
+    "TaskJobModel": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "TechGroupModel": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "TechnologyModel": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "group_id": {
+          "type": "number"
+        }
+      }
+    },
+    "UserModel": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "login": {
+          "type": "string"
+        },
+        "info": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "DoB": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "slack_name": {
+          "type": "string"
+        },
+        "slack_conversational_id": {
+          "type": "string"
+        },
+        "slack_conversational_crm_id": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "student",
+            "user",
+            "sales",
+            "admin"
+          ]
+        },
+        "repo": {
+          "type": "string"
+        },
+        "resetPasswordExpires": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "resetPasswordToken": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "registered",
+            "active",
+            "disabled"
+          ]
+        }
+      }
+    }
+  }
+}

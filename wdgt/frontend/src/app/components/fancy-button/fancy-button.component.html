@@ -1,0 +1,11 @@
+<button
+  class="fancy-button"
+  (click)="onClick($event)"
+  [disabled]="disabled"
+  [class.fancy-button--full-width]="fullWidth"
+  [class.fancy-button--rounded]="rounded"
+  [type]="type"
+  [ngClass]="className"
+>
+  {{title}}
+</button>

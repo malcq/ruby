@@ -1,0 +1,53 @@
+@import '../../assets/styles/mediaSettings';
+
+
+.sidenav {
+  background-color: #fff;
+  border-radius: 3px;
+  height: 100%;
+  padding: 0;
+  border: 1px solid #ebedf0;
+
+  @media screen and (max-width: $mobile-screen-width){
+    display: none;
+  };
+
+
+
+  &__feature {
+    margin: 0 5px;
+    background: #a3d6f7;
+    padding: 1px;
+    line-height: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.65rem;
+  }
+
+
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.62rem 1.2rem;
+    font-size: 1rem;
+    color: #98a0a5;
+
+    &--search {
+      border-bottom: 1px solid #ebedf0;
+      padding: 0.8rem 1.2rem;
+    }
+
+    &_logout {
+      background-color: #fafafa;
+    }
+
+    &:hover {
+      background-color: #e8f7fd;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+  }
+}

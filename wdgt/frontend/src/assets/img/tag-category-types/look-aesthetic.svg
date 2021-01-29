@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/kontakt</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.7132308,8.75 L10.3363077,8.75 C9.54153846,9.18723077 8.43661538,10.0638462 7.21323077,10.0638462 C5.98984615,10.0638462 4.88492308,9.18830769 4.09015385,8.75 L3.71323077,8.75 C1.78769231,8.75 0,10.1327692 0,12.0561538 L0,14 L14,14 L14,12.0572308 C14,10.1327692 12.6387692,8.75107692 10.7132308,8.75107692 L10.7132308,8.75 Z M7.06246154,6.46153846 C8.54861538,6.46153846 9.69230769,5.01523077 9.69230769,3.23076923 C9.69230769,1.44630769 8.54861538,-1.59872116e-14 7.06246154,-1.59872116e-14 C5.57630769,-1.59872116e-14 4.37015385,1.44630769 4.37015385,3.23076923 C4.37015385,5.01523077 5.57630769,6.46153846 7.06246154,6.46153846 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/kontakt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, 1.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#2274d7" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-34.000000, -31.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#2274d7" fill-rule="evenodd" x="0" y="0" width="86" height="86"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="86" height="86"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

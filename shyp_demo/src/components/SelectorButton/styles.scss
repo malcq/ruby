@@ -1,0 +1,67 @@
+@import '../../assets/styles/theme';
+
+.selector-button{
+  $font-size: 1rem;
+  $v-padding: 0.4rem;
+  $option-height: $font-size + 2 * $v-padding;
+
+
+  &__search{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $background-color;
+    font: lighter $font-size $main-font-family;
+    padding: 0.4rem 1rem;
+
+    &::placeholder{
+      color: #b0b6b9;
+    }
+
+    &-container{
+      display: flex;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  &__options{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 0.25rem 0;
+
+    &_limited{
+      overflow-y: scroll;
+      max-height: $option-height * 5;
+    }
+  }
+
+  &__option{
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    color: $passive-color;
+    padding: $v-padding 1rem;
+    font-size: $font-size;
+    line-height: $font-size;
+    z-index: 10;
+
+
+    &::before, &::after{
+      box-sizing: border-box;
+    }
+
+    &_selected,
+    &:hover{
+      background-color: $green-hover-color;
+    }
+
+    &-checkbox{
+
+    }
+
+    &-name{
+      font-weight: lighter;
+    }
+  }
+}

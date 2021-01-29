@@ -1,0 +1,218 @@
+@import 'assets/styles/colors';
+
+/* eslint-disable no-param-reassign */
+
+.btn__sign-up {
+  width: 100%;
+}
+
+.landing {
+  height: 100vh;
+  color: var(--brand-white);
+  font-size: 13px;
+
+  .container-block {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  header {
+    padding: .5rem;
+    background-color: var(--the-black-flag);
+
+    h1 {
+      font-family: "SourceSansProSemiBold", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 2.6em;
+      line-height: 80px;
+    }
+
+    img {
+      max-height: 68px;
+    }
+
+    .contact-us {
+      font-size: 0.9375em;
+
+      a {
+        color: var(--brand-blue);
+      }
+    }
+  }
+
+  .content {
+    .offer {
+
+
+      .sub-text {
+        margin-top: 50px;
+        opacity: 0.8;
+        font-size: 1em;
+        color: var(--the-black-flag);
+      }
+
+      @media (min-width: 576px) {
+        h1 {
+          font-size: 3.4375em;
+        }
+
+        .sub-text {
+          font-size: 1.125em;
+        }
+      }
+
+      @media (min-width: 992px) {
+        h1 {
+          font-size: 4.0625em;
+        }
+
+        .sub-text {
+          font-size: 1.25em;
+        }
+      }
+    }
+
+    .form-wrapper {
+      border-radius: 10px;
+      background-color: var(--the-black-flag);
+
+      .form {
+        padding: 40px;
+        width: 100%;
+
+        .heading {
+          opacity: 0.8;
+        }
+
+        form {
+          width: 100%;
+          margin-top: .2rem;
+
+          .input {
+            position: relative;
+
+            input {
+              width: 100%;
+              margin: 15px 0 0;
+              padding: 9px 12px;
+              border: none;
+              border-bottom: 1px solid var(--brand-white);
+              border-radius: 0;
+              outline: none;
+              background-color: transparent;
+              color: #fff;
+              font-size: 1.1em;
+
+              &::placeholder {
+                color: rgba(255, 255, 255, 0.4);
+              }
+
+              &:-ms-input-placeholder {
+                color: rgba(255, 255, 255, 0.4);
+              }
+
+              /* stylelint-disable-next-line */
+              &::-ms-input-placeholder {
+                color: rgba(255, 255, 255, 0.4);
+              }
+            }
+
+            .error {
+              position: absolute;
+              bottom: -22px;
+            }
+          }
+
+          .action-buttons {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 0.8125em;
+
+            button {
+              padding: 15px 30px;
+              border: none;
+              border-radius: 30px;
+              outline: none;
+              background: linear-gradient(#fbbe01, #fda102);
+              color: #0d245c;
+              font-weight: bold;
+              cursor: pointer;
+            }
+
+            .login {
+              a {
+                color: #fcbe00;
+                text-decoration: none;
+              }
+
+              @media (min-width: 992px) and (max-width: 1080px) {
+                margin-left: 5px !important;
+              }
+            }
+          }
+        }
+
+        @media (min-width: 992px) {
+          padding-right: 50px;
+        }
+      }
+
+      .invite {
+        padding: 0 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        .invite-text {
+          font-size: 0.8125em;
+          text-align: center;
+        }
+
+        @media (min-width: 992px) {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        @media (max-width: 992px) {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+  }
+
+  footer {
+    opacity: 0.5;
+    font-size: 0.8125em;
+    color: var(--the-black-flag);
+  }
+
+  video {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+
+    .container-block {
+      max-width: 1350px;
+    }
+  }
+}
+/* eslint-enable no-param-reassign */

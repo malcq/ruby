@@ -1,0 +1,34 @@
+{
+  "en": {
+    "info__soft_skills": "SOFT SKILLS",
+    "info__education": "EDUCATION",
+    "info__projects": "PROJECTS",
+    "project__role_responsibilities": "Role/Responsibilities",
+    "employeePosition": {
+      "developer": {
+        "header__specialty": "DEVELOPER",
+        "info__techs": "TECHNOLOGIES"
+      },
+      "designer": {
+        "header__specialty": "DESIGNER",
+        "info__techs": "TOOLS"
+      }
+    }
+  },
+  "ru": {
+    "info__soft_skills": "ДОПОЛНИТЕЛЬНЫЕ НАВЫКИ",
+    "info__education": "ОБРАЗОВАНИЕ",
+    "info__projects": "ПРОЕКТЫ",
+    "project__role_responsibilities": "Роль/Зона ответсвенности",
+    "employeePosition": {
+      "developer": {
+        "header__specialty": "РАЗРАБОТЧИК",
+        "info__techs": "ТЕХНОЛОГИИ"
+      },
+      "designer": {
+        "header__specialty": "ДИЗАЙНЕР",
+        "info__techs": "ИНСТРУМЕНТЫ"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.shipment-docs-page {
+  &__information-status {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+
+    &--complete {
+      color: #05ceb6;
+      border: 1px solid #05ceb6;
+    }
+
+    &--incomplete {
+      color: #f14b71;
+      border: 1px solid #f14b71;
+    }
+  }
+
+  &__information-status-icon {
+    font-size: 14px;
+    margin-right: 3px;
+  }
+}

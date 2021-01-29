@@ -1,0 +1,13 @@
+<div
+  class="actions"
+  [style.visibility]="!hide ? 'visible' : 'hidden'"
+>
+  <div
+    *ngFor="let action of actions"
+    class="action"
+    (click)="onActionPress(action)"
+    [attr.data-action] = "stringify(action)"
+  >
+    {{action.title}}
+  </div>
+</div>

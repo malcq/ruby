@@ -1,0 +1,51 @@
+<div
+  class="selector-input"
+  [style.visibility]="!hide ? 'visible' : 'hidden'"
+>
+  <div
+    *ngIf="options && options.length > 0"
+    class="selector-input__selector selector"
+  >
+  <div class="selector__select">
+    <select
+      id="message"
+      [(ngModel)]="selectedValue"
+    >
+      <option
+        selected
+        disabled
+        hidden
+      ></option>
+      <option
+        *ngFor="let option of options"
+        [value]="option.title"
+      >
+        {{option.title}}
+      </option>
+    </select>
+  </div>
+
+    <div class="selector__send-button">
+      <button
+        id="send"
+        (click)="onSelectorSend()"
+      >
+        <mat-icon class="send-icon">send</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div
+    *ngIf="actions && actions.length > 0"
+    class="selector-input__actions"
+  >
+    <button
+      class="fancy-action"
+      (click)="onActionPress(actions[0])"
+      [attr.data-actionTitle] = "actions[0].title"
+    >
+      {{actions[0].title}}
+    </button>
+  </div>
+</div>

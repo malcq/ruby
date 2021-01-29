@@ -1,0 +1,19 @@
+<div class="menu-item">
+  <div
+    class="menu-item__header"
+    *ngIf="headerCaption"
+  >
+      <mat-icon>warning</mat-icon><span>{{headerCaption}}</span>
+  </div>
+
+  <div class="menu-item__content">
+    <ng-content></ng-content>
+  </div>
+
+  <div
+    *ngIf="showArrow"
+    class="menu-item__arrow"
+  >
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
+</div>

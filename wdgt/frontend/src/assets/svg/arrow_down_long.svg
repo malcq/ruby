@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="63px" viewBox="0 0 36 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/arrow_down_long</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="35.1763393 45 18 62.1763393 0.823660714 45 3.9375 41.9866071 15.890625 53.9397321 15.890625 0.823660714 20.109375 0.823660714 20.109375 53.9397321 32.1629464 41.9866071"></polygon>
+    </defs>
+    <g id="App" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4.1.2_Libary_selection" transform="translate(-170.000000, -435.000000)">
+            <g id="ic/arrow_down_long" transform="translate(170.000000, 435.000000)">
+                <mask id="mask-2" fill="#ffffff">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#ffffff" xlink:href="#path-1"></use>
+                <g id="Color/Primary" mask="url(#mask-2)">
+                    <g transform="translate(-102.000000, -75.000000)">
+                        <rect id="Fill/Secondary" stroke="none" fill="#ffffff" fill-rule="evenodd" x="0" y="0" width="246" height="246"></rect>
+                        <rect id="Border/Secondary" stroke="#ffffff" stroke-width="1" fill="none" x="0" y="0" width="246" height="246"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

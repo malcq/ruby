@@ -1,0 +1,45 @@
+.container {
+  margin: 20px;
+}
+
+form {
+  display: flex;
+}
+
+div.fancy-rounded-input {
+  padding: 4px;
+  flex-grow: 1;
+}
+
+.submit-button,
+button.fancy-button,
+div.fancy-rounded-input {
+  box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-rounded-input__icon > .mat-icon {
+  color: #E6E6E6;
+  height: 16px;
+  width: 16px;
+  font-size: 16px;
+}
+
+.submit-button,
+button.fancy-button {
+  border-radius: 50px;
+}
+
+button.send-button {
+  background-color: transparent;
+}
+
+.submit-button {
+  margin-left: 10px;
+}
+
+button.fancy-button {
+  padding: 10px 20px;
+  height: 100%;
+  font-weight: normal;
+  font-size: 15px;
+}

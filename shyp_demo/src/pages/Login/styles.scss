@@ -1,0 +1,133 @@
+@import '../../assets/styles/theme';
+
+.login-page {
+  width: 100%;
+  height: calc(-70px + 100vh);
+  background: $background-color;
+  box-sizing: border-box;
+
+  &__title.mui-override{
+    font-family: $main-font-family;
+  }
+
+  &__header {
+    width: 2em;
+  }
+
+  &__dialog.mui-override {
+    display: flex;
+    max-width: 20em;
+    width: 100%;
+    max-height: 20em;
+    height: 100%;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__input{
+    $input-focused-color: $active-color;
+
+    &.mui-override{
+      font-family: $main-font-family;
+    }
+
+
+
+    &_focused.mui-override{
+      &:after{
+        border-color: $input-focused-color;
+      }
+    }
+
+    &-label {
+      &.mui-override {
+        width: 26rem;
+        font-family: $main-font-family;
+      }
+
+      .login-page__input &_focused.mui-override{
+        color: $input-focused-color;
+      }
+
+      .login-page__input &_error.mui-override{
+        color: $red;
+      }
+    }
+
+    &-component.mui-override{
+      background-color: transparent;
+      font-family: $main-font-family;
+
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px white inset;
+      }
+    }
+
+    &-container{
+      margin: auto 0;
+      flex-basis: 15em;
+      padding: 2em 0;
+    }
+  }
+
+
+
+  &__button{
+
+    &.mui-override{
+      width: 104px;
+      height: 32px;
+      min-width: 0;
+      min-height: 0;
+      border-radius: 3px;
+      text-transform: none;
+      padding: 0;
+    }
+  }
+
+  &__error-message.mui-override {
+    width: 24em;
+    max-height: 36px;
+    margin-top: 24px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ff1e4d;
+  }
+
+  &__error-message {
+
+    &-container {
+      display: flex;
+    }
+
+    &-icon {
+      padding-right: 15px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #0596e9;
+  }
+}
+
+.remember-checkbox {
+  $checkbox-color: #1c9de9;
+
+  &-label.mui-override{
+    font-family: $main-font-family;
+  }
+
+  &_checked.mui-override.remember-checkbox{
+    color: $checkbox-color;
+  }
+}
+
+.login-links.mui-override {
+  width: auto;
+}

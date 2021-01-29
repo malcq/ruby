@@ -1,0 +1,124 @@
+.shipment-overview-timeline-details {
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 550px) {
+    flex-wrap: wrap;
+  }
+  &__shipment-cell-container {
+    width: 25%;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    @media (max-width: 1200px) {
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 50%;
+      padding: 3px;
+    }
+
+    &--start {
+      padding-left: 0;
+    }
+
+    &--end {
+      padding-right: 0;
+    }
+  }
+
+  &__shipment-cell {
+    height: 100%;
+    border: 1px solid #EBEDF0;
+    padding: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  &__shipment-cell-header {
+    font-size: 12.8px;
+    line-height: 15.2px;
+    color: #98a0a5;
+    font-weight: 300;
+    margin-bottom: 4px;
+  }
+
+  &__shipment-port-code, &__shipment-port-country-text, &__shipment-port-date {
+    font-size: 16px;
+    color: #1b2538;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__shipment-port-country {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      margin-left: 0.25rem;
+      $height: 0.8rem;
+      $ratio: 4/3;
+      width: $height * $ratio;
+      height: $height;
+      line-height: 0.8rem;
+      border-radius: 2px;
+      opacity: 0.5;
+    }
+  }
+
+  &__shipment-port-date-container {
+    padding-top: 5px;
+  }
+
+  &__pick-up-date, &__delivery-date {
+    padding-top: 5px;
+  }
+
+  &__pick-up-date-header, &__delivery-date-header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__pick-up-date-header-icon-green, &__delivery-date-header-icon-green {
+    font-size: 12.8px;
+    margin-left: 5px;
+    color: #01e7ce;
+  }
+
+  &__pick-up-date-header-icon-red, &__delivery-date-header-icon-red {
+    font-size: 12.8px;
+    margin-left: 5px;
+    color: #f04b71;
+  }
+
+  &__pick-up-date-header-icon-grey, &__delivery-date-header-icon-grey {
+    font-size: 12.8px;
+    margin-left: 5px;
+    color: #98a0a5;
+    cursor: pointer;
+  }
+
+  &__pick-up-value {
+    font-size: 16px;
+    color: #1b2538;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__google-input {
+    border: 0;
+    padding: 0 0 6px 0;
+    color: #555;
+    min-height: 1px;
+    border-bottom: 1px solid #EBEDF0;
+    border-radius: 0;
+    width: 100%;
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    outline: none;
+  }
+}

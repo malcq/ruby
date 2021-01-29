@@ -1,0 +1,13 @@
+@import '../../assets/styles/theme';
+
+.loader-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+
+  &__spinner.mui-override{
+    color: $active-color;
+    fill: $active-color;
+  }
+}

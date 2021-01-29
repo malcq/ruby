@@ -1,0 +1,80 @@
+.file {
+  display: flex;
+  flex-direction: column;
+}
+
+.file__thumbnail {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.file__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.file__file-type {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #262626;
+}
+
+.change {
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #1C69D4;
+  padding-left: 2px;
+}
+
+.file__file-duration {
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+  color: #262626;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.type-list {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.file__file-type.many-files {
+  padding-bottom: 6px;
+}
+
+.file-one .file__file-type {
+  margin-top: -2px;
+  padding-left: 4px;
+}
+
+.file-one .file__file-duration {
+  padding: 4px 5px 5px;
+}
+
+.no-file .change {
+  margin-left: -7px;
+}
+.no-file .file__file-type {
+  margin-bottom: 6px;
+}
+
+.type-list .file__file-duration {
+  width: 50px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/comfort</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.68,2.91150243 C1.96,2.39950243 1.784,1.40750243 2.288,0.679502434 C2.792,-0.0404975661 3.792,-0.216497566 4.52,0.287502434 C5.24,0.799502434 5.416,1.79150243 4.912,2.51950243 C4.4,3.23950243 3.408,3.41550243 2.68,2.91150243 Z M11.2,13.5995024 L5.544,13.5995024 C4.36,13.5995024 3.352,12.7355024 3.176,11.5675024 L1.6,3.99950243 L0,3.99950243 L1.592,11.8075024 C1.896,13.7595024 3.576,15.1995024 5.552,15.1995024 L11.2,15.1995024 L11.2,13.5995024 Z M11.384,10.3995024 L7.48,10.3995024 L6.656,7.11950243 C7.92,7.83150243 9.28,8.35150243 10.776,8.09550243 L10.776,6.39150243 C9.472,6.63950243 8.024,6.17550243 7.024,5.39150243 L5.712,4.37550243 C5.528,4.23150243 5.32,4.13550243 5.104,4.07150243 C4.848,3.99950243 4.576,3.97550243 4.312,4.02350243 L4.296,4.02350243 C3.312,4.19950243 2.656,5.13550243 2.824,6.11150243 L3.904,10.8475024 C4.128,11.9835024 5.112,12.7995024 6.264,12.7995024 L11.744,12.7995024 L14.8,15.1995024 L16,13.9995024 L11.384,10.3995024 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/comfort" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="baseline-airline_seat_recline_extra-24px">
+            <g id="Color/Dark_grey">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(-41.142857, -42.285714)">
+                        <rect id="Fill/Secondary" stroke="none" fill="#2273d7" fill-rule="evenodd" x="0" y="0" width="98" height="98"></rect>
+                        <rect id="Border/Secondary" stroke="#2273d7" stroke-width="1" fill="none" x="0" y="0" width="98" height="98"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

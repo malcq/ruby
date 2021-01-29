@@ -1,0 +1,115 @@
+@import '../../assets/styles/theme';
+@import '../../assets/styles/mediaSettings';
+
+$preview-height: 160px;
+$curved-arrow: url('../../assets/images/curved-arrow.png');
+
+.account-avatar-form {
+  &__checkbox-text {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: $main-font-family;
+    font-size: 0.8rem;
+  }
+
+  &__avatar.mui-override{
+    font-family: $main-font-family;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: gainsboro;
+    color: $text-color;
+    width: $preview-height;
+    height: $preview-height;
+    min-height: $preview-height;
+    margin-left: 25%;
+    @media screen and (max-width: $mobile-screen-width) {
+      margin-left: 0;
+    }
+  }
+
+  &__content{
+    margin-bottom: 30px;
+    border: 2px solid white;
+    &_hovered {
+      border: 2px dashed $active-color;
+    }
+  }
+
+  &__pointer{
+    max-width: 15.25rem;
+    color: $light-text-color;
+    background: $curved-arrow no-repeat top left;
+    padding-top: 32px;
+    padding-left: 50px;
+    margin-top: 2rem;
+    @media screen and (max-width: $mobile-screen-width) {
+      display: none;
+    }
+  }
+
+
+  &__checkbox-group {
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0 0.75rem;
+  }
+
+  &__drop-zone{
+    display: flex;
+
+    @media screen and (max-width: $mobile-screen-width){
+      justify-content: center;
+    }
+  }
+
+  &__preview {
+    border-radius: 50%;
+    width: 160px;
+
+    height: $preview-height;
+    min-height: $preview-height;
+
+    &-container{
+      display: flex;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: $mobile-screen-width){
+      margin: 0;
+    }
+
+  }
+
+  &__preview-text {
+    width: auto;
+    height: $preview-height;
+
+    &_not-picked {
+      @media screen and (max-width: $mobile-screen-width) {
+        display: none;
+      }
+    }
+  }
+
+  &__note{
+    text-align: center;
+    color: #a1a1a1;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: $mobile-screen-width){
+      display: none;
+    }
+  }
+
+  &__cropper {
+    height: 400px;
+    width: 100%;
+    padding-top: 12px;
+  }
+
+}

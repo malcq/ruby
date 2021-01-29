@@ -1,0 +1,235 @@
+@import './theme';
+
+.icon::before {
+  font-family: $icon-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  font-smoothing: antialiased;
+}
+.icon.dashboard:before {
+  content: "\e922";
+  font-size: 14px;
+}
+.icon.shipments:before {
+  content: "\e918";
+}
+.icon.request-quote:before, .icon.pencil:before {
+  content: "\e903";
+}
+.icon.quotes:before, .icon.rates:before{
+  content: "\e91d";
+}
+.icon.reporting:before {
+  content: "\e91e";
+}
+.icon.map-overviews:before {
+  content: "\e943";
+}
+.icon.account:before, .icon.person:before {
+  content: "\e915";
+}
+.icon.address-book:before {
+  content: "\e94d";
+}
+.icon.logout:before {
+  content: "\e919";
+}
+.icon.notify::before {
+  content: "\e90f";
+}
+.icon.inbox::before {
+  content: "\e910";
+}
+.icon.checked::before {
+  content: "\e90a";
+}
+.icon.success::before,
+.icon.checked-circle::before,
+.icon.checkcircle:before
+{
+  content: "\e94c";
+}
+
+.icon.restaurant:before, .icon.company:before {
+  content: "\e901";
+}
+.icon.container:before {
+  content: "\e93b";
+}
+
+$icon-air-arrive: "\e93d";
+.icon.arrive:before, .icon.plane-landing:before {
+  content: $icon-air-arrive;
+}
+
+$icon-air-depart: "\e93e";
+.icon.depart:before, .icon.plane-lift-off:before {
+  content: $icon-air-depart;
+}
+.hrevert.icon:before {
+  transform: scale(-1, 1);
+}
+.icon.lcl:before {
+  content: "\e914";
+}
+.icon.container20ft:before {
+  content: "\e916";
+}
+.icon.container40ft:before {
+  content: "\e91b";
+}
+.icon.container40fthq:before {
+  content: "\e92f";
+}
+.icon.truck:before, .icon.delivery-truck:before {
+  content: "\e912";
+}
+.icon.crane:before {
+  content: "\e90c";
+}
+.icon.stamp:before {
+  content: "\e90d";
+}
+.icon.transport:before,
+.icon.transport-1:before,
+.icon.trade-ship:before
+{
+  content: "\e91a";
+}
+.icon.secure:before {
+  content: "\e90b";
+}
+.icon.add:before {
+  content: "\e911";
+}
+.icon.box:before {
+  content: "\e905";
+}
+.icon.close:before {
+  content: "\e904";
+}
+.icon.calendar:before {
+  content: "\e920";
+}
+.icon.info:before {
+  content: "\e940";
+}
+.icon.draw:before {
+  content: "\e903";
+}
+
+$icon-chevron: "\e942";
+.icon.chevron:before, icon.chevron-right:before {
+  content: $icon-chevron;
+}
+
+$icon-start-and-end: "\e944";
+.icon.startandend:before {
+  content: $icon-start-and-end;
+}
+
+$icon-mid: "\e945";
+.icon.mid:before {
+  content: $icon-mid;
+}
+
+$icon-long-mid: "\e946";
+.icon.daysintransit:before {
+  content: $icon-long-mid;
+}
+
+$icon-destination: "\e93a";
+.icon.destination:before {
+  content: $icon-destination;
+}
+
+.icon.switch:before {
+  content: "\e93f";
+}
+
+.icon.link:before {
+  content: "\e952";
+}
+
+.icon.attention:before {
+  content: "\e948";
+}
+
+.icon.secure-shield:before {
+  content: "\e90b";
+}
+
+.icon.add:before {
+  content: "\e911";
+}
+
+$icon-air: "\e93c";
+.icon.air:before, .icon.airport:before {
+   content: $icon-air;
+}
+
+$icon-shypple: "\e923";
+.icon.shypple:before{
+  content: $icon-shypple;
+}
+
+.icon.sea:before {
+  content: "\e947";
+}
+
+.icon.download:before {
+  content: "\e906";
+}
+
+.icon.close:before{
+  content: "\e904";
+}
+
+.icon.search:before {
+  content: "\e94b";
+}
+
+.icon.close:before {
+   content: "\e904";
+}
+
+.icon.check:before {
+  content: "\e909";
+}
+.icon.searchandbook:before {
+  content: "\e939";
+}
+
+.icon.trash:before {
+  content: "\e949";
+}
+
+.icon.lcl:before {
+  content: "\e914";
+}
+
+.icon.backarrow:before {
+  content: "\e951";
+}
+
+.icon.pin:before {
+  content: "\e950";
+}
+
+.icon.paperclip:before {
+  content: "\e94f";
+}
+
+.icon.list:before {
+  content: "\e94a";
+}
+
+$icon-cargo: "\e93b";
+.icon.cargo:before{
+  content: $icon-cargo;
+}

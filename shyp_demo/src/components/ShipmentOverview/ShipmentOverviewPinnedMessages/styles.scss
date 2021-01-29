@@ -1,0 +1,65 @@
+.shipment-overview-pinned-messages {
+  &__header {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+    color: #98a0a5;
+    font-weight: 300;
+  }
+
+  &__message-container {
+    position: relative;
+    padding: 12px 40px 12px 12px;
+    background-color: #f5f8fc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__message {
+    display: inline-block;
+  }
+
+  &__message-separator {
+    margin: 0 3px;
+  }
+
+  &__show-message-link {
+    color: #1b2538;
+    text-decoration: underline;
+  }
+
+  &__attachment-link {
+    display: block;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-top: 4px;
+    background-color: #e1eaf4;
+    color: #0b0d0d;
+    text-decoration: underline;
+    word-break: break-all;
+
+    &:hover {
+      color: #0b0d0d;
+    }
+  }
+
+  &__message-container:hover &__unpin-icon {
+    display: block;
+  }
+
+  &__unpin-icon {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 16px;
+    color: #98a0a5;
+    cursor: pointer;
+  }
+
+  & .atwho-inserted, & .atwho-custom {
+    font-weight: 700;
+  }
+}

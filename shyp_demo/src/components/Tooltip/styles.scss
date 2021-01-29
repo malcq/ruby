@@ -1,0 +1,23 @@
+@import '../../assets/styles/theme';
+
+.tooltip{
+  &.mui-override{
+    font: {
+      family: $main-font-family;
+      size: 13px;
+    }
+    opacity: 1;
+    max-width: 202px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.04);
+    border: solid 1px $grey;
+    background-color: white;
+    text-align: center;
+    color: $text-color;
+    user-select: none;
+  }
+
+  &-popper.mui-override{
+    opacity: 1;
+  }
+}

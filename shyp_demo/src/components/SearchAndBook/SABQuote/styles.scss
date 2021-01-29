@@ -1,0 +1,373 @@
+@import '../../../assets/styles/theme';
+@import '../../../assets/styles/mediaSettings';
+.search-book__quote {
+  .SABSearchItemExpanded {
+    padding: 32px 0 25px;
+  }
+  .back-button {
+    font-family: "Exo 2",sans-serif;
+    width: 192px;
+    height: 32px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    .icon {
+      padding-left: 10px;
+      display: inline-block;
+    }
+  }
+  .search-book__info {
+    display: flex;
+    min-height: 239px;
+    box-shadow: none;
+    border: 1px solid #ebedf0;
+    flex-wrap: wrap;
+    .info__left-part {
+      flex: 1 1 auto;
+      padding: 32px;
+      width: 75%;
+      box-sizing: border-box;
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+    .info-shipment {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      color: $text-color;
+      display: flex;
+      justify-content: space-between;
+      &__cariage {
+        display: inline-block;
+        padding-left: 20px;
+
+        .icon {
+          color: #0596e9;
+          font-size: 14px;
+        }
+      }
+      &__incoterm {
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: normal;
+        color: #98a0a5;
+      }
+    }
+    .info-company {
+      flex: 0 1 auto;
+      width: 25%;
+      box-sizing: border-box;
+      border-left: solid 2px #ebedf0;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+        border-left: none;
+        border-top: solid 2px #ebedf0;
+      }
+      &__title {
+        font-size: 14px;
+        font-weight: bold;
+        color: $text-color;
+      }
+      .button-container {
+        &__button {
+          margin-right: 5px;
+          margin-top: 5px;
+          padding: 0 11px;
+          height: 18px;
+          font-size: 12px;
+          border-radius: 3px;
+          letter-spacing: -0.3px;
+          background: none;
+          border: 1px solid #a000e6;
+          color: #a000e6;
+          box-sizing: border-box;
+          display: inline-block;
+
+          &--orange {
+            color: #ed9400;
+            border: 1px solid #ed9400;
+          }
+          &--disabled {
+            border: 1px solid #bebebe;
+            color: #bebebe;
+          }
+        }
+        &__text {
+          padding-top: 6px;
+          font-size: 11px;
+          font-weight: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #98a0a5;
+        }
+      }
+    }
+    .info__lcl {
+      width: 100%;
+      border-top: solid 2px #ebedf0 ;
+      thead {
+        th:first-child {
+          color: #818181;
+        }
+      }
+      td, th {
+        width: 18.5%;
+        padding: 0;
+        @media screen and (max-width: 630px) {
+          min-height: 18px;
+        }
+      }
+      td:first-child, th:first-child {
+        width: 7.5%;
+        padding-left: 24px;
+      }
+      td:last-child, th:last-child {
+        padding-right: 24px;
+      }
+    }
+    .SABSearchItemExpanded .address-row__second-col {
+      width: 47%;
+    }
+    .SABSearchItemExpanded .address-row__last-col {
+      max-width: 120px;
+      width: auto;
+    }
+  }
+  .search-book__links {
+    box-shadow: none;
+    border: 1px solid #ebedf0;
+    padding: 32px;
+    margin-top: 16px;
+  }
+  .search-book__pricing {
+    margin-top: 16px;
+    box-shadow: none;
+    border: 1px solid #ebedf0;
+    .price__on-request {
+      color: $green;
+      text-decoration: underline;
+    }
+    .subprice__on-request {
+      color: $red
+    }
+  }
+  table {
+    font-family: "Exo 2", sans-serif;
+    th {
+      font-size: 14px;
+      &:nth-child(1) {
+        font-weight: bold;
+        color: $text-color;
+      }
+    }
+    tbody {
+      tr {
+        height: 39px;
+      }
+      tr:nth-child(2n-1) {
+        background-color: #fafafa;
+      }
+      td:nth-child(2), td:nth-child(3), th:nth-child(2), th:nth-child(3) {
+        max-width: 210px;
+      }
+      tr.pricing-tr--hoverable:hover {
+        cursor: pointer;
+        background-color: $grey-outline-button-hover-color;
+      }
+      .icon {
+        &:before {
+          padding-right: 10px;
+        }
+        &.transport:before {
+          font-size: 11px;
+        }
+      }
+    }
+    td:not(:first-child), th:not(:first-child) {
+      text-align: right;
+      width: 100px;
+    }
+    td:last-child, th:last-child  {
+      width: 10px;
+    }
+    td {
+      font-size: 14px;
+      color: #818181;
+    }
+    tfoot {
+      td {
+        color: $text-color;
+        font-weight: bold;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      td, th {
+        padding: 5px;
+        width: auto;
+      }
+    }
+  }
+  .quote__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 88px;
+    display: flex;
+    @media screen and (max-width: 550px){
+      flex-wrap: wrap;
+    };
+    .footer__empty {
+
+      @media screen and (min-width: $small-screen-width) {
+        flex: 0 0 320px;
+      };
+      @media screen and (min-width: $mobile-screen-width) and (max-width: $small-screen-width){
+        flex: 0 0 175px;
+      };
+      @media screen and (max-width: $mobile-screen-width){
+        flex: 0 0 24px;
+      };
+      @media screen and (max-width: 550px){
+        display: none;
+      };
+    }
+    .footer__accept {
+      font-size: 13px;
+      color: #818181;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 550px){
+        width: 100%;
+        margin: 5px auto;
+      };
+      &--container {
+        max-width: 570px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .footer__results-booking {
+      display: flex;
+      @media screen and (max-width: 550px){
+        width: 100%;
+        justify-content: flex-end;
+      };
+    }
+    .footer__total-results {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 18px;
+      align-items: flex-end;
+      .total-results__total {
+        letter-spacing: -0.3px;
+        text-align: right;
+        color: #05ceb6;
+        font-size: 12px;
+        @media screen and (max-width: 850px) {
+          width: 100px;
+        }
+        &.all-price {
+          font-size: 14px;
+        }
+        b {
+          font-size: calc(1em + 2px);
+        }
+      }
+      .total-results__warning {
+        text-align: right;
+        font-size: 11px;
+        color: #98a0a5;
+        max-width: 300px;
+        b {
+          color: $text-color;
+        }
+      }
+    }
+    .footer__booking {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      @media screen and (max-width: 550px) {
+        padding: 13px;
+      }
+      .booking__button {
+        outline: none;
+        font-family: "Exo 2",sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.1px;
+        border-radius: 3px;
+        width: 143px;
+        height: 32px;
+        background-color: #05ceb6;
+        color: #ffffff;
+        &:disabled {
+          background-color: #98a0a5;
+        }
+      }
+    }
+  }
+}
+
+.search-book__modal-content {
+  width: 396px;
+  height: 347px;
+  background-color: white;
+  border-radius: 5px;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .search-book__modal-input {
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+  }
+  .search-book__modal-title {
+    font-size: 20px;
+    color: $text-color;
+    margin-left: 32px;
+  }
+  .search-book__modal-buttons {
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    .modal-button {
+      width: 166px;
+      height: 32px;
+      border-radius: 3px;
+      border: solid 1px #818181;
+      letter-spacing: -0.1px;
+      color: #818181;
+      outline: none;
+      font-family: "Exo 2",sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      &--link {
+        color: #0091ea;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        font-family: "Exo 2",sans-serif;
+      }
+    }
+  }
+}
+body .search-book__modal {
+  top: calc(50% - 188px);
+  left: calc(50% - 173px);
+}
+@media screen and (max-width: 550px) {
+  iframe#drift-widget.quoted-drift {
+    bottom: 150px !important;
+    right: -4px !important;
+  }
+}

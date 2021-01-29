@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ic / close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements-/-Input-Bar-/-active" transform="translate(-282.000000, -16.000000)">
+            <g id="Elements-/-Search-Bar-/-active">
+                <g id="ic-/-send" transform="translate(280.000000, 13.000000)">
+                    <g id="baseline-send-24px">
+                        <polygon id="Path" fill="#27C46A" points="2.01 21 23 12 2.01 3 2 10 17 12 2 14"></polygon>
+                        <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

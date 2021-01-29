@@ -1,0 +1,87 @@
+@import '../../assets/styles/theme';
+@import '../../assets/styles/mediaSettings';
+
+.sidenav-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.62rem 1.2rem;
+  font-size: 1rem;
+  color: #98a0a5;
+
+  &__tooltip.mui-override{
+    margin-left: -0.4rem;
+
+    @media screen and (max-width: $mobile-screen-width){
+      display: none;
+    };
+  }
+
+  &--search {
+    border-bottom: 1px solid #ebedf0;
+    padding: 0.8rem 1.2rem;
+  }
+
+  &_logout {
+    background-color: #fafafa;
+  }
+
+  &:hover {
+    background-color: #e8f7fd;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &_active {
+    color: #1b2538;
+    font-weight: 400;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.62rem;
+      bottom: 0.62rem;
+      background-color: #2baffc;
+      width: 3px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    & .sidenav-button__icon {
+      color: #1B9FE9;
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    font-size: 1.2rem;
+    line-height: 1;
+
+    color: rgba(27, 37, 56, 0.5);
+
+    display: flex;
+    flex: 0 0 2.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__name {
+    padding-left: 0.8rem;
+    width: 8.3rem;
+
+    &_logout {
+      font-size: 75%;
+      padding-left: 0.25rem;
+    }
+
+    @media screen and (min-width: $mobile-screen-width) and (max-width: $small-screen-width){
+      display: none;
+    };
+  }
+
+
+}

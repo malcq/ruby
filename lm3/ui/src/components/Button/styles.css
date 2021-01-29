@@ -1,0 +1,53 @@
+@import 'assets/styles/colors';
+
+.default-btn,
+.primary-btn,
+.danger-btn,
+.btn-secondary,
+.sucsess-btn {
+  margin: 5px;
+  padding: 7px 15px 6px 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  background: var(--lagoon);
+  color: #fff;
+  cursor: pointer;
+  font-family: "SourceSansProSemiBold", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.6;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.primary-btn:hover {
+  outline: none;
+  color: #ffffff;
+  background: var(--lagoon);
+}
+
+
+.default-btn:hover {
+  background: var(--btn-default-hover);
+}
+
+.danger-btn {
+  background: var(--btn-danger);
+
+&:hover {
+   background: var(--btn-danger-hover);
+ }
+}
+
+.sucsess-btn {
+  background: var(--btn-success);
+
+&:hover {
+   background: var(--btn-success-hover);
+ }
+}
+
+.btn__sign-up {
+  width: 100%;
+}

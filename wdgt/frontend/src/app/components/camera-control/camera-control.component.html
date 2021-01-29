@@ -1,0 +1,97 @@
+<div
+  *ngIf="!hintMode"
+  class="preview-wrapper"
+>
+  <app-files-preview
+    [files]="files"
+    (removeFile)="onFileRemove($event)"
+    (addFile)="onAddFile()"
+    [updateRequest]="updateRequest"
+  ></app-files-preview>
+
+  <div
+    class="button-wrapper"
+    [style.visibility]="files.length>0 ? 'visible' : 'hidden'"
+  >
+    <app-fancy-button
+      title="Confirm Selection"
+      [fullWidth]="true"
+      (buttonPress)="onConfirmSelection()"
+    ></app-fancy-button>
+  </div>
+</div>
+
+<div *ngIf="hintMode"></div>
+
+<div class="file-types">
+  <div class="capture-button">
+    <div class="capture-button__button">
+      <label for="file-library">
+        <img
+          src="/assets/svg/library.svg"
+        />
+        <div class="capture-button__title">
+          Library
+        </div>
+      </label>
+      <input
+        #inputAll
+        accept="image/*, video/*, audio/*"
+        type="file"
+        name="file-library"
+        id="file-library"
+        (change)="onFileChange($event)"
+        multiple
+      />
+    </div>
+  </div>
+
+  <div class="capture-button capture-button--video">
+    <div class="capture-button__button capture-button__button--video">
+      <label for="file-video">
+          <img
+            src="/assets/svg/shutter.svg"
+          />
+          <div class="capture-button__title">
+            Video
+          </div>
+      </label>
+      <input
+        accept="video/*"
+        type="file"
+        name="file-video"
+        id="file-video"
+        capture
+        (change)="onFileChange($event)"
+      />
+    </div>
+  </div>
+
+  <div class="capture-button">
+    <div class="capture-button__button">
+      <label for="file-photo">
+        <img
+          src="/assets/svg/camera_alt.svg"
+        />
+        <div class="capture-button__title">
+          Photo
+        </div>
+      </label>
+      <input
+        #inputPicture
+        accept="image/*"
+        type="file"
+        name="file-photo"
+        id="file-photo"
+        capture
+        (change)="onFileChange($event)"
+      />
+    </div>
+  </div>
+  <div
+    [class.file-types__footer--hidden]="!hintMode"
+    class="file-types__footer"
+  >
+  </div>
+</div>
+

@@ -1,0 +1,44 @@
+<div class="search-suggest">
+  <div class="chat-input">
+    <div class="chat-input__input">
+    <textarea
+      #searchInput
+      [appFocus]="focus"
+      placeholder="Enter part, feeling or experience..."
+      [(ngModel)]="search"
+      (ngModelChange)="onSearchChange()"
+    ></textarea>
+    </div>
+    <div
+      class="chat-input__send-button"
+      *ngIf="search.length"
+    >
+      <button
+        class="send-button"
+        (click)="onSendPress()"
+      >
+        <mat-icon class="send-icon">send</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div
+    class="tag-selector"
+  >
+    <div class="tag-selector__items">
+      <div
+        class="tag__item"
+        *ngFor="let tag of tags"
+        (click)="onReplacePress(tag)"
+        (mousedown)="onTagMousedown($event)"
+      >
+        <div
+          class="tag-selector__item-content"
+          [innerHTML]="tag.showTitle|RichTextToHtml"
+        ></div>
+        <div class="tag-selector__item-icon">
+          <mat-icon>call_made</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

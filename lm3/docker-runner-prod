@@ -1,0 +1,11 @@
+#!/bin/bash
+
+command=${1}
+
+if [ "$command" = "stop" ]; then
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
+elif [ "$command" = "logs" ]; then
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml logs -f --tail=10 "${@:2}"
+else
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build "${@:2}"
+fi

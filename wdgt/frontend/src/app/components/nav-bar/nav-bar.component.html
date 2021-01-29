@@ -1,0 +1,33 @@
+<div
+  [class.navbar--blue]="blue"
+  class="navbar"
+>
+  <div class="navbar__button navbar__button--left">
+    <button
+      mat-icon-button
+      *ngIf="!hideBack"
+      (click)="onLeftButtonClick()"
+    >
+      <mat-icon *ngIf="!xButton">arrow_back</mat-icon>
+      <mat-icon *ngIf="xButton">clear</mat-icon>
+    </button>
+  </div>
+
+  <div
+    class="navbar__toolbar-title"
+  >
+    <ng-container
+      *ngIf="title"
+    >
+      {{title}}
+    </ng-container>
+  </div>
+
+  <div class="navbar__button navbar__button--right">
+    <div
+      *ngIf="rightButtonTitle"
+      (click)="onRightButtonClick()"
+    >
+      {{rightButtonTitle}}
+  </div>
+</div>

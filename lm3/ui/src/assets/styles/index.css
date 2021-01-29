@@ -1,0 +1,68 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'colors.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--brand-white);
+  color: var(--brand-text-normal);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+legend {
+  font-size: 1rem;
+}
+
+.navbar {
+  margin-bottom: 40px;
+  background-color: var(--admin-header);
+
+.navbar-brand {
+  height: 40px;
+  padding: 0;
+
+img {
+  height: 100%;
+}
+}
+
+.active {
+  color: var(--admin-active-link);
+}
+
+.logout-link {
+  color: var(--brand-text-light);
+  cursor: pointer;
+}
+}
+
+.table {
+td,
+th {
+  vertical-align: middle;
+
+&.numeric {
+   text-align: right;
+ }
+}
+}
+
+hr.divider {
+  margin: 0;
+}
+

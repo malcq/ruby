@@ -1,0 +1,25 @@
+:host {
+  /* display: flex;
+  align-items: center; */
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content__icon {
+  margin-right: 5px;
+}
+
+.content__icon,
+.content__icon > img {
+  width: 24px;
+  height: 24px;
+}

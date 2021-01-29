@@ -1,0 +1,24 @@
+<div
+  #bar
+  class="seekbar" 
+  (click)="onClick($event)"
+  (mousemove)="onMovie($event)"
+  (touchmove)="onMovie($event)"
+  
+  (mousedown)="onSeekStart($event)"
+  (touchstart)="onSeekStart($event)"
+  (touchend)="onSeekEnd($event)"
+  (mouseup)="onSeekEnd($event)"
+  >
+  <div #btn class="seekbar_btn"></div><div #bg class="seekbar_bg"></div>
+</div>
+
+<div class="duration-info">
+  <div class="duration-info__current-time">
+    {{currentTime | fancyTime:false}}
+  </div>
+  
+  <div class="duration-info__time-left">
+    {{overallTime | fancyTime:false:true}}
+  </div>
+</div>

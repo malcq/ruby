@@ -1,0 +1,120 @@
+.shipment-overview-container {
+  &__title {
+    font-size: 16px;
+    line-height: 1.1875;
+    margin-bottom: 10px;
+    color: #98a0a5;
+    font-weight: 300;
+  }
+
+  &__main-container {
+    width: calc(50% - 16px);
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid #EBEDF0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+
+  &__general-info-table {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__general-info-table-column {
+    width: 33%;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    &--end {
+      padding-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+
+  &__general-info-table-header {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.1875;
+    color: #98a0a5;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__general-info-table-type-value,
+  &__general-info-table-container-id-value,
+  &__general-info-table-status-value {
+    color: #1b2538;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__general-info-table-type-value {
+    color: #98a0a5;
+  }
+
+  &__general-info-table-type-value-icon {
+    padding-right: 5px;
+  }
+
+  &__general-info-table-status-value-icon {
+    padding-right: 5px;
+    color: #00e3c8;
+    font-size: 14px;
+
+    &--danger {
+      color: #ed4266;
+    }
+  }
+
+  &__container-info-table-wrapper {
+    word-break: break-all;
+    hyphens: auto;
+  }
+
+  &__container-info-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__container-info-table-value {
+    padding: 8px;
+
+    @media (max-width: 768px) {
+      padding: 4px;
+    }
+
+    &--header {
+      font-family: "Exo 2", sans-serif;
+      font-size: 16px;
+      line-height: 1.1875;
+      color: #98a0a5;
+      font-weight: 300;
+      text-align: left;
+    }
+
+    &--footer {
+      border-top: 1px solid #ddd;
+    }
+
+    &--cargo-field {
+      min-width: 43px;
+    }
+  }
+}

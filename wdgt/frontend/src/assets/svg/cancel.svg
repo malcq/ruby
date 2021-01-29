@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.8214286,10.75 L9.07142857,8 L11.8214286,5.25 L10.75,4.17857143 L8,6.92857143 L5.25,4.17857143 L4.17857143,5.25 L6.92857143,8 L4.17857143,10.75 L5.25,11.8214286 L8,9.07142857 L10.75,11.8214286 L11.8214286,10.75 Z M2.60714286,2.64285714 C4.10715036,1.14284964 5.90475143,0.392857143 8,0.392857143 C10.0952486,0.392857143 11.8868973,1.13689732 13.375,2.625 C14.8631027,4.11310268 15.6071429,5.90475143 15.6071429,8 C15.6071429,10.0952486 14.8631027,11.8868973 13.375,13.375 C11.8868973,14.8631027 10.0952486,15.6071429 8,15.6071429 C5.90475143,15.6071429 4.11310268,14.8631027 2.625,13.375 C1.13689732,11.8868973 0.392857143,10.0952486 0.392857143,8 C0.392857143,5.90475143 1.130945,4.119055 2.60714286,2.64285714 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/cancel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#262626" xlink:href="#path-1"></use>
+            <g id="Color/Grey" mask="url(#mask-2)">
+                <g transform="translate(-42.285714, -40.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#A8A8A8" fill-rule="evenodd" x="0" y="0" width="98" height="98"></rect>
+                    <rect id="Border/Secondary" stroke="#A8A8A8" stroke-width="1" fill="none" x="0" y="0" width="98" height="98"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

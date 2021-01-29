@@ -1,0 +1,77 @@
+<div class="navbar">
+  <app-nav-bar
+    (leftButtonPress)="back()"
+    [blue]="true"
+  ></app-nav-bar>
+  <div *ngIf="debugMode">
+    <button (click)="addHistory()">
+      Add history 
+    </button>
+  
+    <button (click)="addBotMessage()">
+      Usual bot message
+    </button>
+  
+    <button (click)="addUserMessage()">
+      Usual user message
+    </button>
+    
+    <button (click)="addActionsMessage()">
+      Actions message
+    </button>
+    
+    <button (click)="addInputMessage()">
+      Input message
+    </button>
+    
+    <button (click)="addInputNumbersMessage()">
+      Input numbers message
+    </button>
+  
+    <button (click)="addLoginMessage()">
+        Login message
+    </button>
+  
+    <button (click)="addLinkMessage()">
+        Link message
+    </button>
+  
+    <button (click)="addEmailMessage()">
+        Extra email
+    </button>
+  
+    <button (click)="addUsernameMessage()">
+        Extra username
+    </button>
+  
+    <button (click)="addSelectorMessage()">
+        Selector message
+    </button>
+  
+    <button (click)="addSearchMessage()">
+        Search message
+    </button>
+    
+    <button (click)="scrollToBottom()">
+      Scroll to bottom
+    </button>
+  </div>
+</div>
+
+<div
+  class="chat-view"
+  [class.chat-view--debug-mode]="debugMode"
+  [class.chat-view--suggestion]="suggestionShowed"
+>
+  <app-chat-view
+    [messages]="messages"
+    [lastMessage]="lastMessage"
+    [context]="context"
+    #chatView
+  ></app-chat-view>
+  <div
+    id="scroller"
+    #scroller
+  ></div>
+</div>
+

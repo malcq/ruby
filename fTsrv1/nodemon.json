@@ -1,0 +1,6 @@
+{
+  "events": {
+    "restart": "node node_modules/.bin/swagger-jsdoc -d swaggerDef.js"
+  },
+  "ignore": ["swagger.json", "calendar.json"]
+}

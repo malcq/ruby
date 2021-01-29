@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/arrow_down</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14.8705357 8 8 14.8705357 1.12946429 8 2.375 6.79464286 7.15625 11.5758929 7.15625 1.12946429 8.84375 1.12946429 8.84375 11.5758929 13.6651786 6.79464286"></polygon>
+    </defs>
+    <g id="ic/arrow_down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-40.000000, -40.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#666666" fill-rule="evenodd" x="0" y="0" width="98" height="98"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="98" height="98"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

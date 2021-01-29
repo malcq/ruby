@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/issue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.20849609,5.67724609 L7.20849609,3.0625 L5.91650391,3.0625 L5.91650391,5.67724609 L7.20849609,5.67724609 Z M7.20849609,8.32275391 L7.20849609,7 L5.91650391,7 L5.91650391,8.32275391 L7.20849609,8.32275391 Z M11.8227539,0.447753906 C12.1713885,0.447753906 12.4738757,0.575926453 12.7302246,0.832275391 C12.9865735,1.08862433 13.1147461,1.39111154 13.1147461,1.73974609 L13.1147461,9.61474609 C13.1147461,9.96338065 12.9865735,10.2709948 12.7302246,10.5375977 C12.4738757,10.8042006 12.1713885,10.9375 11.8227539,10.9375 L2.625,10.9375 L0.0102539062,13.5522461 L0.0102539062,1.73974609 C0.0102539062,1.39111154 0.138426453,1.08862433 0.394775391,0.832275391 C0.651124329,0.575926453 0.953611538,0.447753906 1.30224609,0.447753906 L11.8227539,0.447753906 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/issue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(1.000000, 2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="white" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-27.125000, -28.875000)">
+                    <rect id="Fill/Secondary" stroke="none" fill-rule="evenodd" x="0" y="0" width="75" height="75"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="75" height="75"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

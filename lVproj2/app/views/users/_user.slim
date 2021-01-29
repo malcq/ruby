@@ -1,0 +1,6 @@
+tr
+  td= link_to user.email, user_path(user)
+  td= date_formatter user.created_at
+  td= user.username
+  td= user.carma
+  td= image_tag(user.avatar.url, size: '100x100') if user.avatar?

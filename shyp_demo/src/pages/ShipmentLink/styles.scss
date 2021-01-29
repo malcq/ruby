@@ -1,0 +1,14 @@
+@import '../../assets/styles/mediaSettings';
+
+.public-shipments {
+  padding: 1.5rem 4rem;
+
+  &__title {
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+
+  .shipment {
+    background-color: white;
+  }
+}

@@ -1,0 +1,16 @@
+h1 show user
+h3 email: #{@user.email}
+h3 created at: #{date_formatter @user.created_at}
+h3 username:  #{@user.username}
+h3 phrases:
+table.table.table-striped
+  tr
+    th id
+    th phrase
+    th translation
+    th category
+    th vote
+    th actions
+
+  - @phrases.each do |phrase|
+    = render phrase, author: false

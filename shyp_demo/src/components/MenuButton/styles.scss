@@ -1,0 +1,40 @@
+@import '../../assets/styles/theme';
+
+.menu-button{
+
+  &_hoverable:hover{
+    background-color: $green-hover-color;
+  }
+
+  &__menu{
+    $menu-border-color: $light-border-color;
+    margin-top: 0.54rem;
+    background-color: white;
+    border: $menu-border-color 1px solid;
+    border-radius: 3px;
+
+    &::before{
+      content: '';
+      width: 0.8rem;
+      height: 0.8rem;
+      left: 0.8rem;
+      top: 0.1rem;
+      border: 1px solid $menu-border-color;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(45deg);
+      position: absolute;
+      background-color: white;
+      z-index: 0;
+    }
+  }
+
+  &__popper.mui-override{
+    z-index: 2;
+  }
+
+  &__icon::before{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+}

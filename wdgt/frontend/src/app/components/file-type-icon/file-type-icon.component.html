@@ -1,0 +1,19 @@
+<div
+  class="record-type"
+  (click)="onTypeClick()"
+>
+  <div
+    class="record-type__icon"
+    [class.record-type__icon--inversed]="inversed"
+  >
+    <app-video-image  *ngIf="iconName && iconName==='video'"></app-video-image>
+    <app-photo-image  *ngIf="iconName && iconName==='photo'"></app-photo-image>
+    <app-library-image  *ngIf="iconName && iconName==='library'"></app-library-image>
+    <app-text-image  *ngIf="iconName && iconName==='text'"></app-text-image>
+    <app-voice-image  *ngIf="iconName && iconName==='voice'"></app-voice-image>
+    <img *ngIf="iconName && iconName!=='video' && iconName!=='photo' && iconName!=='library' && iconName!=='text' && iconName!=='voice'" src="/assets/img/record-type/{{iconName}}.svg" />
+  </div>
+  <div class="record-type__title">
+    {{ title }}
+  </div>
+</div>

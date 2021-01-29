@@ -1,0 +1,232 @@
+@import "../../assets/styles/theme";
+@import "../../assets/styles/mediaSettings";
+
+.rates-page{
+  min-width: 40rem;
+
+  &__header{
+    height: 3.75rem;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0.5625rem 1.5rem 0.5625rem 0.6875rem;
+    justify-content: flex-start;
+  }
+
+  &__search{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8125rem;
+    font-family: $main-font-family;
+    color: $passive-color;
+    justify-content: center;
+
+    &-icon{
+      display: flex;
+      color: $active-color;
+      height: 100%;
+      align-items: center;
+      font-size: 1.3rem;
+      margin: 0 1rem 0 0.5rem;
+
+    }
+
+    &-input{
+      display: block;
+      outline: none;
+      border: none;
+      font-family: $main-font-family;
+      padding: 0;
+      font-size: 0.8125rem;
+      width: 100%;
+
+      &::placeholder{
+        color: $passive-color;
+      }
+    }
+
+    &-button.mui-override{
+      width: 6.6875rem;
+      align-self: center;
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__content{
+    &.mui-override{
+      margin-top: 1.5rem;
+    }
+
+    &-header{
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__disclaimer{
+    flex: 1;
+    padding: 1rem;
+    font:{
+      size: 0.8rem;
+    }
+    min-width: 18rem;
+    color: $passive-color;
+
+    @media screen and (max-width: $small-screen-width){
+     font-size: 0.7rem;
+    }
+
+    &-line{
+      margin: 0 0;
+      text-align: right;
+    }
+  }
+
+  &__loading{
+    min-height: 16.25rem;
+  }
+
+  &__tab{
+    &.mui-override{
+      $y-padding: 1.75rem;
+      color: $light-text-color;
+      font: 500 1rem $main-font-family;
+      text-transform: none;
+      min-width: 100px;
+      padding: $y-padding 0.5rem;
+      flex: 1;
+
+      &.media-override{
+        $smaller_font: 0.875rem;
+        @media screen and (max-width: $small-screen-width) {
+          font-size: $smaller_font
+        }
+      }
+    }
+
+    &_selected.mui-override{
+      color: $active-color;
+      font-weight: bold;
+    }
+
+    &-text.mui-override{
+      padding: 0;
+    }
+
+    &-panel{
+      &.mui-override{
+        flex: 1 1 100%;
+        max-width: 36rem;
+        overflow: visible;
+
+      }
+
+      &-container.mui-override{
+        height: 100%;
+        justify-content: space-between;
+      }
+
+      &-scroller.mui-override{
+        overflow-x: visible;
+      }
+    }
+
+    &-indicator.mui-override{
+      background-color: $active-color;
+      height: 4px;
+    }
+  }
+
+  &__table{
+    min-width: 38rem;
+
+    &-placeholder{
+      display: flex;
+      min-height: 15rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: $passive-color;
+      flex-direction: column;
+      padding: 0 2rem;
+      text-align: center;
+
+      &-icon{
+        color: #caced0;
+        font-size: 3rem;
+      }
+    }
+
+    &-row{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+
+      @media screen and (max-width: $mobile-screen-width){
+        font-size: 0.75rem;
+      }
+
+      &_header{
+        min-height: 5rem;
+        box-sizing: border-box;
+        font:{
+          size: 0.8125rem;
+          weight: bold;
+        }
+        color: $light-text-color;
+        padding:{
+          top: 1.3125rem;
+          bottom: 1.625rem;
+        };
+      }
+
+      &:nth-child(odd), &_header{
+        background-color: $secondary-background-color;
+        border:{
+          bottom: solid 1px;
+          top: solid 1px;
+          color: $light-border-color;
+        }
+      }
+    }
+
+    &-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 0.2rem;
+      min-height: 1.5rem;
+      font:{
+        size: 0.875rem;
+        family: $main-font-family;
+      }
+
+      flex: 1 1 0;
+      text-align: center;
+
+      &_header {
+        white-space: normal;
+      }
+
+      &_note {
+        font-weight: normal;
+        width: 100%;
+      }
+    }
+
+    &-button.mui-override {
+      width: 5.3125rem;
+      height: 1.5rem;
+      padding: 0;
+      font: {
+        weight: bold;
+        size: 0.75rem;
+      }
+      border-width: 1px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div
+  [@popup]
+  class="popup-wrapper overlay"
+>
+  <div class="popup">
+      <div class="popup__content">
+        <div
+          *ngIf="title"
+          class="popup__title"
+        >
+          {{title}}
+        </div>
+        <div
+          *ngIf="description"
+          class="popup__description"
+        >
+          {{description}}
+        </div>
+      </div>
+    
+      <div class="popup__buttons">
+        <div
+          *ngFor="let button of buttons"
+          class="popup__button"
+          [class.popup__button--danger]="button.danger"
+          (click)="onButtonClick(button)"
+        >
+          {{button.title}}
+        </div>
+      </div>
+    </div>
+</div>

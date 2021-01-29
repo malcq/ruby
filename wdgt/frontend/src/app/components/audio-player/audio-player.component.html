@@ -1,0 +1,36 @@
+<div class="audio-player__seekbar">
+  <app-seekbar
+    [currentTime]="currentTime"
+    [duration]="duration"
+    (valueChange)="onPositionChange($event)"
+  ></app-seekbar>
+</div>
+<div class="audio-player__duration-info">
+  <app-duration-info [duration]="currentTime"></app-duration-info>
+</div>
+
+<div class="audio-player__controls">
+  <div
+    class="audio-player__control audio-player__control--backward"
+    (click)="onBackwardClick()"
+  >
+    <app-backward-image></app-backward-image>
+  </div>
+  <div
+    class="audio-player__control audio-player__control--play"
+    (click)="onTogglePlay()"
+  >
+    <div [hidden]="!paused">
+      <app-play-button-image size="64"></app-play-button-image>
+    </div>
+    <div [hidden]="paused">
+      <app-pause-button-image size="64"></app-pause-button-image>
+    </div>
+  </div>
+  <div
+    class="audio-player__control audio-player__control--forward"
+    (click)="onForwardClick()"
+  >
+    <app-forward-image></app-forward-image>
+  </div>
+</div>

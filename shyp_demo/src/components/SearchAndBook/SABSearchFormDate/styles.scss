@@ -1,0 +1,123 @@
+@import '../../../assets/styles/theme';
+
+.search-form__date-picker {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ebedf0;
+  width: 90px;
+  padding: 11px;
+  font-size: 13px;
+  flex: initial;
+  .date-picker__wicon {
+    display: flex;
+    align-items: center;
+    .calendar {
+      color: #98a0a5;
+    }
+  }
+  label {
+    color: #98a0a5;
+  }
+  input {
+    border: none;
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    width: 90px;
+  }
+  .react-datepicker {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    border: 1px solid #EBEDF0;
+    .react-datepicker__triangle {
+      left: 92px;
+      border-bottom-color: #fff;
+      &:before {
+        border-bottom-color: #ebedf0;
+      }
+    }
+    &__navigation {
+      text-indent: 0;
+      color: #ebedf0;
+      font-family: $icon-font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      font-smoothing: antialiased;
+    }
+
+    &__header {
+      padding-bottom: 5px;
+      background-color: #ffffff;
+      border-bottom: none;
+    }
+
+    &__current-month {
+      font-size: 16px;
+      font-weight: 400;
+      color: #98a0a5;
+    }
+
+    &__input-container {
+      width: 100%;
+    }
+    &__month {
+      margin: 0;
+    }
+    &__month-container {
+      float: none;
+    }
+
+    &__day-name {
+      text-decoration: underline dotted;
+      text-align: right;
+      font-weight: bold;
+      font-size: 13px;
+      color: #98a0a5;
+    }
+
+    &__day {
+      width: 30px;
+      height: 23px;
+      margin: 0;
+      color: #98a0a5;
+      line-height: 22px;
+      padding-right: 3px;
+      font-size: 13px;
+      text-align: right;
+
+      &:hover {
+        border-radius: 5px;
+        background-color: #d7fbf6;
+      }
+      &--selected {
+        border-radius: 5px;
+        background-color: #02d4be;
+        font-weight: bold;
+        color: #ffffff;
+
+        &:hover {
+          color: #98a0a5;
+        }
+      }
+
+      &--disabled {
+        background-color: #F4F4F4;
+        opacity: .3;
+
+        &:hover {
+          background-color: rgba(244, 244, 244, 72);
+        }
+      }
+    }
+
+    &__triangle {
+      &:before {
+        border-top-color: #EBEDF0 !important;
+      }
+    }
+  }
+}

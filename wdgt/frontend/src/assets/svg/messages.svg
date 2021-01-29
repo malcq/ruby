@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/messages</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.3759014,7 C10.3759014,7.18930383 10.3075428,7.34705466 10.1708233,7.47325721 C10.0341039,7.59945977 9.8710947,7.6625601 9.68179087,7.6625601 L2.96153846,7.6625601 L0.279747596,10.3759014 L0.279747596,0.942307692 C0.279747596,0.753003861 0.342847927,0.595253035 0.469050481,0.469050481 C0.595253035,0.342847927 0.753003861,0.279747596 0.942307692,0.279747596 L9.68179087,0.279747596 C9.8710947,0.279747596 10.0341039,0.342847927 10.1708233,0.469050481 C10.3075428,0.595253035 10.3759014,0.753003861 10.3759014,0.942307692 L10.3759014,7 Z M13.0576923,2.96153846 C13.2469961,2.96153846 13.404747,3.02463879 13.5309495,3.15084135 C13.6571521,3.2770439 13.7202524,3.43479473 13.7202524,3.62409856 L13.7202524,13.7202524 L11.0384615,11.0384615 L3.62409856,11.0384615 C3.43479473,11.0384615 3.2770439,10.9753612 3.15084135,10.8491587 C3.02463879,10.7229561 2.96153846,10.5652053 2.96153846,10.3759014 L2.96153846,9.01923077 L11.7010216,9.01923077 L11.7010216,2.96153846 L13.0576923,2.96153846 Z" id="path-1"></path>
+        <circle id="path-3" cx="4" cy="4" r="4"></circle>
+        <circle id="path-5" cx="3" cy="3" r="3"></circle>
+        <path d="M0.833160813,3.35000014 L0.833160813,3.11994833 C0.833160813,2.82979143 0.955439385,2.56312743 1.2000002,2.31994831 C1.29533746,2.22322935 1.47081067,2.08920651 1.72642508,1.91787577 C1.91848131,1.78937772 2.06079422,1.68091593 2.15336809,1.59248716 C2.31779033,1.43497342 2.40000021,1.27193532 2.40000021,1.10336799 C2.40000021,0.958289537 2.36062237,0.845682717 2.2818655,0.765544146 C2.20587203,0.688168974 2.0967194,0.649481968 1.95440435,0.649481968 C1.64352196,0.649481968 1.47081212,0.859497142 1.43626963,1.27953379 L0.800000191,1.19870477 C0.902245954,0.499564826 1.29602441,0.150000095 1.98134736,0.150000095 C2.35855132,0.150000095 2.64110463,0.244645092 2.82901577,0.433937923 C3.0017282,0.608032061 3.08808313,0.836009059 3.08808313,1.11787576 C3.08808313,1.44257514 2.93402594,1.73894524 2.62590695,2.00699494 C2.53609649,2.08575181 2.37651259,2.20112199 2.14715047,2.35310894 C1.93851385,2.49404229 1.80932688,2.5873056 1.7595857,2.63290169 C1.70431772,2.68402457 1.65734064,2.74620011 1.61865305,2.81943019 L3.0922282,2.81943019 L3.0922282,3.35000014 L0.833160813,3.35000014 Z" id="path-7"></path>
+    </defs>
+    <g id="ic/messages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic/messages/active" transform="translate(0.000000, 2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#262626" xlink:href="#path-1"></use>
+            <g id="Color/Grey" mask="url(#mask-2)">
+                <g transform="translate(-17.769231, -16.153846)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#A8A8A8" fill-rule="evenodd" x="0" y="0" width="46" height="46"></rect>
+                    <rect id="Border/Secondary" stroke="#A8A8A8" stroke-width="1" fill="none" x="0" y="0" width="46" height="46"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="Color/Primary" transform="translate(8.000000, 0.000000)">
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <use id="Mask" fill="#D8D8D8" xlink:href="#path-3"></use>
+            <g id="Color/White" mask="url(#mask-4)">
+                <g transform="translate(-37.000000, -40.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#FFFFFF" fill-rule="evenodd" x="0" y="0" width="86" height="86"></rect>
+                    <rect id="Border/Secondary" stroke="#FFFFFF" stroke-width="1" fill="none" x="0.5" y="0.5" width="85" height="85"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="Color/Primary" transform="translate(9.000000, 1.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <use id="Mask" fill="#D8D8D8" xlink:href="#path-5"></use>
+            <g mask="url(#mask-6)">
+                <g transform="translate(-29.000000, -29.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#1C69D4" fill-rule="evenodd" x="0" y="0" width="65" height="65"></rect>
+                    <rect id="Border/Secondary" stroke="#1C69D4" stroke-width="1" fill="none" x="0" y="0" width="65" height="65"></rect>
+                </g>
+            </g>
+        </g>
+        <g id="Color/White" transform="translate(10.000000, 2.000000)">
+            <mask id="mask-8" fill="white">
+                <use xlink:href="#path-7"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-7"></use>
+            <g mask="url(#mask-8)">
+                <g transform="translate(-41.000000, -41.000000)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#FFFFFF" fill-rule="evenodd" x="0" y="0" width="86" height="86"></rect>
+                    <rect id="Border/Secondary" stroke="#FFFFFF" stroke-width="1" fill="none" x="0.5" y="0.5" width="85" height="85"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

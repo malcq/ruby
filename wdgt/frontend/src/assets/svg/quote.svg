@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/quote</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.493256262,6.55686275 L0.493256262,0 L6.44315992,0 L6.44315992,5.17647059 C6.44315992,7.97909898 6.12460177,9.99737945 5.48747592,11.2313725 C4.60372069,12.9254987 3.2267274,14.2013029 1.35645472,15.0588235 L0,12.8313725 C1.10983214,12.3712395 1.93705572,11.6444494 2.48169557,10.6509804 C3.02633541,9.65751137 3.32947946,8.29281914 3.3911368,6.55686275 L0.493256262,6.55686275 Z M10.0500963,6.55686275 L10.0500963,0 L16,0 L16,5.17647059 C16,7.97909898 15.6814418,9.99737945 15.044316,11.2313725 C14.1605608,12.9254987 12.7835675,14.2013029 10.9132948,15.0588235 L9.55684008,12.8313725 C10.6666722,12.3712395 11.4938958,11.6444494 12.0385356,10.6509804 C12.5831755,9.65751137 12.8863195,8.29281914 12.9479769,6.55686275 L10.0500963,6.55686275 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/quote" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#8E8E8E" fill-opacity="0.2" xlink:href="#path-1"></use>
+            <g id="Color/Secondary" mask="url(#mask-2)">
+                <rect id="Fill/Secondary" fill="white" fill-opacity="0.6" fill-rule="evenodd" x="0" y="0" width="16" height="16"></rect>
+                <rect id="Border/Secondary" stroke="#rgba(0,0,0,0)" fill-opacity="0.2" stroke-width="1" x="0" y="0" width="16" height="16"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

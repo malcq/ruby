@@ -1,0 +1,51 @@
+.selector-input {
+  margin: 20px;
+  display: flex;
+}
+
+.selector-input__selector {
+  flex-grow: 1;
+}
+
+.selector {
+  display: flex;
+  align-items: stretch;
+  border-radius: 30px;
+  margin-right: 10px;
+  background-color: white;
+  padding-left: 15px;
+  min-height: 31px;
+  box-shadow: 0 0 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.selector__select {
+  flex-grow: 1;
+}
+
+.selector__select > select {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+
+.selector__send-button {
+  display: flex;
+  align-items: center;
+}
+
+.selector__send-button > button {
+  color: white;
+  background-color: #1d69d4;
+  border: none;
+  margin: 0 5px;
+  border-radius: 30px;
+}
+
+.selector__send-button .send-icon {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  padding-left: 12px;
+  padding-right: 8px;
+}

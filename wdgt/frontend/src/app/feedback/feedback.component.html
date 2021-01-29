@@ -1,0 +1,70 @@
+<app-nav-bar
+  (leftButtonPress)="gotoChat()"
+  [blue]="true"
+></app-nav-bar>
+
+<main
+  class="container--paddings loading"
+  *ngIf="loading"
+>
+  <mat-spinner></mat-spinner>
+</main>
+
+<main
+  class="summary container--paddings"
+  *ngIf="!loading && feedback"
+>
+  <app-fancy-header *ngIf="feedback.isEditable && !feedback.updateRequest"
+    [title]="'Submit.'"
+    description="Before you send your feedback, please check if everything is as intended."
+  ></app-fancy-header>
+  <app-fancy-header *ngIf="feedback.isEditable && feedback.updateRequest"
+    [title]="'Summary.'"
+    description="Before you send your feedback, please check if everything is as intended."
+  ></app-fancy-header>
+  <app-fancy-header *ngIf="!feedback.isEditable"
+    [title]="'Summary.'"
+    description="Please find below an overview of your submitted feedback."
+  ></app-fancy-header>
+  <div class="menu">
+      <app-menu-item-product
+        *ngIf = "feedback.productModel && feedback.feedbackCategory && fancyVin"
+        [carName] = "feedback.productModel.title"
+        [vin] = "fancyVin"
+        [feedbackType] = "feedback.feedbackCategory.title"
+      ></app-menu-item-product>
+
+      <app-menu-item-file
+        [getStarted]="getStarted"
+        [files]="feedback.files"
+        [isEditable]="feedback.isEditable"
+        (click)="onFileClick(feedback.files)"
+        [headerCaption]="fileCaption"
+      ></app-menu-item-file>
+
+      <app-menu-item-categories
+        *ngIf = "feedback.chatCategory"
+        [title]="feedback.chatCategory.title"
+      ></app-menu-item-categories>
+
+      <app-menu-item-simple
+        title="Chat History"
+        [disabled]="!feedback.isEditable"
+        (click)="gotoChat()"
+        icon="chat-outline"
+      ></app-menu-item-simple>
+  </div>
+
+  <app-fancy-button *ngIf="feedback.isEditable && !feedback.updateRequest"
+    title="Send Feedback"
+    fullWidth="true"
+    [disabled]="cantSendFeedback"
+    (click)="sendFeedback()"
+  ></app-fancy-button>
+  <app-fancy-button *ngIf="feedback.isEditable && feedback.updateRequest"
+    title="Send Feedback Update"
+    fullWidth="true"
+    [disabled]="cantSendFeedback"
+    (click)="sendFeedback()"
+  ></app-fancy-button>
+</main>

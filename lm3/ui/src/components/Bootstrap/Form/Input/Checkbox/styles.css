@@ -1,0 +1,7 @@
+.custom-form-check {
+  &.is-invalid {
+    .invalid-feedback {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import '../../../assets/styles/theme';
+
+.shipment-overview-date-picker {
+  &__time-interval-select {
+    margin: 10px 15px 0 15px;
+  }
+
+  &__control-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 15px 16px 15px;
+  }
+
+  &__button {
+    font-family: "Exo 2", sans-serif;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    opacity: 0.8;
+    color: #98a0a5;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+
+    &--confirm {
+      color: #00e3c8;
+      margin-left: 20px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker-popper {
+    z-index: 2000;
+  }
+
+  .react-datepicker-popper {
+    &--top-end {
+      .react-datepicker {
+        &__triangle {
+          margin-left: 175px !important;
+        }
+      }
+    }
+  }
+
+  .react-datepicker {
+    font-family: "Exo 2", sans-serif;
+    font-size: 16px;
+    border: 1px solid #EBEDF0;
+
+    &__navigation {
+      text-indent: 0;
+      color: #ebedf0;
+      font-family: $icon-font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-rendering: optimizeLegibility;
+      text-transform: none;
+      font-smoothing: antialiased;
+
+      &--previous, &--next {
+        top: 18.5px;
+        right: 15px;
+        border: 1px solid #ebedf0;
+        height: 24px;
+        width: 30px;
+        border-radius: 0 5px 5px 0;
+        outline: none;
+
+        &:hover {
+          border: 1px solid #bebebe;
+          color: #bebebe;
+        }
+
+        &:before {
+          content: "\e942";
+        }
+      }
+
+      &--previous {
+        transform: rotate(180deg);
+        right: 0;
+        left: 15px;
+      }
+    }
+
+    &__header {
+      padding-top: 21px;
+      padding-bottom: 5px;
+      background-color: #ffffff;
+      border-bottom: none;
+    }
+
+    &__current-month {
+      font-size: 16px;
+      font-weight: 400;
+      color: #98a0a5;
+    }
+
+    &__input-container {
+      width: 100%;
+    }
+
+    &__month-container {
+      float: none;
+    }
+
+    &__month {
+      margin: 1rem 1rem 0 1rem;
+      border-left: 1px solid #ebedf0;
+      border-top: 1px solid #ebedf0;
+    }
+
+    &__day-names {
+      display: none;
+    }
+
+    &__day {
+      border-right: 1px solid #ebedf0;
+      border-bottom: 1px solid #ebedf0;
+      width: 35px;
+      height: 35px;
+      margin: 0;
+      color: #98a0a5;
+      line-height: 34px;
+
+      &:hover {
+        border-radius: 0;
+        background-color: #d7fbf6;
+      }
+      &--selected {
+        border-radius: 0;
+        background-color: #02d4be;
+        font-weight: bold;
+        color: #ffffff;
+
+        &:hover {
+          color: #98a0a5;
+        }
+      }
+
+      &--disabled {
+        background-color: rgba(244, 244, 244, 72);
+        color: rgba(152, 160, 165, 72);
+
+        &:hover {
+          background-color: rgba(244, 244, 244, 72);
+        }
+      }
+    }
+
+    &__triangle {
+      &:before {
+        border-top-color: #EBEDF0 !important;
+      }
+    }
+  }
+
+  .Select {
+    .Select-control {
+      height: 33px;
+    }
+
+    .Select-multi-value-wrapper {
+      height: 33px;
+    }
+
+    .Select-value {
+      background-color: #fbfbfb;
+      color: #98a0a5;
+      line-height: 33px;
+
+      &:hover {
+        background-color: rgba(5, 206, 182, 51);
+      }
+    }
+
+    .Select-value-label {
+      color: #98a0a5 !important;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../assets/styles/theme";
+
+.dashboard {
+  &-layout{
+    &__title {
+      font-size: 16px;
+      padding: 0 0 20px;
+      &.icon {
+        &:before {
+          padding-right: 10px;
+          color: #1b2538;
+        }
+        &.checked:before {
+          font-size: 13px;
+        }
+        &.dashboard:before {
+          font-size: 8px;
+        }
+      }
+    }
+
+    &__progress {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+
+      &-container{
+        width: 69%;
+        min-width: 90px;
+        .shipment-progress__edge.icon {
+          &:before {
+            font-size: 11px;
+            line-height: 26px;
+          }
+          &.container:before {
+            font-size: 12px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+    &__booking {
+      width: calc(50% - 12.5px);
+      margin-right: 25px;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        margin-right: 0;
+        .dashboard__booking {
+          order: 2;
+        }
+        .dashboard__prebooked {
+          order: 1;
+        }
+      }
+    }
+    &__shipments {
+      width: calc(50% - 12.5px);
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+    .dashboard-layout {
+      box-shadow: none;
+      border: 1px solid #ebedf0;
+    }
+  }
+
+
+}
+
+
+

@@ -1,0 +1,114 @@
+@import "../../assets/styles/theme";
+
+.shipment-progress {
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__bg{
+    flex: 1;
+    margin: auto -8px;
+    height: 4px;
+    z-index: 2;
+    position: relative;
+
+    &.lblue {
+      background-color: $dashboard-booking;
+    }
+
+    &.dblue, &.blue {
+      background-color: $dashboard-transit;
+    }
+
+    &.grey {
+      background-color: $border-color;
+    }
+
+    &.green {
+      background-color: $green;
+    }
+  }
+
+
+  &__thumb {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 2px solid $dashboard-transit;
+    background-color: white;
+    top: -100%;
+  }
+
+  &__fill {
+    width: 50%;
+    background-color: #2caffc;
+    height: 4px;
+
+    &.lblue {
+      background-color: $dashboard-booking;
+    }
+    &.dblue, &.blue {
+      background-color: $dashboard-transit;
+    }
+    &.grey {
+      background-color: $border-color;
+    }
+    &.green {
+      background-color: $green;
+    }
+  }
+
+  &__edge {
+    width: 44px;
+    height: 26px;
+    margin: auto 0;
+
+    &.icon:before {
+      font-size: 13px;
+      color: #fff;
+      line-height: 23px;
+      width: 26px;
+      height: 26px;
+      display: block;
+      text-align: center;
+    }
+
+    &.icon-circled {
+      &:before{
+        background-color: #0596e9;
+        border-radius: 50%;
+      }
+
+      &--lblue:before {
+        background-color: $dashboard-booking;
+      }
+      &--dblue:before,  &.blue:before {
+        background-color: $dashboard-transit;
+      }
+      &--grey:before {
+        background-color: $border-color;
+      }
+      &--green:before {
+        background-color: $green;
+      }
+    }
+
+    &.lblue {
+      background: url("../../assets/images/tracker-edge-lblue.svg") no-repeat;
+    }
+
+    &.dblue, &.blue {
+      background: url("../../assets/images/tracker-edge-dblue.svg") no-repeat;
+    }
+
+    &.grey {
+      background: url("../../assets/images/tracker-edge-grey.svg") no-repeat;
+    }
+
+    &.green {
+      background: url("../../assets/images/tracker-edge-green.svg") no-repeat;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.tag-selector__header {
+  margin: 0 25px;
+  margin-bottom: 15px;
+}
+
+.tag-selector__search,
+.tag-selector__search > input {
+  background-color: #efefef
+}
+
+
+.tag-selector__search {
+  padding: 7px 15px;
+  margin: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-radius: 23px;
+}
+
+.tag-selector__search > input {
+  border: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.tag-selector__tags {
+  width: 100%;
+}
+
+.tag-selector__title,
+.tag-selector__item-content {
+  font-size: 14px;
+}
+
+.tag-selector__title {
+  padding: 5px 10px;
+  padding-left: 15px;
+  background-color: #efefef;
+  font-weight: bold;
+}
+
+.tag-selector__item-link {
+  cursor: pointer;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.tag-selector__item {
+  min-height: 28px;
+  margin: 0 10px;
+  margin-right: 0;
+  margin-left: 25px;
+  padding: 7px 0;
+  padding-right: 0;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tag-selector__item-content {
+  text-transform: capitalize;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tag-selector__item-icon {
+  margin-right: 5px;
+  height: 24px;
+}
+
+.tag-selector__item-icon > .material-icons {
+  color: #c0c1c1;
+
+}
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/lenkrad</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,0 C3.584,0 0,3.584 0,8 C0,12.416 3.584,16 8,16 C12.416,16 16,12.416 16,8 C16,3.584 12.416,0 8,0 Z M8,2 C10.784,2 13.12,3.904 13.792,6.464 C11.328,6.256 10.288,4.992 8,4.992 C5.712,4.992 4.672,6.256 2.208,6.464 C2.88,3.904 5.216,2 8,2 Z M2.032,8.72 L3.2,8.72 C5.408,8.72 6.752,10.144 6.752,12.352 L6.752,13.904 C4.256,13.456 2.256,11.216 2.032,8.72 Z M8.752,13.904 L8.752,12.352 C8.752,10.144 10.592,8.72 12.8,8.72 L13.968,8.72 C13.744,11.216 11.76,13.456 8.752,13.904 Z" id="path-1"></path>
+    </defs>
+    <g id="ic/lenkrad" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#2274d7" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <g id="Color/Dark_grey" mask="url(#mask-2)">
+                <g transform="translate(-0.231884, -0.927536)">
+                    <rect id="Fill/Secondary" stroke="none" fill="#2274d7" fill-rule="evenodd" x="0" y="0" width="19" height="18"></rect>
+                    <rect id="Border/Secondary" stroke="#666666" stroke-width="1" fill="none" x="0" y="0" width="19" height="18"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
